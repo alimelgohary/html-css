@@ -1,0 +1,63 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #57 - Grid - Parent - Template Columns
+ * Demonstrating the grid-template-columns property.
+ */
+
+/* --- General Styling --- */
+.grid-container {
+    /* Required property for Grid */
+    display: grid; 
+    width: 600px; /* Fixed width for predictable sizing */
+    border: 3px solid #007bff;
+    margin-bottom: 20px;
+}
+.grid-item {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px;
+    margin: 1px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+}
+.grid-container.row-height {
+    /* Set explicit row height for visual clarity in this lesson */
+    grid-template-rows: 50px 50px; 
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Example CSS Rules (Included in the <pre> tag) */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Pixels (px) */
+.ex-px {
+    /* 57-1: Creates three columns with fixed widths */
+    grid-template-columns: 100px 200px 100px;
+}
+
+/* 2. Percentages (%) and auto */
+.ex-percent-auto {
+    /* 57-2: Column 1 is 25%, Column 2 is 50%, Column 3 takes the remaining space (auto) */
+    grid-template-columns: 25% 50% auto;
+}
+
+/* 3. Fractions (fr) */
+.ex-fraction {
+    /* 57-3: The available space is split into 5 equal fractions (3 + 1 + 1) */
+    grid-template-columns: 3fr 1fr 1fr;
+}
+
+/* 4. Repeat Function */
+.ex-repeat {
+    /* 57-4: Repeats the 1fr column definition 4 times (4 equal columns) */
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* 5. Mixed Units */
+.ex-mixed {
+    /* 57-5: Mixes fixed (100px), flexible (2fr), and auto sizing */
+    grid-template-columns: 100px 2fr auto 1fr;
+}

@@ -1,0 +1,49 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #65 - 2D Transform - Scale - #64 - CSS 2D Transform: scale()
+ * Demonstrating the 'scale()' property.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+
+.container {
+    padding: 50px;
+    height: 300px;
+    background-color: #fff;
+}
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: #3f51b5;
+    color: white;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    border: 2px solid #ccc;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+.box-1:hover {
+    transform: scale(2);
+}
+
+.box-2:hover {
+    transform: scaleX(2);
+}
+
+.box-3:hover {
+    transform: scaleY(2);
+}
+
+.box-4:hover {
+    transform: scale(2, 0.5);
+}
+
+.box-5:hover {
+    transform: scale(-1);
+}

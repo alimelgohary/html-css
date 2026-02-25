@@ -1,0 +1,127 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #71 - 3D Transform - Rotate (Product Hover Example)
+ * Demonstrating 3D rotation with transform-origin for practical UI.
+ */
+
+/* --- General Styling --- */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* 1. The Wrapper (Provides Perspective) */
+.product-card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. The Information Panel (The Hidden Door) */
+.product-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 150, 136, 0.9);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Transformation Properties */
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: top; /* Hinge is at the top edge */
+    transform: rotateX(-90deg); /* Folded up and hidden */
+}
+
+/* 3. Hover State */
+.product-card:hover .product-info {
+    transform: rotateX(0deg); /* Swings down to face the user */
+}
+
+.product-info h3 { margin-bottom: 10px; }
+.product-info p { font-size: 14px; line-height: 1.4; }
+.product-info button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    background: #fff;
+    color: #009688;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #71 - 3D Transform - Rotate - #71 - CSS 3D Transform: Rotate
+ * Demonstrating 3D rotation functions.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+
+.container {
+    perspective: 500px; /* Necessary to see the 3D effect */
+    height: 250px;
+    background-color: #eee;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #009688;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: transform 0.8s ease;
+    border: 2px solid #004d40;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Rotation around the X-axis (Tilting forward/backward) */
+.box-x:hover {
+    transform: rotateX(180deg);
+}
+
+/* 2. Rotation around the Y-axis (Spinning like a door) */
+.box-y:hover {
+    transform: rotateY(180deg);
+}
+
+/* 3. Rotation around the Z-axis (Similar to 2D rotate) */
+.box-z:hover {
+    transform: rotateZ(45deg);
+}
+
+/* 4. Custom 3D Rotation using rotate3d(x, y, z, angle) */
+.box-3d:hover {
+    /* Rotates around a custom vector (1, 1, 1) */
+    transform: rotate3d(1, 1, 1, 45deg);
+}

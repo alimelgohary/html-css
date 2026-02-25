@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form 2</title>
+        <link rel="icon" type="image/x-icon" href="https://elzero.org/favicon.ico">
+    <link rel="stylesheet" href="../../CSS/css/common.css">
+    </head>
+
+    <body>
+        <a href="../../index.html" class="home-button">Home</a>
+    <hr>
+        <form method="get" action="">
+            <section>
+                <div>
+                    <label for="Username">Username</label> <br>
+                    <input 
+                    id="Username"
+                    type="text"
+                    name="Username"
+                    placeholder="Enter Username"
+                    autofocus
+                    required
+                    minlength="5"
+                    maxlength="20">
+                </div>
+                
+                <div>
+                    <label for="Email">Email</label> <br>
+                    <input readonly id="Email" type="email" name="email" value="o@o.com">
+                </div>           
+                <input id="token" hidden type="text" name="token" value="b92f1fc2fce391ad7af633723afd3055">
+            </section>
+            <hr>
+            <section>
+                <div>
+                    <input id="csharp" type="checkbox" name="skills" value="Csharp">
+                    <label for="csharp"> C# </label>
+                </div>
+
+                <div>
+                    <input id="cpp" type="checkbox" checked name="skills" value="Cpp">
+                    <label for="cpp"> C++ </label>
+                </div>
+
+                <div>
+                    <input id="c" type="checkbox" name="skills" value="C">
+                    <label for="c"> C </label>
+                </div>
+
+                <div>
+                    <input id="java" type="checkbox" name="skills" value="Java">
+                    <label for="java"> Java </label>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <div>
+                    <input id="sm" type="radio" name="job" value="Scrum Master">
+                    <label for="sm"> Scrum Master </label>
+                </div>
+
+                <div>
+                    <input id="pm" type="radio" name="job" value="Project Manager">
+                    <label for="pm"> Project Manager </label>
+                </div>
+
+                <div>
+                    <input id="ba" type="radio" name="job" value="Business Analyst">
+                    <label for="ba"> Business Analyst </label>
+                </div>
+
+                <div>
+                    <input id="back" type="radio" checked name="job" value="Back-End Developer">
+                    <label for="back"> Back-End Developer </label>
+                </div>
+            </section>
+
+            <br>
+
+            <section>
+                <label for="">Choose Language</label>
+                <select name="" id="">
+                    <optgroup label="PHP">
+                        <option value="p5">V5.0</option>
+                        <option value="p6">V6.0</option>
+                        <option value="p7">V7.0</option>
+                        <option value="p8">V8.0</option>
+                    </optgroup>
+                    
+                    <optgroup label="Python">
+                        <option value="py1">V1.0</option>
+                        <option value="py2">V2.0</option>
+                        <option value="py3">V3.0</option>
+                        <option value="py4">V4.0</option>
+                    </optgroup>
+                </select>
+            </section>
+            <br>
+            <section>
+                <textarea name="brief" id="" cols="100" rows="5" placeholder="Enter briefWrite Here Why You Want To Learn Programming"></textarea>
+            </section>
+
+            <hr>
+
+            <section>
+                <input type="submit" value="Send">
+                <input type="reset" value="Empty" >
+            </section>
+        </form>
+
+    </body>
+</html>

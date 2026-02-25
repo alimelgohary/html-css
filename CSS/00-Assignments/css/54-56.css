@@ -1,0 +1,68 @@
+html * {
+    box-sizing: border-box;
+}
+.as1 {
+    width: 600px;
+    height: 60px;
+    background-color: #EEE;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px auto;
+    position: relative;
+
+}
+.as1::before {
+    content: "";
+    height: 80px;
+    width: 620px;
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: -10px;
+    background-image: linear-gradient(to right,
+        #f44336 20%,
+        #2196f3 20%, #2196f3 40%,
+        #9fd4a1 40%, #9fd4a1 60%,
+        #e91f63 60%, #e91f63 80%,
+        #673ab7 80%
+    );
+}
+.as1::first-letter {
+    color: #f44336;
+}
+/* =================================================== */
+.form {
+    width: 600px;
+    margin: 20px auto;
+}
+.input {
+    width: inherit;
+    position: relative;
+}
+.one, .two, .three {
+    width: inherit;
+    caret-color: red;
+    padding: 10px;
+    display: block;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    border: 0px;
+    outline: 0px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.input::after {
+    content: "";
+    width: 600px;
+    height: 3px;
+    top:40px;
+    left: 0px;
+    position: absolute;
+    background-image: linear-gradient(
+        to right, #f44336 50%, #f44336 50%, #009688 50%, #009688
+    ) 
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Box Shadow"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../07- 34-39/6.html" class="prev-button">Previous</a>
+            <a href="2.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .shadow-basic {
+        box-shadow: 10px 10px 5px #888888; /* H-shadow V-shadow Blur Color */
+    }
+    .shadow-spread {
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5); /* H V Blur Spread Color */
+    }
+    .shadow-inset {
+        box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.7);
+        background-color: white;
+    }
+    .shadow-multiple {
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5),
+                    5px 5px 10px rgba(0, 0, 0, 0.3),
+                    -5px -5px 15px rgba(255, 165, 0, 0.7);
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Basic Box Shadow Syntax</h4>
+            <p>The core syntax for <code>box-shadow</code> is: <code>[H-offset] [V-offset] [Blur-radius] [Color]</code>.</p>
+            <p><strong>Example:</strong> <span style="font-family: monospace;">box-shadow: 10px 10px 5px #888888;</span></p>
+            <div class="shadow-demo shadow-basic">
+                Basic Shadow
+            </div>
+            <hr>
+
+            <h4>2. Including Spread Radius</h4>
+            <p>The optional **Spread Radius** is placed before the color: <code>[H] [V] [Blur] [Spread] [Color]</code>. A positive spread value expands the shadow, while a negative value shrinks it.</p>
+            <p><strong>Example:</strong> <span style="font-family: monospace;">box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);</span></p>
+            <div class="shadow-demo shadow-spread">
+                Shadow with Spread
+            </div>
+            <hr>
+
+            <h4>3. Creating an Inner Shadow (Inset)</h4>
+            <p>The optional **<code>inset</code>** keyword makes the shadow an internal one, giving the appearance of a recessed or pressed element. It should be placed at the very beginning of the declaration.</p>
+            <p><strong>Example:</strong> <span style="font-family: monospace;">box-shadow: inset 0 0 10px red;</span></p>
+            <div class="shadow-demo shadow-inset">
+                Inset Shadow
+            </div>
+            <hr>
+
+            <h4>4. Applying Multiple Shadows</h4>
+            <p>You can apply multiple shadows to a single element by separating each full shadow declaration with a **comma** (<code>,</code>). The first shadow listed is applied on top.</p>
+            <div class="shadow-demo shadow-multiple">
+                Multiple Shadows
+            </div>
+
+        </section>
+</body>
+</html>

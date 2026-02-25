@@ -1,0 +1,52 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #81 - CSS Selectors Reference Part 4
+ * Covering :not(), :nth-child(), :nth-last-child(), and Type-based variations.
+ */
+
+/* 1. Negation Selector (:not) [00:00:15] */
+/* Selects all elements except those that match the selector inside the parenthesis. */
+.list p:not(.special) {
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* 2. Nth-Child Selector (:nth-child) [00:01:45] */
+/* Targets elements based on their position in the parent. */
+.items li:nth-child(2) {
+    background-color: #ffe0b2; /* Targets the 2nd item */
+}
+
+/* Using 'even' and 'odd' keywords [00:02:58] */
+.items li:nth-child(even) {
+    border-left: 5px solid #2196f3;
+}
+.items li:nth-child(odd) {
+    border-left: 5px solid #e91e63;
+}
+
+/* 3. Nth-Last-Child Selector (:nth-last-child) [00:04:43] */
+/* Counts from the end of the parent. */
+.items li:nth-last-child(2) {
+    text-decoration: underline; /* 2nd item from the bottom */
+}
+
+/* 4. Nth-Of-Type variations [00:06:43] */
+/* Similar to nth-child, but only counts elements of the same tag type. */
+.mixed-container p:nth-of-type(2) {
+    color: green;
+    font-weight: bold;
+}
+
+.mixed-container p:nth-last-of-type(1) {
+    background-color: #f0f0f0;
+}
+
+/* Visual Helpers */
+.visual-section {
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+ul { list-style: none; padding: 0; }
+li { padding: 8px; margin: 4px 0; border: 1px solid #eee; }

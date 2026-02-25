@@ -1,0 +1,58 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #67 - 2D Transform - Translate - #67 - CSS 2D Transform: translate()
+ * Demonstrating the 'translate()' property.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+
+.container {
+    height: 250px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+    position: relative;
+    border: 2px dashed #ccc;
+}
+.box {
+    width: 120px;
+    height: 80px;
+    background-color: #009688;
+    color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-out;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+.example-4 .container {
+    border: 2px solid #e91e63;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Translation on X and Y axes */
+.box-1:hover {
+    transform: translate(50px, 20px);
+}
+
+/* 2. Translation on X-axis only */
+.box-2:hover {
+    transform: translateX(70px);
+}
+
+/* 3. Translation on Y-axis with percentage */
+.box-3:hover {
+    transform: translateY(-50%);
+}
+
+/* 4. Centering an element horizontally and vertically */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

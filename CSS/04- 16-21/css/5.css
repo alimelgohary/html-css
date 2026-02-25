@@ -1,0 +1,43 @@
+.zero, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
+    margin-left: 50px;
+    color: black;
+    margin-bottom: 20px;
+}
+.zero {
+    width: 400px;
+}
+.one {
+    letter-spacing: 5px;
+}
+.two {
+    letter-spacing: -1px;
+}
+.three {
+    text-indent: 40px;
+}
+.four {
+    text-indent: -40px;
+}
+.five {
+    width: 400px;
+    line-height: 2.5; /* Recommended line height=1.6 */
+}
+.six {
+    word-spacing: 20px;
+}
+.seven {
+    background-color: #eee;
+    width: 400px;
+    white-space: nowrap;
+}
+.eight {
+    background-color: #eee;
+    overflow-wrap: break-word;
+    width: 200px;
+    hyphens: auto;
+}
+.nine {
+    background-color: #eee;
+    word-break: break-all;
+    width: 400px;
+}

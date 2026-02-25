@@ -1,0 +1,20 @@
+.one, .two, .three {
+    margin-left: 50px;
+    color: darkmagenta;
+}
+.one {
+    text-align: right;
+}
+.two {
+    text-align: left;
+}
+.three {
+    text-align: center;
+}
+.four {
+    direction: rtl;
+    text-align: center;
+}
+.five img {
+    vertical-align: top;
+}

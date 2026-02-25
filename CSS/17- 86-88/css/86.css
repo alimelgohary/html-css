@@ -1,0 +1,40 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #86 - Create Your Framework
+ * Creating reusable utility classes and components to streamline development.
+ */
+
+/* --- Framework Utilities --- */
+
+/* 1. Centering Utility (Flexbox) [00:06:28] */
+/* Quickly center any content inside a container. */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. Circle Component [00:04:47] */
+/* Turns any element into a circle with centralized content. */
+.circle-100 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+}
+
+/* 3. Spacing Utilities (Margins/Padding) [00:08:36] */
+/* Pre-defined spacing to maintain rhythm across the site. */
+.m-20 { margin: 20px; }
+.p-20 { padding: 20px; }
+
+/* 4. Color Palette [00:00:51] */
+.bg-red { background-color: #e91e63; }
+.bg-blue { background-color: #2196f3; }
+.text-white { color: white; }
+
+/* --- Site Specific Styles --- */
+.product-box {
+    border: 1px solid #ddd;
+    text-align: center;
+}

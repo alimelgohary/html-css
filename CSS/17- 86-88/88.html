@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/88.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "The End: Roadmap to Mastery"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="87.html" class="prev-button">Previous</a>
+            <a href="#" class="next-button" style="pointer-events: none; opacity: 0.5;">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Mastery Roadmap: */
+    - Practice: CSS Battle for code golf & logic [00:00:43].
+    - Projects: Frontend Mentor for real design specs [00:02:04].
+    - Tools: Learn Git & GitHub to manage your code [00:03:03].
+    - Inspiration: CodePen to see what experts are building [00:05:46].
+    - Challenges: Elzero Web School challenges for local practice [00:05:14].
+        </pre>
+
+        <section class="roadmap-container">
+            <h3>Congratulations on completing the course!</h3>
+            <p>Here is your path forward to becoming a professional Front-End Developer:</p>
+
+            <div class="step">
+                <h4>1. Competitive Coding (CSS Battle)</h4>
+                <p>Improve your logic and learn how to write minimal CSS by solving visual puzzles [00:00:43].</p>
+                <a href="https://cssbattle.dev" target="_blank" class="resource-link">Visit CSS Battle</a>
+            </div>
+
+            <div class="step">
+                <h4>2. Real-World Challenges (Frontend Mentor)</h4>
+                <p>Build professional designs based on specific images, colors, and fonts to simulate a real job environment [00:02:04].</p>
+                <a href="https://www.frontendmentor.io" target="_blank" class="resource-link">Visit Frontend Mentor</a>
+            </div>
+
+            <div class="step">
+                <h4>3. Version Control (Git & GitHub)</h4>
+                <p>Essential for saving your progress and collaborating with teams. Elzero provides specific tutorials for this [00:03:03].</p>
+            </div>
+
+            <div class="step">
+                <h4>4. Community & Inspiration (CodePen)</h4>
+                <p>Browse pens from other developers. Try to replicate them without looking at the code first, then compare [00:05:46].</p>
+                <a href="https://codepen.io" target="_blank" class="resource-link">Visit CodePen</a>
+            </div>
+        </section>
+
+        <section>
+            <h3>Final Advice:</h3>
+            <p>Do not move on to JavaScript or other languages until you have built at least 4-5 full responsive websites using HTML and CSS [00:05:38]. Consistency is the key to mastery!</p>
+        </section>
+    </section>
+</body>
+</html>

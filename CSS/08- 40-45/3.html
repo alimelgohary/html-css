@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/3.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Transition"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="2.html" class="prev-button">Previous</a>
+            <a href="4.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .trans-basic {
+        transition-duration: 2s;
+    }
+    .trans-basic:hover {
+        width: 300px;
+        background-color: blue;
+    }
+    .trans-specific {
+        transition-property: width;
+        transition-duration: 2s;
+    }
+    .trans-specific:hover {
+        width: 300px;
+        background-color: blue;
+    }
+    .trans-delay {
+        transition-property: width;
+        transition-duration: 2s;
+        transition-delay: 1s;
+    }
+    .trans-delay:hover {
+        width: 300px;
+    }
+    .trans-multi {
+        transition: width 2s, height 1s;
+    }
+    .trans-multi:hover {
+        width: 300px;
+        height: 150px;
+    }
+    .trans-shorthand {
+        transition: all 1s ease-in-out 0.5s;
+    }
+    .trans-shorthand:hover {
+        width: 300px;
+        background-color: green;
+        border-radius: 50%;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Basic Transition (Implicit 'All')</h4>
+            <p>Setting only <span style="font-family: monospace;">transition-duration</span> allows all changeable properties (width and background-color) to animate smoothly over 2 seconds.</p>
+            <div class="box trans-basic">Hover Me</div>
+            <hr>
+
+            <h4>2. Transitioning Specific Properties (<span style="font-family: monospace;">transition-property</span>)</h4>
+            <p>For better performance, you should specify exactly which property to animate. Here, only the <strong>width</strong> animates, while the background color changes instantly.</p>
+            <div class="box trans-specific">Hover Me</div>
+            <hr>
+
+            <h4>3. Adding a Delay (<span style="font-family: monospace;">transition-delay</span>)</h4>
+            <p>The transition waits for 1 second (<span style="font-family: monospace;">transition-delay: 1s;</span>) before starting the 2-second animation.</p>
+            <div class="box trans-delay">Hover (Wait 1s)</div>
+            <hr>
+
+            <h4>4. Multiple Properties with Different Durations</h4>
+            <p>You can comma-separate properties to give them distinct durations. The width takes 2s, while the height takes only 1s.</p>
+            <div class="box trans-multi">Hover Me</div>
+            <hr>
+
+            <h4>5. The Shorthand Property</h4>
+            <p>The <span style="font-family: monospace;">transition</span> shorthand follows the order: <strong>property | duration | timing-function | delay</strong>.</p>
+            <div class="box trans-shorthand">Hover Me</div>
+            <hr>
+
+        </section>
+</body>
+</html>

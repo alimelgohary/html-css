@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/77.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Animation Practice: Up and Down Loading"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="76.html" class="prev-button">Previous</a>
+            <a href="../15- 78-82/78.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Core Logic: Staggering Delays */
+    .loading div:nth-child(2) { animation-delay: 0.2s; }
+    .loading div:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes up-and-down {
+        to {
+            opacity: 0.3;
+            transform: translateY(-20px);
+        }
+    }
+        </pre>
+
+        <section>
+            <h4>Live Preview: Bouncing Dots</h4>
+            <p>The staggered effect is achieved by applying different <code>animation-delay</code> values to each circle. By using <code>alternate</code>, the dots bounce smoothly between their start and end positions.</p>
+            
+            <div class="loading-container">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <hr>
+
+            <h4>Key Concepts:</h4>
+            <ul>
+                <li><strong>nth-child:</strong> Used to target specific circles within the container without adding extra classes to each.</li>
+                <li><strong>Alternate Direction:</strong> This is crucial here; it makes the dot return to the bottom smoothly instead of jumping back instantly.</li>
+                <li><strong>Relative Timing:</strong> Each delay (0.2s, 0.4s) creates the "wave" or "rhythm" effect.</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

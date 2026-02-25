@@ -1,0 +1,55 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #85 - Media Queries And Responsive Designs Practice
+ * Demonstrating the "Mobile First" approach using Flexbox and Media Queries.
+ */
+
+/* 1. General Styles (Global) [00:04:13] */
+/* Styles applied to all screen sizes unless overridden */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap; /* Critical for responsiveness [00:05:24] */
+    justify-content: center;
+    padding: 10px;
+}
+
+.child {
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    /* Default: 100% width for mobile [00:03:55] */
+    flex-basis: 100%; 
+}
+
+/* 2. Small/Tablet Devices (min-width: 768px) [00:05:55] */
+/* Targets devices from 768px and up (Small screens) */
+@media (min-width: 768px) {
+    .child {
+        /* Display two items per row [00:06:11] */
+        flex-basis: calc(50% - 10px); 
+        background-color: #bbdefb;
+    }
+}
+
+/* 3. Medium Devices (min-width: 992px) [00:08:02] */
+/* Targets devices from 992px and up (Medium/Large screens) */
+@media (min-width: 992px) {
+    .child {
+        /* Display four items per row [00:08:11] */
+        flex-basis: calc(25% - 10px);
+        background-color: #4caf50;
+        color: white;
+    }
+}

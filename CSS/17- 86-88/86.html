@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/86.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Creating Your Own CSS Framework"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../16- 83-85/85.html" class="prev-button">Previous</a>
+            <a href="87.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Framework Concept: */
+    - Utility Classes: Small, single-purpose classes (e.g., .m-20) [00:08:36].
+    - Components: Reusable complex structures (e.g., .circle-100) [00:04:47].
+    - Maintenance: Update the framework file to change the whole site [00:09:01].
+    - Avoid "Class Overload": Don't recreate CSS properties as classes; 
+      focus on repeating patterns instead [00:07:08].
+        </pre>
+
+        <section class="visual-container">
+            <h4>Component & Utility Examples</h4>
+            
+            <div class="circle-100 flex-center bg-red m-20">
+                A
+            </div>
+
+            <div class="circle-100 flex-center bg-blue m-20">
+                B
+            </div>
+
+            <hr>
+            <h4>Layout Utility</h4>
+            <div class="product-box p-20">
+                <p>This box uses the <code>.p-20</code> utility for consistent padding [00:08:36].</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Why build your own framework?</h3>
+            <ul>
+                <li><strong>Speed:</strong> Once your utilities are built, you can code complex layouts directly in HTML without touching CSS [00:00:31].</li>
+                <li><strong>Consistency:</strong> Ensures that margins, paddings, and colors are identical across all pages [00:08:36].</li>
+                <li><strong>Future Proofing:</strong> If you decide to change your "Circle" size or "Red" color later, you only change it in one place in your framework file [00:09:01].</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #29 - Opacity
+ * Demonstrating the 'opacity' property.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+.box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    width: 400px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.container-comparison {
+    display: flex;
+    gap: 20px;
+}
+/* Ensure default colors are set for comparison */
+.box-opacity-01 {
+    background-color: black;
+}
+.opacity-full {
+    background-color: #007bff; /* Blue */
+}
+.opacity-zero {
+    background-color: #28a745; /* Green */
+}
+.rgba-box { 
+    color: black; 
+}
+.opacity-box { 
+    background-color: black;
+    color: white; 
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Setting Full Element Opacity (0.3) */
+.box-opacity-01 {
+    opacity: 0.1;
+}
+
+/* 2. Full Opacity (1.0) vs. Full Transparency (0.0) */
+.opacity-full {
+    opacity: 1.0;
+}
+.opacity-zero {
+    opacity: 0.0;
+}
+
+/* 3. Opacity vs. RGBA Transparency */
+.rgba-box {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.opacity-box {
+    opacity: 0.5;
+}

@@ -1,0 +1,43 @@
+html {
+    font-size: 20px;
+}
+.o {
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    border: 3px rgb(219, 41, 41) solid;
+}
+.o p {
+    border: inherit;
+    background-color: #EEE;
+    padding: inherit;
+}
+.tw1, .tw2, .tw3 {
+    font-size: 5vw;
+    text-align: center;
+}
+.tw1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.tw2 {
+    font-family: "Cairo", sans-serif;
+    font-weight: 700;
+}
+.tw3{
+    font-family: "Jomhuria", serif;
+    font-weight: 400;
+}
+.th1 {
+    font-size: 2.5rem;
+    /* font-size: 50px; */
+}
+.th2 {
+    font-size: 2rem;
+    /* font-size: 40px; */
+}
+.th3 {
+    font-size: 1.5rem;
+    /* font-size: 30px; */
+}

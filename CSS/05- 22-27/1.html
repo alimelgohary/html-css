@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Inheritance"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../04- 16-21/6.html" class="prev-button">Previous</a> <a href="2.html" class="next-button">Next</a>   <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+
+        <pre id="pre">
+
+            /* General styling for all examples */
+            .parent-one, .parent-two, .parent-three {
+                margin-bottom: 25px;
+                padding: 10px;
+                background-color: #f7f7f7;
+            }
+
+            /* 1. Default Inheritance */
+            .parent-one {
+                font-size: 30px;
+                color: green;
+            }
+            .parent-one p, .parent-one span {
+                margin: 5px 0;
+            }
+
+            /* 2. Non-Inherited Properties */
+            .parent-two {
+                border: 5px solid red;
+                padding: 10px;
+            }
+            .child-two {
+                margin-top: 10px;
+                padding: 5px;
+                background-color: #ddd;
+                margin-left: 20px;
+            }
+
+            /* 3. Forcing Inheritance with 'inherit' */
+            .parent-three {
+                border: 3px dashed blue;
+                padding: 10px;
+            }
+            .child-three {
+                border: inherit; /* Explicitly forces the child to take the parent's border */
+                margin-top: 10px;
+                padding: 5px;
+                background-color: #ddd;
+            }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Demonstrating Default Inheritance (e.g., color, font-size)</h4>
+            <div class="parent-one">
+                This parent has a large font-size and green color (defined in <span style="font-family: monospace;">.parent-one</span>).
+                <hr>
+                <p>The paragraph inherits the font-size and color.</p>
+                <hr>
+                <span>The span also inherits the font-size and color.</span>
+            </div>
+            <hr>
+
+            <h4>2. Demonstrating Non-Inherited Properties (e.g., border, padding)</h4>
+            <div class="parent-two">
+                This parent has a red border and padding.<br>
+                <div class="child-two">
+                    This child does **not** inherit the border by default, showing that properties affecting the box model must be set explicitly.
+                </div>
+            </div>
+            <hr>
+
+            <h4>3. Forcing Inheritance using the <span style="font-family: monospace;">inherit</span> Keyword</h4>
+            <div class="parent-three">
+                This parent has a dashed blue border.<br>
+                <div class="child-three">
+                    This child explicitly uses <span style="font-family: monospace;">border: inherit;</span> to get its parent's border style.
+                </div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

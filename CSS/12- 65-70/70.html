@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/70.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Transform: transform-origin"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="69.html" class="prev-button">Previous</a>
+            <a href="../13- 71-73/71.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Default Origin (Center Center / 50% 50%) */
+    .box-1:hover {
+        transform-origin: center center; /* default */
+        transform: rotate(45deg);
+    }
+
+    /* 2. Top-Left Origin */
+    .box-2:hover {
+        transform-origin: top left; /* Or: 0% 0% */
+        transform: rotate(45deg);
+    }
+
+    /* 3. Bottom-Right Origin */
+    .box-3:hover {
+        transform-origin: bottom right; /* Or: 100% 100% */
+        transform: rotate(45deg);
+    }
+
+    /* 4. Origin using custom percentages */
+    .box-4:hover {
+        transform-origin: 20% 80%;
+        transform: rotate(45deg);
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Default Origin (`center center`)</h4>
+            <p>By default, transformations like rotation occur around the element's exact center (50% 50%). When you rotate, the box spins around its middle point.</p>
+            <div class="container">
+                <div class="box box-1">
+                    Rotate (Center) [04:07]
+                    <div class="origin-marker" style="top: calc(50% - 5px); left: calc(50% - 5px);"></div>
+                </div>
+            </div>
+            <hr>
+
+            <h4>2. Top-Left Origin (`top left`)</h4>
+            <p>Setting the origin to <code>top left</code> (or 0% 0%) moves the pivot point to the upper-left corner. The box will swing around this fixed corner during rotation.</p>
+            <div class="container">
+                <div class="box box-2">
+                    Rotate (Top-Left) [08:07]
+                    <div class="origin-marker" style="top: -5px; left: -5px;"></div>
+                </div>
+            </div>
+            <hr>
+
+            <h4>3. Bottom-Right Origin (`bottom right`)</h4>
+            <p>Setting the origin to <code>bottom right</code> (or 100% 100%) moves the pivot point to the lower-right corner. All transformations now use this corner as the stationary anchor.</p>
+            <div class="container">
+                <div class="box box-3">
+                    Rotate (Bottom-Right) [06:03]
+                    <div class="origin-marker" style="bottom: -5px; right: -5px;"></div>
+                </div>
+            </div>
+            <hr>
+
+            <h4>4. Custom Origin using Percentages</h4>
+            <p>You are not restricted to keywords. You can specify exact coordinates using percentages or length units. <code>20% 80%</code> places the origin point near the bottom-left, but offset slightly into the box's area.</p>
+            <div class="container">
+                <div class="box box-4">
+                    Rotate (20% 80%) [02:12]
+                    <div class="origin-marker" style="top: calc(80% - 5px); left: calc(20% - 5px);"></div>
+                </div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

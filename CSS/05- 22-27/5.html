@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/5.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Mouse Cursor"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="4.html" class="prev-button">Previous</a>
+            <a href="6.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .pointer-cursor {
+        cursor: pointer;
+    }
+    .help-cursor {
+        cursor: help;
+    }
+    .not-allowed-cursor {
+        cursor: not-allowed;
+    }
+    .wait-cursor {
+        cursor: wait;
+    }
+    .move-cursor {
+        cursor: move;
+    }
+    .grab-cursor {
+        cursor: grab;
+    }
+    .grabbing-cursor {
+        cursor: grabbing;
+    }
+    .ew-resize-cursor {
+        cursor: ew-resize;
+    }
+    .nesw-resize-cursor {
+        cursor: nesw-resize;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. <span style="font-family: monospace;">pointer</span> and <span style="font-family: monospace;">help</span> (Indicating Action)</h4>
+            <p>Use <span style="font-family: monospace;">pointer</span> (the hand icon) for clickable elements, and <span style="font-family: monospace;">help</span> (the question mark) when hovering suggests assistance is available.</p>
+            <div class="pointer-cursor demo-box">Hover for Pointer (Clickable)</div>
+            <hr>
+            <div class="help-cursor demo-box">Hover for Help (?)</div>
+            <hr>
+
+            <h4>2. <span style="font-family: monospace;">not-allowed</span> and <span style="font-family: monospace;">wait</span> (Indicating State)</h4>
+            <p>The <span style="font-family: monospace;">not-allowed</span> cursor indicates a forbidden action, while <span style="font-family: monospace;">wait</span> indicates that the system is busy processing a task.</p>
+            <div class="not-allowed-cursor demo-box">Hover for Not-Allowed</div>
+            <hr>
+            <div class="wait-cursor demo-box">Hover for Wait (Processing)</div>
+            <hr>
+
+            <h4>3. <span style="font-family: monospace;">move</span> and Dragging Cursors</h4>
+            <p>These cursors are used to indicate that an element can be freely moved (<span style="font-family: monospace;">move</span>) or is actively being dragged (<span style="font-family: monospace;">grab</span> and <span style="font-family: monospace;">grabbing</span>).</p>
+            <div class="move-cursor demo-box">Hover for Move</div>
+            <hr>
+            <div class="grab-cursor demo-box">Hover for Grab (Ready to Drag)</div>
+            <hr>
+            <div class="grabbing-cursor demo-box">Hover for Grabbing (Actively Dragging)</div>
+            <hr>
+
+            <h4>4. Resizing Cursors</h4>
+            <p>Used to indicate that an element can be resized along a specific axis or direction.</p>
+            <ul>
+                <li><span style="font-family: monospace;">ew-resize</span>: East-West (Horizontal) resizing.</li>
+                <li><span style="font-family: monospace;">nesw-resize</span>: North-East/South-West (Diagonal) resizing.</li>
+            </ul>
+            <div class="ew-resize-cursor demo-box">Hover for East-West Resize</div>
+            <hr>
+            <div class="nesw-resize-cursor demo-box">Hover for Diagonal Resize (NESW)</div>
+            <hr>
+
+        </section>
+</body>
+</html>

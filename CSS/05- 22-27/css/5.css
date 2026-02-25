@@ -1,0 +1,56 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #26 - Mouse Cursor
+ * Demonstrating the 'cursor' property.
+ */
+
+/* General styling for demonstration structure and readability (will not be in <pre>) */
+.demo-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    user-select: none;
+}
+
+/* --- Example CSS Rules --- */
+
+/* 1. Action and Information */
+.pointer-cursor {
+    cursor: pointer;
+}
+.help-cursor {
+    cursor: help;
+}
+
+/* 2. Restriction and Process */
+.not-allowed-cursor {
+    cursor: not-allowed;
+}
+.wait-cursor {
+    cursor: wait;
+}
+
+/* 3. Movement and Dragging */
+.move-cursor {
+    cursor: move;
+}
+.grab-cursor {
+    cursor: grab;
+}
+.grabbing-cursor {
+    cursor: grabbing;
+}
+
+/* 4. Resizing */
+.ew-resize-cursor {
+    cursor: ew-resize;
+}
+.nesw-resize-cursor {
+    cursor: nesw-resize;
+}

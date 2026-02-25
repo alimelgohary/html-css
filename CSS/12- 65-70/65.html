@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/65.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS 2D Transform: scale()"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../11- 57-63/63.html" class="prev-button">Previous</a>
+            <a href="66.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    .box-1:hover {
+        transform: scale(2);
+    }
+
+    .box-2:hover {
+        transform: scaleX(2);
+    }
+
+    .box-3:hover {
+        transform: scaleY(2);
+    }
+
+    .box-4:hover {
+        transform: scale(2, 0.5);
+    }
+
+    .box-5:hover {
+        transform: scale(-1);
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Uniform Scaling using `scale(N)`</h4>
+            <p>The <code>scale()</code> function scales an element uniformly across both the X and Y axes by a single factor (<code>N</code>). A value of <code>2</code> doubles the size of the element horizontally and vertically upon hover.</p>
+            <div class="container">
+                <div class="box box-1">Hover to Scale (2) [03:12]</div>
+            </div>
+            <hr>
+
+            <h4>2. Horizontal Scaling with `scaleX(N)`</h4>
+            <p>The <code>scaleX()</code> function scales the element only along the horizontal (X) axis. Using <code>scaleX(2)</code> doubles the element's width while keeping its height the same.</p>
+            <div class="container">
+                <div class="box box-2">Hover to ScaleX (2) [02:56]</div>
+            </div>
+            <hr>
+
+            <h4>3. Vertical Scaling with `scaleY(N)`</h4>
+            <p>The <code>scaleY()</code> function scales the element only along the vertical (Y) axis. Using <code>scaleY(2)</code> doubles the element's height while keeping its width the same.</p>
+            <div class="container">
+                <div class="box box-3">Hover to ScaleY (2) [02:52]</div>
+            </div>
+            <hr>
+
+            <h4>4. Non-Uniform Scaling using `scale(Nx, Ny)`</h4>
+            <p>You can specify different scaling factors for the X and Y axes by passing two arguments to the <code>scale()</code> function. This example doubles the width (2) and halves the height (0.5).</p>
+            <div class="container">
+                <div class="box box-4">Hover to Scale (2, 0.5) [03:12]</div>
+            </div>
+            <hr>
+
+            <h4>5. Flipping the Element using Negative Scale</h4>
+            <p>Using a negative value for the scaling factor, such as <code>scale(-1)</code>, flips the element along the specified axis (or both axes if a single value is provided), reversing its direction.</p>
+            <div class="container">
+                <div class="box box-5">Hover to Scale (-1) [04:10]</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

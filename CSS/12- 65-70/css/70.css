@@ -1,0 +1,70 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #70 - Transform - Origin - #70 - CSS Transform: transform-origin
+ * Demonstrating the 'transform-origin' property.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+
+.container {
+    height: 300px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    position: relative;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: #3f51b5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease;
+    border: 2px solid #000;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Red dot to mark the transformation origin point visually */
+.origin-marker {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Default Origin (Center Center / 50% 50%) */
+.box-1:hover {
+    transform-origin: center center; /* default */
+    transform: rotate(45deg);
+}
+
+/* 2. Top-Left Origin */
+.box-2:hover {
+    transform-origin: top left; /* Or: 0% 0% */
+    transform: rotate(45deg);
+}
+
+/* 3. Bottom-Right Origin */
+.box-3:hover {
+    transform-origin: bottom right; /* Or: 100% 100% */
+    transform: rotate(45deg);
+}
+
+/* 4. Origin using custom percentages */
+.box-4:hover {
+    transform-origin: 20% 80%;
+    transform: rotate(45deg);
+}

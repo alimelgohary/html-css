@@ -1,0 +1,83 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #78 - CSS Selectors Reference Part 1
+ * Covering Universal (*), Element, Class, ID, Grouping, Combinators, and Multi-Class.
+ */
+
+/* 1. Universal Selector [00:00:49] */
+/* Targets every single element on the page. Often used for resets. */
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Basic Selectors [00:01:04] */
+h4 { color: #333; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+.test { color: blue; }   /* Class Selector */
+#special { color: red; } /* ID Selector */
+
+/* 3. Grouping Selectors [00:04:29] */
+/* Applies the same styles to multiple different selectors. */
+.box, .circle {
+    border: 2px solid #555;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+/* 4. Element with Class [00:05:05] */
+/* Targets only <div> elements that specifically have the class 'active'. */
+div.active {
+    background-color: #e3f2fd;
+    border: 1px solid #2196f3;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* 5. Multi-Class Chaining (.class.class) - NEW EXAMPLE */
+/* These base classes define specific traits */
+.is-urgent {
+    color: red;
+    font-weight: bold;
+}
+.is-notification {
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+/* This selector targets ONLY elements that have BOTH classes simultaneously.
+   It often overrides styles from the individual classes. */
+.is-notification.is-urgent {
+    background-color: #ffebee; /* Light red background */
+    border-color: #d32f2f;    /* Dark red border */
+    border-left-width: 5px;   /* Thicker left border for emphasis */
+}
+
+
+/* 6. Descendant Combinator (Space) [00:01:42] */
+/* Targets all <span> elements that are INSIDE a container, no matter how deep. */
+.parent-container span {
+    font-weight: bold;
+    color: green;
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+/* 7. Direct Child Combinator (>) [00:06:22] */
+/* Targets ONLY the direct children of the parent. Does NOT target nested grand-children. */
+.parent > .child {
+    background-color: #fff9c4; /* Yellowish background */
+    padding: 10px;
+    border: 1px solid #fbc02d;
+    margin-top: 5px;
+}
+
+/* Visual Helpers */
+.visual-container {
+    padding: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #ddd;
+    line-height: 1.6;
+}
+.child, .grand-child {
+    padding: 5px 10px;
+    border: 1px dashed #999;
+}

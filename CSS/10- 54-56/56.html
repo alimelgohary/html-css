@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/56.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Pointer Events and Caret Color"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+            
+            // Script to toggle the disabled class for demonstration
+            document.getElementById('toggle-pointer').addEventListener('click', function() {
+                var link = document.getElementById('test-link');
+                link.classList.toggle('disabled');
+                
+                var button = document.getElementById('toggle-pointer');
+                if (link.classList.contains('disabled')) {
+                    button.textContent = 'Enable Link';
+                } else {
+                    button.textContent = 'Disable Link';
+                }
+            });
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="55.html" class="prev-button">Previous</a>
+            <a href="57.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Caret Color */
+    .red-caret {
+        caret-color: red; /* 56-1: Changes the input cursor color */
+    }
+    .transparent-caret {
+        caret-color: transparent; /* 56-2: Hides the input cursor */
+    }
+
+    /* 2. Pointer Events */
+    .link-box.disabled {
+        opacity: 0.6;
+        background-color: #6c757d; 
+        pointer-events: none; /* 56-4: Disables all mouse/touch events */
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. <span style="font-family: monospace;">caret-color</span></h4>
+            <p>Changes the color of the text input cursor (the blinking line) to match your design's color scheme.</p>
+            
+            <label for="input1">Normal/Red Caret:</label><br>
+            <input type="text" id="input1" class="input-field red-caret" value="The cursor here is RED">
+            
+            <br><br>
+            
+            <label for="input2">Transparent Caret:</label><br>
+            <input type="text" id="input2" class="input-field transparent-caret" value="The cursor here is invisible">
+            <hr>
+
+            <h4>2. <span style="font-family: monospace;">pointer-events</span></h4>
+            <p>Controls whether an element can be the target of mouse/touch events. Used to make an element completely non-interactive.</p>
+            
+            <a href="https://www.google.com" target="_blank" class="link-box" id="test-link" style="margin-right: 20px;">
+                Clickable Link (Hover works)
+            </a>
+            
+            <button id="toggle-pointer">Disable Link</button>
+            
+            <p style="margin-top: 15px;">When the link is disabled (grayed out), <span style="font-family: monospace;">pointer-events: none;</span> prevents the click event and the hover effect, making it completely non-interactive. This is useful for elements like buttons that should only be clicked once (as shown in the video's Hangman game example).</p>
+            
+        </section>
+    </section>
+</body>
+</html>

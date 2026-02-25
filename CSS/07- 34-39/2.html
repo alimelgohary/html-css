@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Pseudo Elements (Part 1)"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="1.html" class="prev-button">Previous</a>
+            <a href="3.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .first-letter-demo::first-letter {
+        font-size: 60px;
+        color: red;
+        font-weight: bold;
+        float: left;
+        margin-right: 10px;
+    }
+    .first-line-demo::first-line {
+        background-color: yellow;
+        color: green;
+        font-weight: bold;
+    }
+    ::selection {
+        background-color: black;
+        color: yellow;
+    }
+    .custom-selection::selection {
+        background-color: red;
+        color: white;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Styling the First Letter (<span style="font-family: monospace;">::first-letter</span>)</h4>
+            <p>The <span style="font-family: monospace;">::first-letter</span> pseudo-element allows you to style the first character of a block-level element, useful for creating "Drop Cap" effects.</p>
+            <div class="demo-text first-letter-demo">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <hr>
+
+            <h4>2. Styling the First Line (<span style="font-family: monospace;">::first-line</span>)</h4>
+            <p>The <span style="font-family: monospace;">::first-line</span> pseudo-element targets the first line of a block-level element. This style adapts dynamically if the window is resized and the text reflows.</p>
+            <div class="demo-text first-line-demo">
+                This paragraph demonstrates formatting only the first line. If you resize the browser window, the highlighting will automatically adjust to cover whatever text remains on the top line.
+            </div>
+            <hr>
+
+            <h4>3. Styling Text Selection (<span style="font-family: monospace;">::selection</span>)</h4>
+            <p>The <span style="font-family: monospace;">::selection</span> pseudo-element changes the appearance of text when highlighted by the user. (Try selecting the text below).</p>
+            <div class="selection-area">
+                <p>This text uses the global selection style (Black background, Yellow text).</p>
+                <p class="custom-selection">This text uses a custom selection style (Red background, White text).</p>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessibility</title>
+        <link rel="icon" type="image/x-icon" href="https://elzero.org/favicon.ico">
+    <link rel="stylesheet" href="../../CSS/css/common.css">
+    </head>
+    <body>
+        <a href="../../index.html" class="home-button">Home</a>
+        <h1>Book Title</h1>
+        <p>ARIA is Accessible Rich Internet Applications</p>
+        <p>Role = checkbox (Do it when an element is acting like another)</p>
+        <p>Headings should decrease gradually for better accessibility</p>
+        <p>Colors contrast should be checked for better visibility</p>
+        <p><q>Lighthouse</q> for accessibility analysis</p>
+    
+    
+        <form action="">
+        <label for="user">Username</label>
+        <input id="user" type="text" name="user">
+        <!-- Old -->
+        <div>Send</div>
+        <div>Reset</div>
+        <!-- New -->
+        <button>Send</button>
+        <button>Reset</button>
+        </form>
+
+    <h3>Chapter One</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, voluptas placeat necessitatibus nulla velit quae
+      reprehenderit minus fugiat illo tempora eaque, ullam corrupti doloribus perspiciatis unde rem perferendis nesciunt
+      aspernatur!
+    </p>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quisquam sed at reiciendis asperiores officia
+      similique id non, ducimus nobis possimus eligendi itaque magni molestias illum quam beatae. Velit, facilis?
+    </div>
+    <h2>Inside Chapter One</h2>
+    <form action="">
+      <label for="skill1">Skill One</label>
+      <input id="skill1" type="checkbox" checked />
+      <label for="skill2">Skill Two</label>
+      <input id="skill2" type="checkbox" />
+    </form>
+    <hr />
+    <div role="checkbox" aria-checked="true" tabindex="0" aria-labelledby="plan1">Plan One</div>
+    <label id="plan1">Plan One Label</label>
+    <div tabindex="0">Plan Two</div>
+    <div tabindex="0">Plan Three</div>
+
+    </body>
+</html>

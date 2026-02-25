@@ -1,0 +1,70 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #55 - Gradients
+ * Demonstrating the linear-gradient() function.
+ */
+
+/* --- General Styling --- */
+.gradient-box {
+    width: 400px;
+    height: 100px;
+    margin-bottom: 25px;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Example CSS Rules (Included in the <pre> tag) */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Default Direction (to bottom) */
+.ex-default {
+    /* 55-1: Default linear-gradient goes from top to bottom (Red to Blue) */
+    background-image: linear-gradient(red, blue); 
+}
+
+/* 2. Direction Keywords */
+.ex-direction {
+    /* 55-2: Set direction to go from left to right (Green to Yellow) */
+    background-image: linear-gradient(to right, green, yellow);
+}
+
+/* 3. Angles */
+.ex-angle {
+    /* 55-3: Set direction using a 45-degree angle (Black to Purple) */
+    background-image: linear-gradient(45deg, black, purple); 
+}
+
+/* 4. Color Stops */
+.ex-stops {
+    /* 55-4: Red starts at 0% and ends sharply at 20%. Blue starts at 20% and ends sharply at 80%. */
+    background-image: linear-gradient(to right, 
+        #00c3ff 20%, /* Light Blue starts at 0% and ends at 20% */
+        #00c3ff 20%, /* Light Blue starts again at 20% (to create a sharp stop) */
+        #34d989 80%, /* Green starts at 20% and ends at 80% */
+        #34d989 80%  /* Green starts again at 80% */
+    );
+    background-color: #ff9800; /* Fallback/remaining color is Orange */
+}
+
+/* 5. Border Effect (The video's main task) */
+.ex-border {
+    /* 55-5: Use color stops at the same point to create sharp, multi-colored lines 
+       mimicking a border or separated sections. */
+    background-image: linear-gradient(to right,
+        /* Color 1: Blue (0% to 20%) */
+        #007bff 20%, 
+        /* Color 2: Green (20% to 40%) */
+        #28a745 20%, #28a745 40%, 
+        /* Color 3: Yellow (40% to 60%) */
+        #ffc107 40%, #ffc107 60%,
+        /* Color 4: Red (60% to 80%) */
+        #dc3545 60%, #dc3545 80%,
+        /* Color 5: Purple (80% to 100%) */
+        purple 80%
+    );
+}

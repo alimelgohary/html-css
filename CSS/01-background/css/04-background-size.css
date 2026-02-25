@@ -1,0 +1,38 @@
+html {
+    padding-left: 50px;
+}
+
+.div-0 {
+    background-color: blue;
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.div-1 {
+    background-color: blue;
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-2 {
+    background-color: blue;
+    background-image: url('../imgs/image\ -\ Copy.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.div-3 {
+    background-color: blue;
+    background-image: url('../imgs/image\ -\ Copy.png');
+    background-repeat: no-repeat;
+    background-size: 300px 200px;
+}
+
+.div-4 {
+    background-color: blue;
+    background-image: url('../imgs/image\ -\ Copy.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

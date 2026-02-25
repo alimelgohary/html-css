@@ -1,0 +1,56 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #59 - Grid - Parent - Justify Content And Align Content
+ * Demonstrating justify-content and align-content properties.
+ */
+
+/* --- General Styling --- */
+.grid-container {
+    /* Required properties for Grid */
+    display: grid; 
+    
+    /* Set fixed track sizes so the content does NOT fill the container */
+    grid-template-columns: 100px 100px; 
+    grid-template-rows: 80px 80px;
+    
+    /* Fixed container size is essential for these properties to work */
+    width: 400px; 
+    height: 250px; 
+    
+    border: 3px solid #007bff;
+    margin-bottom: 25px;
+    /* Add a small gap to better visualize item spacing */
+    gap: 5px;
+}
+.grid-item {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Example CSS Rules (Included in the <pre> tag) */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Justify Content (Horizontal Alignment) */
+.ex-justify-center {
+    /* 59-1: Centers the entire grid content horizontally */
+    justify-content: center; 
+}
+
+/* 2. Align Content (Vertical Alignment) */
+.ex-align-end {
+    /* 59-2: Aligns the entire grid content to the bottom of the container */
+    align-content: flex-end; 
+}
+
+/* 3. Space Distribution (Both Axes) */
+.ex-space-around {
+    /* 59-3: Distributes space evenly around the grid tracks on the row axis */
+    justify-content: space-around; 
+    /* 59-4: Distributes space evenly between the grid tracks on the column axis */
+    align-content: space-between; 
+}

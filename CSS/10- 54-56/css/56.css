@@ -1,0 +1,55 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #56 - Pointer Events And Caret Color
+ * Demonstrating caret-color and pointer-events.
+ */
+
+/* --- General Styling --- */
+.input-field {
+    border: 2px solid #333;
+    padding: 8px;
+    width: 300px;
+    margin-top: 10px;
+    color: #007bff; 
+    font-size: 16px;
+}
+.link-box {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.link-box:hover {
+    background-color: #0056b3;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Example CSS Rules (Included in the <pre> tag) */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Caret Color */
+.red-caret {
+    /* 56-1: Changes the input cursor color to red */
+    caret-color: red; 
+}
+.transparent-caret {
+    /* 56-2: Hides the input cursor */
+    caret-color: transparent; 
+}
+
+/* 2. Pointer Events */
+.link-box.disabled {
+    opacity: 0.6;
+    background-color: #6c757d; 
+    /* 56-4: Disables all mouse/touch events (no click, no hover) */
+    pointer-events: none; 
+}
+.link-box.disabled:hover {
+    /* Prevents hover effect from overriding the disabled color */
+    background-color: #6c757d; 
+}

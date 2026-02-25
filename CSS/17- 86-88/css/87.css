@@ -1,0 +1,49 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #87 - CSS Global Values
+ * Mastering inherit, initial, unset, revert, and the 'all' property.
+ */
+
+/* --- Parent Styling --- */
+.parent {
+    color: #2196f3;
+    font-size: 24px;
+    border: 2px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 1. Inherit [00:00:54] */
+/* Forces an element to take the value from its parent, even for non-inherited properties. */
+.child-inherit {
+    border: inherit; /* Inherits the border which is NOT inherited by default */
+}
+
+/* 2. Initial [00:01:47] */
+/* Resets the property to its official CSS default value (e.g., color becomes black). */
+.child-initial {
+    color: initial;
+    font-size: initial;
+}
+
+/* 3. Unset [00:04:31] */
+/* Acts like 'inherit' if the property is naturally inherited, and like 'initial' if it's not. */
+.child-unset {
+    color: unset;      /* Inherits color (since color is inherited by default) */
+    border: unset;     /* Resets border (since border is not inherited) */
+}
+
+/* 4. Revert [00:08:27] */
+/* Resets the property to the browser's default style (User Agent Stylesheet). */
+.child-revert {
+    display: revert; 
+    margin: revert;
+}
+
+/* 5. All Property [00:06:53] */
+/* Resets all properties of an element at once. */
+.reset-all {
+    all: unset; /* All properties now follow 'unset' logic [00:07:02] */
+}
+
+/* Visual Helpers */
+.box { margin-top: 10px; padding: 10px; background: #f9f9f9; }

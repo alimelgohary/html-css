@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/61.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Grid: Child Properties (grid-column and grid-row)"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="60.html" class="prev-button">Previous</a>
+            <a href="62.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Spanning 4 columns using explicit lines */
+    .example-1 .item-1 {
+        grid-column-start: 1;
+        grid-column-end: 5; /* Spans 4 columns */
+    }
+
+    /* 2. Shorthand for start line and span count */
+    .example-2 .item-2 {
+        grid-column: 2 / span 4; /* Starts at line 2, takes 4 columns */
+    }
+
+    /* 3. Shorthand for start line and row span */
+    .example-3 .item-3 {
+        grid-row: 1 / span 2; /* Starts at row line 1, takes 2 rows */
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Defining Column Span with Explicit Start and End Lines</h4>
+            <p>This method explicitly defines the starting and ending grid lines for an item. The video shows that setting <code>grid-column-start: 1;</code> and <code>grid-column-end: 5;</code> makes the item occupy 4 columns, as the end line is exclusive in this context.</p>
+            <div class="grid-container example-1">
+                <div class="grid-item item-1">Item 1 (1 to 5) [01:43]</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+            <hr>
+
+            <h4>2. Shorthand for Start Line and Column Span (`/ span N`)</h4>
+            <p>The shorthand property <code>grid-column</code> is used here to define both the starting line and the number of columns the item should span (<code>span 4</code>). Setting <code>grid-column: 2 / span 4;</code> will start the item at line 2 and make it take up the next four column tracks.</p>
+            <div class="grid-container example-2">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item item-2">Item 2 (Start 2 / Span 4) [02:59]</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+            <hr>
+
+            <h4>3. Spanning Multiple Rows with Shorthand (`grid-row`)</h4>
+            <p>Similar to columns, the <code>grid-row</code> shorthand can be used to control vertical placement. Setting <code>grid-row: 1 / span 2;</code> makes the item start at the first row line and expand downward to cover two full rows, demonstrating the power of Grid for complex layouts.</p>
+            <div class="grid-container example-3">
+                <div class="grid-item item-3">Item 3 (Row Span 2) [06:07]</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+                <div class="grid-item">Item 7</div>
+                <div class="grid-item">Item 8</div>
+                <div class="grid-item">Item 9</div>
+                <div class="grid-item">Item 10</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

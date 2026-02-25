@@ -1,0 +1,12 @@
+.div-1 {
+    background-color: yellow;
+    padding: 20px;
+    width: 500px;
+    outline: 10px red solid;
+}
+.div-2 {
+    background-color: yellow;
+    padding: 20px;
+    width: 500px;
+    border: 10px red solid;
+}

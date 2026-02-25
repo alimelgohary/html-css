@@ -1,0 +1,49 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #88 - The End And How To Master HTML And CSS
+ * Final summary styles and resource highlights.
+ */
+
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #2196f3;
+    --accent-color: #ff9800;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+}
+
+.roadmap-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.step {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--primary-color);
+    background-color: #f1f8e9;
+}
+
+.step h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.resource-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resource-link:hover {
+    background-color: #1976d2;
+}

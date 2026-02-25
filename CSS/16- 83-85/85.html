@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/85.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Responsive Design: Practice"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="84.html" class="prev-button">Previous</a>
+            <a href="../17- 86-88/86.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Practice Summary: */
+    - Mobile First: Base styles are for mobile, then scale up [00:00:33].
+    - Flex-wrap: wrap: Essential for items to drop to new lines [00:05:24].
+    - Flex-basis: Controls the "ideal" width of the child elements [00:06:11].
+    - Viewport Meta Tag: Essential for mobile scaling (added in head) [00:02:14].
+        </pre>
+
+        <section class="visual-container">
+            <h4>Responsive Grid Demo</h4>
+            <p>Resize the window to see the transition from 1 column (Mobile) to 2 columns (Tablet) to 4 columns (Desktop) [00:01:59].</p>
+            
+            <div class="parent">
+                <div class="child">Product 1</div>
+                <div class="child">Product 2</div>
+                <div class="child">Product 3</div>
+                <div class="child">Product 4</div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Key Takeaways from the Lab:</h3>
+            <ul>
+                <li><strong>Mobile First:</strong> It's often easier to define the mobile layout as the default (100% width) and then use <code>min-width</code> queries to split the screen into columns as space allows [00:00:41].</li>
+                <li><strong>Flexbox Power:</strong> Combining <code>display: flex</code> with <code>flex-wrap: wrap</code> makes building these grids very straightforward compared to older methods [00:05:24].</li>
+                <li><strong>Calc() Function:</strong> Using <code>calc()</code> helps account for margins so items fit perfectly in a row (e.g., <code>calc(50% - 10px)</code>) [00:06:50].</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

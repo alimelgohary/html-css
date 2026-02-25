@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/57.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Grid: grid-template-columns"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="56.html" class="prev-button">Previous</a>
+            <a href="58.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* Container must have display: grid; */
+
+    /* 1. Pixels (Fixed Width) */
+    .ex-px {
+        grid-template-columns: 100px 200px 100px; /* 57-1: Three fixed columns */
+    }
+
+    /* 2. Percentages and auto */
+    .ex-percent-auto {
+        grid-template-columns: 25% 50% auto; /* 57-2: Auto takes remaining space */
+    }
+
+    /* 3. Fractions (fr) */
+    .ex-fraction {
+        grid-template-columns: 3fr 1fr 1fr; /* 57-3: Space split into 5 parts (3/5, 1/5, 1/5) */
+    }
+
+    /* 4. Repeat Function */
+    .ex-repeat {
+        grid-template-columns: repeat(4, 1fr); /* 57-4: Creates 4 equal 1fr columns */
+    }
+
+    /* 5. Mixed Units */
+    .ex-mixed {
+        grid-template-columns: 100px 2fr auto 1fr; /* 57-5: Mix of fixed, flexible, and content-based sizing */
+    }
+            
+        </pre>
+        <section>
+            
+            <h3>CSS Grid: <span style="font-family: monospace;">grid-template-columns</span></h3>
+            <p>This property defines the number and size of columns in the grid layout. Each value listed defines a new column track.</p>
+            <hr>
+
+            <h4>1. Fixed Widths (<span style="font-family: monospace;">px</span>)</h4>
+            <div class="grid-container row-height ex-px">
+                <div class="grid-item">100px</div>
+                <div class="grid-item">200px</div>
+                <div class="grid-item">100px</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <hr>
+
+            <h4>2. Percentages (<span style="font-family: monospace;">%</span>) and <span style="font-family: monospace;">auto</span></h4>
+            <p><span style="font-family: monospace;">auto</span> takes up any available space *after* fixed units and percentages are accounted for.</p>
+            <div class="grid-container row-height ex-percent-auto">
+                <div class="grid-item">25%</div>
+                <div class="grid-item">50%</div>
+                <div class="grid-item">Auto</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <hr>
+
+            <h4>3. Fractions (<span style="font-family: monospace;">fr</span>)</h4>
+            <p>The **fractional unit** (`fr`) divides the **remaining free space** of the grid container into parts. In this example, the space is divided into 5 parts (3+1+1).</p>
+            <div class="grid-container row-height ex-fraction">
+                <div class="grid-item">3fr</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <hr>
+
+            <h4>4. <span style="font-family: monospace;">repeat()</span> Function</h4>
+            <p>A shorthand for repeating the same column definition multiple times.</p>
+            <div class="grid-container row-height ex-repeat">
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+            </div>
+            <hr>
+
+            <h4>5. Mixed Units</h4>
+            <p>Grids allow mixing all units, which is powerful for complex layouts.</p>
+            <div class="grid-container row-height ex-mixed">
+                <div class="grid-item">100px</div>
+                <div class="grid-item">2fr</div>
+                <div class="grid-item">Auto</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+            </div>
+            
+        </section>
+</body>
+</html>

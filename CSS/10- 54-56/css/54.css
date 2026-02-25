@@ -1,0 +1,53 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #54 - Filters
+ * Demonstrating the filter property.
+ */
+
+/* --- General Styling --- */
+.filter-img {
+    /* Note: Placeholder image is assumed. Background color is a fallback. */
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    /* Add a transition for smooth hover effects */
+    transition: filter 0.5s ease-in-out; 
+}
+.img-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Example CSS Rules (Included in the <pre> tag) */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Grayscale Filter */
+.grayscale-example .filter-img {
+    /* 54-1: Apply 100% grayscale (full black and white) */
+    filter: grayscale(100%);
+}
+.grayscale-example .filter-img:hover {
+    /* 54-2: Revert to color (0% grayscale) on hover */
+    filter: grayscale(0%); 
+}
+
+/* 2. Blur Filter */
+.blur-example .filter-img {
+    /* 54-3: Apply a 4px blur */
+    filter: blur(4px);
+}
+.blur-example .filter-img:hover {
+    /* 54-4: Remove the blur on hover */
+    filter: blur(0px); 
+}
+
+/* 3. Invert Filter */
+.invert-example .filter-img {
+    /* 54-5: Fully invert the colors (100%) */
+    filter: invert(100%);
+}
+.invert-example .filter-img:hover {
+    /* 54-6: Invert by 50% on hover */
+    filter: invert(45%); 
+}

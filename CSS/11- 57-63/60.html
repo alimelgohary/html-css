@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/60.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Grid: grid-template-areas"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    <section class="intro">
+        <a href="../../index.html" class="home-button">Go Home</a><br>
+        <a href="59.html" class="prev-button">Previous</a>
+        <a href="61.html" class="next-button">Next</a><br>
+        
+        <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        
+    </section>
+        
+    <pre id="pre">
+    .page {
+        background-color: #EEE;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 50px auto 50px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-areas: 
+        "logo . links links links links links links links links"
+        "cont cont cont cont cont cont cont . side side"
+        "foot foot foot foot foot foot foot foot foot foot";
+        /* gap: 10px 10px */
+    }
+
+    nav {
+        grid-area: links;
+        background-color: blue;
+    }
+
+    footer {
+        grid-area: foot;
+        background-color: black;
+        color: white;
+    }
+
+    .logo {
+        grid-area: logo;
+        background-color: red;
+    }
+
+    main {
+        grid-area: cont;
+        background-color: green;
+    }
+
+    aside {
+        grid-area: side;
+        background-color: yellow;
+    }
+    </pre>
+        
+    <div class="page">
+        <h2 class="logo">Ali Algohary</h2>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Register</li>
+                <li>Login</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        
+        <main>
+            Content
+        </main>
+
+        <aside>
+            Sidebar
+        </aside>
+
+        <footer>
+            All rights reserved
+        </footer>
+    </div>
+</body>
+</html>

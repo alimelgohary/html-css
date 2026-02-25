@@ -1,0 +1,51 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #35 - Pseudo Elements
+ * Demonstrating ::first-letter, ::first-line, and ::selection.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.demo-text {
+    width: 300px; /* Constrained width to demonstrate first-line wrapping */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+.selection-area {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Styling the First Letter (Drop Cap) */
+.first-letter-demo::first-letter {
+    font-size: 60px;
+    color: red;
+    font-weight: bold;
+    float: left; /* Allows text to wrap around the letter */
+    margin-right: 10px;
+}
+
+/* 2. Styling the First Line */
+.first-line-demo::first-line {
+    background-color: yellow;
+    color: green;
+    font-weight: bold;
+}
+
+/* 3. Styling Text Selection (Global) */
+/* Applies to any text selected on the page */
+::selection {
+    background-color: black;
+    color: yellow;
+}
+
+/* 4. Styling Text Selection (Specific Element) */
+.custom-selection::selection {
+    background-color: red;
+    color: white;
+}

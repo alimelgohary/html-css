@@ -1,0 +1,89 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #51 - Flex Box Child
+ * Demonstrating flex-basis, flex shorthand, and inline-flex.
+ */
+
+/* --- General Styling --- */
+.flex-container {
+    background-color: #f0ffdf;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 3px solid #007bff;
+    /* Common setup for all examples */
+    display: flex; 
+    height: 100px;
+}
+.flex-item {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 1. Flex Basis Examples */
+/* -------------------------------------------------------------------------- */
+.ex-basis {
+    width: 600px; /* Fixed width to show remaining space */
+}
+.ex-basis .item-51-1 {
+    /* 51-1: flex-basis acts like initial width (100px) before growth/shrink */
+    flex-basis: 100px; 
+    flex-grow: 1; 
+}
+.ex-basis .item-51-2 {
+    /* 51-2: flex-basis takes 40% of the container space */
+    flex-basis: 40%; 
+    flex-grow: 0; /* No growth */
+    background-color: #28a745; /* Green */
+}
+.ex-basis .item-51-3 {
+    /* 51-3: flex-basis: auto uses the content's size or the 'width' property (if set) */
+    flex-basis: auto; 
+    width: 60px; /* This width is used since basis is auto */
+    flex-grow: 1; 
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2. Flex Shorthand Examples (flex: grow shrink basis) */
+/* -------------------------------------------------------------------------- */
+.ex-shorthand {
+    width: 500px; 
+}
+.ex-shorthand .item-51-4 {
+    /* 51-4: flex: 1; (Shorthand for 1 1 0%) - Grows, Shrinks, Initial size 0 */
+    flex: 1; 
+}
+.ex-shorthand .item-51-5 {
+    /* 51-5: flex: 2 1 auto; - Grows 2x others, Shrinks 1x, Initial size based on content/width */
+    flex: 2 1 auto; 
+    width: 80px;
+    background-color: #dc3545; /* Red */
+}
+.ex-shorthand .item-51-6 {
+    /* 51-6: flex: none; (Shorthand for 0 0 auto) - Fixed size, no growth or shrink */
+    flex: none; 
+    width: 150px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. Inline-Flex Example */
+/* -------------------------------------------------------------------------- */
+.ex-inline-flex {
+    /* 51-7: Inline-flex container acts like an inline element itself, 
+       but its children still behave like flex items */
+    display: inline-flex; 
+    width: auto; /* Shrinks to content size */
+    border-color: #17a2b8; /* Cyan */
+    margin-right: 20px;
+}
+.ex-inline-flex div {
+    /* Item styling simplified for space */
+    width: 60px; 
+    height: 40px;
+    flex-grow: 0;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/75.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Animation: Iteration Count, Timing & Spinner"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="74.html" class="prev-button">Previous</a>
+            <a href="76.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* 1. Iteration Count: How many times it plays */
+    .box {
+        animation-iteration-count: infinite; /* or a number like 3 */
+    }
+
+    /* 2. Timing Function: The pace of the animation */
+    .box {
+        animation-timing-function: linear; /* uniform speed */
+    }
+
+    /* 3. Practical Loading Spinner */
+    .spinner {
+        border: 5px solid #eee;
+        border-top-color: #2196f3;
+        border-radius: 50%;
+        animation: spinning 1s linear infinite;
+    }
+    @keyframes spinning {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+        </pre>
+
+        <section>
+            <h4>1. Animation Iteration Count</h4>
+            <p>The <code>animation-iteration-count</code> property determines how many times the animation cycle repeats. Use <code>infinite</code> for continuous loops [00:02:53].</p>
+            <div class="container">
+                <div class="box box-once">Once</div>
+                <div class="box box-infinite">Infinite</div>
+            </div>
+            <hr>
+
+            <h4>2. Animation Timing Function</h4>
+            <p>This controls the pace of the animation. <code>linear</code> maintains a constant speed, while <code>ease</code> (the default) starts slow, speeds up, and ends slow [00:03:26].</p>
+            <div class="container">
+                <div class="box box-linear">Linear</div>
+                <div class="box box-ease">Ease</div>
+            </div>
+            <hr>
+
+            <h4>3. Practical Application: Loading Spinner</h4>
+            <p>By combining a circular border, a single colored edge, and an infinite linear rotation, you can create a professional loading spinner [00:01:02].</p>
+            <div class="container">
+                <div class="spinner"></div>
+            </div>
+            <hr>
+
+        </section>
+    </section>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/49.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Flexbox Align Content"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="48.html" class="prev-button">Previous</a>
+            <a href="50.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* Container setup: display: flex, height: 250px, flex-wrap: wrap; */
+    /* Item setup: width: 30%, height: 50px */
+
+    /* 1. Default Behavior */
+    .ex-stretch {
+        align-content: stretch;
+    }
+
+    /* 2. Content at the Top */
+    .ex-start {
+        align-content: flex-start;
+    }
+
+    /* 3. Content at the Bottom */
+    .ex-end {
+        align-content: flex-end;
+    }
+
+    /* 4. Content Centered */
+    .ex-center {
+        align-content: center;
+    }
+
+    /* 5. Space Between Rows */
+    .ex-between {
+        align-content: space-between; 
+    }
+
+    /* 6. Space Around Rows */
+    .ex-around {
+        align-content: space-around;
+    }
+
+    /* 7. Space Evenly */
+    .ex-evenly {
+        align-content: space-evenly;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Align Content: <span style="font-family: monospace;">stretch</span> (Default)</h4>
+            <p>Rows of flex items stretch to take up the remaining space along the cross axis. This is the default when <span style="font-family: monospace;">align-items</span> is also <span style="font-family: monospace;">stretch</span>. </p>
+            <div class="flex-container ex-stretch">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <hr>
+
+            <h4>2. Align Content: <span style="font-family: monospace;">flex-start</span></h4>
+            <p>Packs the entire content (all rows) toward the start of the cross axis (top).</p>
+            <div class="flex-container ex-start">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <hr>
+
+            <h4>3. Align Content: <span style="font-family: monospace;">flex-end</span></h4>
+            <p>Packs the entire content (all rows) toward the end of the cross axis (bottom).</p>
+            <div class="flex-container ex-end">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <hr>
+
+            <h4>4. Align Content: <span style="font-family: monospace;">center</span></h4>
+            <p>Centers the entire content (all rows) along the cross axis.</p>
+            <div class="flex-container ex-center">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <hr>
+
+            <h4>5. Align Content: <span style="font-family: monospace;">space-between</span></h4>
+            <p>Distributes the rows evenly in the container. The first row is at the top, and the last row is at the bottom.</p>
+            <div class="flex-container ex-between">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <hr>
+
+            <h4>6. Align Content: <span style="font-family: monospace;">space-around</span></h4>
+            <p>Distributes the rows evenly with equal space around each row.</p>
+            <div class="flex-container ex-around">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <hr>
+
+            <h4>7. Align Content: <span style="font-family: monospace;">space-evenly</span></h4>
+            <p>Distributes the rows such that the vertical space between all rows, and the space at the top and bottom of the content, is exactly the same.</p>
+            <div class="flex-container ex-evenly">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+
+        </section>
+</body>
+</html>

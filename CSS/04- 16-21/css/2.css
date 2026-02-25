@@ -1,0 +1,14 @@
+.one, .two, .three {
+    font-size: 50px;
+    margin-left: 50px;
+    color: darkmagenta;
+}
+.one {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.two {
+    text-shadow: 20px 35px 2px rgba(0, 0, 0, 0.6);
+}
+.three {
+    text-shadow: -20px -35px 2px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,57 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #32 - Lists Styling
+ * Demonstrating the 'list-style' properties.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.list-example {
+    width: 450px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+.list-example li {
+    margin-bottom: 5px;
+}
+/* For position demo to show wrapping */
+.list-outside li, .list-inside li {
+    width: 250px;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. List-Style-Type (Unordered) */
+.list-disc {
+    list-style-type: disc;
+}
+.list-square {
+    list-style-type: square;
+}
+
+/* 2. List-Style-Type (Ordered) */
+.list-roman {
+    list-style-type: lower-roman;
+}
+.list-alpha {
+    list-style-type: upper-alpha;
+}
+
+/* 3. List-Style-Position */
+.list-outside {
+    list-style-position: outside;
+}
+.list-inside {
+    list-style-position: inside;
+}
+.list-inside li, .list-outside li {
+    background-color: aqua;
+}
+
+/* 4. List Reset (Best Practice) */
+.list-reset {
+    list-style: none;
+    padding-left: 0;
+}

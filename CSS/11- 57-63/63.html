@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/63.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Grid: minmax() and auto-fill"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="62.html" class="prev-button">Previous</a>
+            <a href="../12- 65-70/65.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Using minmax() to define a minimum and maximum size for the first track */
+    .example-1 {
+        grid-template-columns: minmax(200px, 400px) 1fr 1fr 1fr;
+    }
+
+    /* 2. Using auto-fill with a fixed column size */
+    .example-2 {
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-auto-rows: 100px; /* Ensure rows appear correctly */
+    }
+
+    /* 3. Combining auto-fill and minmax() for responsive columns */
+    .example-3 {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. The `minmax()` Function</h4>
+            <p>The <code>minmax(min, max)</code> function defines a size range greater than or equal to <code>min</code> and less than or equal to <code>max</code>. This example applies it to the first column: it must be at least 200px wide, and can expand up to 400px, with the rest of the space distributed equally among the remaining <code>1fr</code> tracks.</p>
+            <div class="grid-container example-1">
+                <div class="grid-item">Min 200px, Max 400px [02:25]</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">1fr</div>
+                <div class="grid-item">1fr</div>
+            </div>
+            <hr>
+
+            <h4>2. The `auto-fill` Keyword in `repeat()`</h4>
+            <p>Using <code>auto-fill</code> inside the <code>repeat()</code> function tells the grid to automatically calculate and fill the container with as many columns as possible, each having the specified size (200px in this case). This helps make the layout dynamic without media queries, but the column sizes are fixed.</p>
+            <div class="grid-container example-2">
+                <div class="grid-item">Item 1 (200px)</div>
+                <div class="grid-item">Item 2 (200px)</div>
+                <div class="grid-item">Item 3 (200px)</div>
+                <div class="grid-item">Item 4 (200px)</div>
+                <div class="grid-item">Item 5 (200px)</div>
+                <div class="grid-item">Item 6 (200px)</div>
+                <div class="grid-item">Item 7 (200px) [04:41]</div>
+            </div>
+            <hr>
+
+            <h4>3. Responsive Columns with `minmax(..., 1fr)` and `auto-fill`</h4>
+            <p>This is the ultimate responsive technique: <code>repeat(auto-fill, minmax(200px, 1fr))</code>. It creates as many columns as can fit, ensuring each is *at least* 200px wide. The <code>1fr</code> as the maximum value ensures that any leftover space is shared equally among all columns, allowing them to stretch proportionally to fill the container perfectly. This combination removes the need for traditional media queries for column count.</p>
+            <div class="grid-container example-3">
+                <div class="grid-item">Item 1 (Min 200px, Max 1fr) [05:58]</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+        </section>
+</body>
+</html>

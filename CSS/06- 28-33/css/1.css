@@ -1,0 +1,53 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #28 - Mastering The CSS Calculation
+ * Demonstrating the 'calc()' function for responsive grid layouts.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.container-perc, .container-calc, .container-calc-five {
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 3px solid blue;
+    background-color: #f0f0ff;
+    width: 600px;
+}
+.item {
+    float: left;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    height: 60px;
+}
+
+/* Clearfix for containers (essential for floated layouts) */
+.container-perc::after, .container-calc::after, .container-calc-five::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Pure Percentage Distribution (4 items, 5 margins @ 1%) */
+.item-perc {
+    width: 23.75%; /* (100% - 5% total margin) / 4 items = 23.75% */
+    margin-right: 1%;
+}
+
+/* 2. Calculating 4-Item Width with Fixed Pixel Margins (5 margins @ 10px = 50px) */
+.item-calc {
+    width: calc((100% - 50px) / 4);
+    margin-right: 10px;
+}
+
+/* 3. Calculating 5-Item Width with Fixed Pixel Margins (6 margins @ 10px = 60px) */
+.item-calc-five {
+    width: calc((100% - 60px) / 5);
+    margin-right: 10px;
+}

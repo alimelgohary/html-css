@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/83.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Media Queries & Responsive Intro"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../15- 78-82/82.html" class="prev-button">Previous</a>
+            <a href="84.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* 1. Basic Syntax */
+    @media [Media Type] and ([Condition]) {
+        /* CSS rules here */
+    }
+
+    /* 2. Print Only */
+    @media print { .no-print { display: none; } }
+
+    /* 3. Responsive Breakpoints */
+    @media (max-width: 600px) { ... } /* Mobile [00:05:09] */
+    @media (min-width: 1000px) { ... } /* Desktop [00:06:44] */
+        </pre>
+
+        <section>
+            <h4>Current Viewport Status: <span class="status"></span></h4>
+            <p>Resize your browser window (or use DevTools Device Mode) to see the box change color and width based on the screen size [00:01:59].</p>
+            
+            <div class="box">Responsive Box</div>
+            
+            <hr>
+            <h4>Try to Print!</h4>
+            <p>Press <code>Ctrl + P</code> (or Cmd + P) to see the print preview. The blue box above will disappear in the preview because of the <code>@media print</code> rule [00:04:25].</p>
+        </section>
+
+        <section>
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Media Type:</strong> Common types are <code>screen</code> (digital displays) and <code>print</code> (paper) [00:03:07].</li>
+                <li><strong>Breakpoints:</strong> Specific pixel widths where the design "breaks" or changes to accommodate a different screen size [00:01:34].</li>
+                <li><strong>min-width:</strong> Apply styles starting from this width and UP [00:06:44].</li>
+                <li><strong>max-width:</strong> Apply styles UP TO this width [00:05:09].</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

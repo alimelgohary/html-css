@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/4.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Outline</title>
+</head>
+<body>
+    <a href="../../index.html" class="home-button">Go Home</a><br>
+    <a href="3.html" class="prev-button">Previous</a>
+    <a href="../03- 11-15/1.html" class="next-button">Next</a><br>
+    
+    <section>
+        <h1>02-Spacing & Borders/Outline</h1>
+        <h4>When adding a border, border&element is considered the new element</h4>
+        <h4>In Outline, element stays in place while outline goes outside of it</h4>
+        <h4>Outline can't change each direction color|style|weight (it can be only one value)</h4>
+        <h4>Outline is not widely used</h4>
+        <pre>
+            
+            .div-1 {
+                background-color: yellow;
+                padding: 20px;
+                width: 500px;
+                outline: 10px red solid;
+            }
+            .div-2 {
+                background-color: yellow;
+                padding: 20px;
+                width: 500px;
+                border: 10px red solid;
+            }
+
+        </pre>
+        <div class="div-1"><b>div1 with outline content start here </b>
+            <p>Paragraph: This is Text</p>
+            <p>Paragraph: This is Text</p>
+            <p>Paragraph: This is Text</p>
+        </div>
+
+        <br><hr><br>
+        <div class="div-2"><b>div2 with border start here </b>
+            <p>Paragraph: This is Text</p>
+            <p>Paragraph: This is Text</p>
+            <p>Paragraph: This is Text</p>
+        </div>
+    </section>
+</body>
+</html>

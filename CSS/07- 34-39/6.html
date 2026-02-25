@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/6.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Border Radius"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="5.html" class="prev-button">Previous</a>
+            <a href="../08- 40-45/1.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .radius-single {
+        border-radius: 15px; 
+    }
+    .radius-four-values {
+        border-radius: 5px 20px 40px 60px;
+    }
+    .radius-individual {
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    .radius-circle {
+        border-radius: 50%;
+    }
+    .radius-elliptical {
+        border-radius: 50px / 10px;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Single Value (<span style="font-family: monospace;">border-radius: 15px;</span>)</h4>
+            <p>A single value applies the same radius to all four corners (Top-Left, Top-Right, Bottom-Right, Bottom-Left).</p>
+            <div class="radius-demo radius-single">
+                15px Radius
+            </div>
+            <hr>
+
+            <h4>2. Four Values (<span style="font-family: monospace;">border-radius: TL TR BR BL;</span>)</h4>
+            <p>Values are set in a clockwise order, starting from the **Top-Left** corner: Top-Left, Top-Right, Bottom-Right, Bottom-Left.</p>
+            <div class="radius-demo radius-four-values">
+                5px 20px 40px 60px
+            </div>
+            <hr>
+
+            <h4>3. Individual Corner Properties</h4>
+            <p>For more control, you can use longhand properties like <span style="font-family: monospace;">border-top-left-radius</span> and <span style="font-family: monospace;">border-bottom-right-radius</span>.</p>
+            <div class="radius-demo radius-individual">
+                Individual Radius
+            </div>
+            <hr>
+
+            <h4>4. Creating a Perfect Circle or Oval</h4>
+            <p>Applying <span style="font-family: monospace;">border-radius: 50%;</span> to a square element creates a perfect circle. Applying it to a rectangular element creates an oval (or ellipse).</p>
+            <div class="circle-demo radius-circle">
+                Circle (50%)
+            </div>
+            <hr>
+
+            <h4>5. Elliptical Corners (Horizontal / Vertical)</h4>
+            <p>You can create elliptical or oval-like corners by separating two sets of values with a slash (<span style="font-family: monospace;">/</span>). The values before the slash define the horizontal radius, and the values after define the vertical radius.</p>
+            <p>Each corner can have 2 values <span style="font-family: monospace;">border-top-left-radius: 50px 20px; </span></p>
+            <div class="radius-demo radius-elliptical">
+                50px / 10px
+            </div>
+            <div class="radius-demo radius-elliptical2">
+                top right: 50px 20px
+            </div>
+
+        </section>
+</body>
+</html>

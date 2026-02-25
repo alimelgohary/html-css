@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Border</title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../02-Spacing & Borders/4.html" class="prev-button">Previous</a>
+            <a href="2.html" class="next-button">Next</a><br>
+            
+            <br><span>11-15/</span><h2 style="display: inline;">Block vs Inline</h2>
+            <h4>Block respects width/height/padding/margins, inline repsects right-left only</h4>
+            <h4>Block takes full width if no width specified</h4>
+            <h4>Block adds a line break, inline: no line break</h4>
+            <h4>Inline-Block allows elements side by side with (no line break) with respect to padding/margin</h4>
+        </section>
+        <pre>
+            div {
+                background-color: gray;
+                width: 200px;
+                height: 100px;
+                padding: 20px;
+                margin: 10px;
+            }
+            .inline-span {
+                background-color: greenyellow;
+                padding: 20px;
+                margin: 20px;
+            }
+            .inline-block-span {
+                background-color: greenyellow;
+                padding: 20px;
+                margin: 20px;
+                display: inline-block;
+            }
+        </pre>
+        <div>Div => Block with width/height/padding/margin</div>
+        <div>Div => Block with width/height/padding/margin</div>
+        <div>Div => Block with width/height/padding/margin</div>
+<br>    <hr><br>
+        <span class="inline-span">Span => Inline</span>
+        <span class="inline-span">Span => Inline</span>
+        <span class="inline-span">Span => Inline</span>
+        <div>
+            <b>
+                Hello div,
+                this is <mark>broken</mark>
+                because inline elements doesn't respect bottom/top padding/margin
+            </b> 
+        </div>
+
+<br>    <hr><br>
+        <span class="inline-block-span">Span => Inline block</span>
+        <span class="inline-block-span">Span => Inline block</span>
+        <span class="inline-block-span">Span => Inline block</span>
+        <span class="inline-block-span">Span => Inline block</span>
+        <span class="inline-block-span">Span => Inline block</span>
+        <span class="inline-block-span">Span => Inline block</span>
+        <div>
+            <b>
+                Hello div,
+                this is <mark>not broken</mark> 
+                because inline-block elements respect bottom/top padding/margin
+            </b> 
+        </div>
+    </section>
+
+
+
+
+
+</body>
+</html>

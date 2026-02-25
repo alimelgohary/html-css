@@ -1,0 +1,38 @@
+div {
+    background-color: red;
+    padding: 10px;
+    margin: 10px;
+    font-size: 50px;
+    display: inline-block;
+}
+.div1 {
+    width: 400px;
+}
+
+.div2 {
+    min-width: 500px;
+}
+
+.div3, .div33 {
+    max-width: 400px;
+}
+
+.div4 {
+    width: fit-content;
+}
+
+.div5 {
+    height: 400px;
+}
+
+.div6 {
+    min-height: 400px;
+}
+
+.div7 {
+    max-height: 200px;
+}
+
+.div8 {
+    height: fit-content;
+}

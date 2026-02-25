@@ -1,0 +1,45 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #44 - The Margin Collapse
+ * Demonstrating the behavior of vertical margin collapsing.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.container {
+    width: 350px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px dashed #999;
+}
+.element {
+    width: 100%;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Adjacent Siblings Collapse (Largest Margin Wins) */
+/* Expected gap: 10px + 25px = 35px. Actual gap: 25px (the largest margin) */
+.margin-a {
+    margin-bottom: 10px;
+}
+
+.margin-b {
+    margin-top: 25px;
+}
+
+/* 2. Preventing Collapse using a Border */
+.separator-parent {
+    border-top: 1px solid black; /* Border prevents margin-top of child from collapsing with parent's margin-top */
+}
+.child-margin-top {
+    margin-top: 20px; /* This margin will NOT collapse with the parent */
+}

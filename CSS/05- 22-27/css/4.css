@@ -1,0 +1,45 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #25 - Typography - Font Style And Variant And Weight
+ * Demonstrating font-style, font-variant, and font-weight.
+ */
+
+/* General styling for demonstration structure and readability */
+.style-italic, .style-normal, .variant-small-caps, .weight-bold, .weight-normal, .weight-900, .weight-200 {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    width: 600px;
+    font-family: Arial, sans-serif; /* A font with wide weight support for demos */
+}
+
+/* --- Example CSS Rules --- */
+
+/* 1. Font Style */
+.style-italic {
+    font-style: italic;
+}
+.style-normal {
+    font-style: normal;
+}
+
+/* 2. Font Variant */
+.variant-small-caps {
+    font-variant: small-caps;
+}
+
+/* 3. Font Weight Keywords */
+.weight-bold {
+    font-weight: bold;
+}
+.weight-normal {
+    font-weight: normal;
+}
+
+/* 4. Font Weight Numeric Values */
+.weight-900 {
+    font-weight: 900;
+}
+.weight-200 {
+    font-weight: 200;
+}

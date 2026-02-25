@@ -1,0 +1,44 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #68 - 2D Transform - Skew - #68 - CSS 2D Transform: skew()
+ * Demonstrating the 'skew()' property.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+
+.container {
+    height: 250px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+    position: relative;
+    border: 2px dashed #ccc;
+}
+.box {
+    width: 150px;
+    height: 80px;
+    background-color: #ff9800;
+    color: white;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-out;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+.box-1:hover {
+    transform: skewX(20deg);
+}
+
+.box-2:hover {
+    transform: skewY(15deg);
+}
+
+.box-3:hover {
+    transform: skew(10deg, -5deg);
+}

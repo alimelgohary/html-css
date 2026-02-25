@@ -1,0 +1,153 @@
+.green, .blue, .red, .black, .spacing {
+    width: 100px;
+    height: 100px;
+}
+.green, .blue, .red, .black {
+    position: absolute;
+} 
+.blue {
+    background-color: #03a9f4;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+.green {
+    background-color: #009688;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+}
+
+.red {
+    top: 40px;
+    left: 40px;
+    z-index: 3;
+    background-color: #f44336;
+}
+.black {
+    background-color: #333333;
+    top: 30px;
+    left: 20px;
+}
+
+/* ================================ */
+
+.parent {
+    width: 400px;
+    padding: 20px;
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EEE;
+    margin: auto;
+    border: 2px solid;
+    border-color: #f44336 #2196f3;
+    position: relative;
+}
+.top-left, .top-right, .bottom-left, .bottom-right {
+    background-color: #2196f3;
+    width: 30px;
+    line-height: normal;
+    height: 20px;
+    text-align: center;
+    color: #f6f5fc;
+    position: absolute;
+}
+.top-left, .top-right, .bottom-right, .bottom-left {
+    border: solid
+}
+.top-left, .top-right, .bottom-right, .bottom-left {
+    border-color: #f44336;
+}
+.top-left {
+    border-width: 0px 2px 0px 0px;
+    top: -10px;
+    left: -15px;
+}
+.top-right {
+    border-width: 0px 0px 0px 2px;
+    top: -10px;
+    right: -15px
+}
+.bottom-right {
+    border-width: 0px 0px 0px 2px;
+    bottom: -10px;
+    right: -15px
+}
+.bottom-left {
+    border-width: 0px 2px 0px 0px;
+    bottom: -10px;
+    left: -15px
+}
+
+/* ================================ */
+
+.main-ul {
+    margin: auto;
+    width: 400px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.list {
+    background-color: #EEE;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.list li {
+    background-color: #FFF;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.css ol{
+    list-style-type: upper-roman;
+}
+.js ul {
+    list-style-position: inside;
+    padding-left: 0px;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 700px;
+    margin: auto;
+    border-spacing: 0px;
+}
+table caption {
+    font-weight: bolder;
+}
+table img {
+    width: 75px;
+}
+td {
+    padding: 15px;
+    border: 0.01px white solid;
+    border-spacing: 0px;
+    text-align: center;
+    background-color: #EEE;
+}
+thead td {
+    background-color: #404040;
+    color: white;
+    font-weight: bolder;
+}
+.view-button {
+    background-color: #03a9f4;
+    
+}
+.view-button:hover, .delete-button:hover{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.521) ;
+} 
+.view-button:active, .delete-button:active{
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.521) ;
+} 
+
+.delete-button {
+    background-color: #e91e63;
+}
+button {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px 7px;
+    color: white;
+    border: 0px;
+    outline: 0px;
+}

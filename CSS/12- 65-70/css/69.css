@@ -1,0 +1,65 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #69 - 2D Transform - Matrix - #69 - CSS 2D Transform: matrix()
+ * Demonstrating the 'matrix()' property.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+
+.container {
+    height: 250px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+    position: relative;
+    border: 2px dashed #ccc;
+}
+.box {
+    width: 120px;
+    height: 80px;
+    background-color: #673ab7;
+    color: white;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-out;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+.initial-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px; /* -half height */
+    margin-left: -60px; /* -half width */
+    background-color: rgba(103, 58, 183, 0.2);
+    border: 1px dotted #673ab7;
+    z-index: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Matrix that only applies Scale (2, 2) */
+.box-1:hover {
+    /* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+    transform: matrix(2, 0, 0, 2, 0, 0);
+}
+
+/* 2. Matrix that only applies Translate (30px, 30px) */
+.box-2:hover {
+    transform: matrix(1, 0, 0, 1, 30, 30);
+}
+
+/* 3. Matrix that combines SkewX (tan(15deg)) and Translate (20px, 20px) */
+.box-3:hover {
+    /* tan(15deg) is approx 0.2679 */
+    transform: matrix(1, 0, 0.2679, 1, 20, 20);
+}
+
+/* 4. Matrix combining multiple effects (Scale, Skew, Translate) */
+.box-4:hover {
+    /* Scale X=1.2, Skew X=0.3, Translate X=20, Translate Y=10 */
+    transform: matrix(1.2, 0, 0.3, 1, 20, 10);
+}

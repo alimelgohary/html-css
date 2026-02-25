@@ -1,0 +1,58 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #73 - 3D Transform - Backface Visibility And Flip Product
+ * Demonstrating backface-visibility and preserve-3d for a flip card effect.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+
+.container {
+    perspective: 800px; /* Distance between the user and the z=0 plane [00:07:09] */
+    margin: 50px auto;
+    width: 300px;
+    height: 400px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* --- The Flip Card Logic (Included in the <pre> tag) --- */
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    /* Essential: Allows children to exist in 3D space [00:05:04] */
+    transform-style: preserve-3d; 
+    cursor: pointer;
+}
+
+/* Rotate the entire card on hover [00:04:16] */
+.container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    /* Hide the back of the element when it's flipped [00:04:51] */
+    backface-visibility: hidden; 
+}
+
+.front {
+    background-color: #3f51b5;
+    z-index: 2; /* Ensure front is on top initially */
+}
+
+.back {
+    background-color: #e91e63;
+    /* Pre-rotate the back face so it faces "away" [00:03:55] */
+    transform: rotateY(180deg); 
+}

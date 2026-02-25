@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/74.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Animation: Keyframes & Basic Properties"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../13- 71-73/73.html" class="prev-button">Previous</a>
+            <a href="75.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Defining Animation with @keyframes */
+    @keyframes change-color {
+        from { background-color: red; }
+        to { background-color: blue; }
+    }
+
+    /* Applying to Element */
+    .box {
+        animation-name: change-color;
+        animation-duration: 3s;
+    }
+    @keyframes uneven-timing {
+    0% {
+        background-color: red;
+    }
+    80% {
+        background-color: green; /* Spends 80% of the time transition to green */
+    }
+    100% {
+        background-color: yellow; /* Spends only 20% moving to yellow */
+    }
+}
+        </pre>
+
+        <section>
+            <h4>1. Simple Two-State Animation</h4>
+            <p>Using <code>from</code> and <code>to</code> keywords to define a simple transition from a start state to an end state [00:01:29].</p>
+            <div class="container">
+                <div class="box box-1">Red to Blue</div>
+            </div>
+            <hr>
+
+            <h4>2. Multi-State Animation (Percentages)</h4>
+            <p>Using percentages allows you to define multiple steps within the animation cycle [00:03:39]. Here, it cycles through Red, Blue, and Black.</p>
+            <div class="container">
+                <div class="box box-2">Red &rarr; Blue &rarr; Black</div>
+            </div>
+            <hr>
+
+            <h4>3. Uneven Timing Distribution</h4>
+            <p>You can control the speed of specific parts of the animation by adjusting percentage gaps [00:04:30]. This box stays Red/Green much longer than it stays Yellow.</p>
+            <div class="container">
+                <div class="box box-3">Slow Transition</div>
+            </div>
+            <hr>
+
+            <h4>Key Concepts:</h4>
+            <ul>
+                <li><strong>@keyframes:</strong> The rule used to define the animation sequence and its name [00:01:29].</li>
+                <li><strong>animation-name:</strong> Links the element to the specific keyframe rule [00:02:10].</li>
+                <li><strong>animation-duration:</strong> Defines how long one cycle of the animation takes to complete (e.g., 3s or 3000ms) [00:02:40].</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

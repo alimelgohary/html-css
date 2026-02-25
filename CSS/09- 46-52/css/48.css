@@ -1,0 +1,81 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #48 - Flex Box Parent - Align Items
+ * Demonstrating the align-items property.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.flex-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    display: flex; 
+    /* Fixed height is crucial to demonstrate vertical alignment */
+    height: 150px; 
+}
+.flex-container div {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    width: 80px; 
+    /* Note: No explicit height set on items for stretch to work */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Default Behavior: stretch */
+.ex-stretch {
+    align-items: stretch; /* Items stretch to fill the container height (default if height is not set on item) */
+}
+
+/* 2. Items at the Top: flex-start */
+.ex-start {
+    align-items: flex-start; /* Items packed toward the start of the cross axis */
+}
+.ex-start div {
+    height: 60px; /* Set a fixed height to show the positioning */
+}
+
+/* 3. Items at the Bottom: flex-end */
+.ex-end {
+    align-items: flex-end; /* Items packed toward the end of the cross axis */
+}
+.ex-end div {
+    height: 60px;
+}
+
+/* 4. Items Centered: center */
+.ex-center {
+    align-items: center; /* Items centered along the cross axis */
+}
+.ex-center div {
+    height: 60px;
+}
+
+/* 5. Baseline Alignment */
+.ex-baseline {
+    align-items: baseline; /* Items aligned according to their content baseline */
+}
+.ex-baseline .box-1 {
+    font-size: 10px;
+    height: 60px;
+    align-items: end;
+}
+.ex-baseline .box-2 {
+    font-size: 20px;
+    height: 80px;
+}
+.ex-baseline .box-3 {
+    font-size: 14px;
+    height: 60px;
+    align-items: start;
+}

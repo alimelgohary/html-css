@@ -1,0 +1,23 @@
+div div span {
+    color: red;
+}
+div span {
+    color: blue;
+}
+p, div[class=title]  {
+    color: green;
+}
+
+.ass2 {
+    /* font-size: 20px; */
+    background-color: rgb(201, 34, 34);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    width: fit-content;
+}
+.four {
+    max-height: 20px;
+    overflow: hidden;
+}

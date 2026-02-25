@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/68.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS 2D Transform: skew()"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="67.html" class="prev-button">Previous</a>
+            <a href="69.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    .box-1:hover {
+        transform: skewX(20deg);
+    }
+
+    .box-2:hover {
+        transform: skewY(15deg);
+    }
+
+    .box-3:hover {
+        transform: skew(10deg, -5deg);
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Skewing Along the X-Axis (`skewX()`)</h4>
+            <p>The <code>skewX()</code> function tilts an element horizontally by a specified angle. Positive values tilt the top of the element to the right, and negative values tilt it to the left. The example uses <code>20deg</code> to slant the element.</p>
+            <div class="container">
+                <div class="box box-1">Hover to SkewX (20deg) [00:35]</div>
+            </div>
+            <hr>
+
+            <h4>2. Skewing Along the Y-Axis (`skewY()`)</h4>
+            <p>The <code>skewY()</code> function tilts an element vertically. Positive values tilt the right side of the element downwards, and negative values tilt it upwards. The example uses <code>15deg</code> for vertical slanting.</p>
+            <div class="container">
+                <div class="box box-2">Hover to SkewY (15deg) [00:45]</div>
+            </div>
+            <hr>
+
+            <h4>3. Combined Skewing (`skew(x, y)`)</h4>
+            <p>The shorthand <code>skew()</code> function accepts two angle values: the first for the X-axis and the second for the Y-axis. This allows for a combined, compound slanting effect, like <code>skew(10deg, -5deg)</code>.</p>
+            <div class="container">
+                <div class="box box-3">Hover to Skew (10deg, -5deg) [01:34]</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/4.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Font Style, Variant, and Weight"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="3.html" class="prev-button">Previous</a>
+            <a href="5.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .style-italic {
+        font-style: italic;
+    }
+    .style-normal {
+        font-style: normal;
+    }
+    .variant-small-caps {
+        font-variant: small-caps;
+    }
+    .weight-bold {
+        font-weight: bold;
+    }
+    .weight-normal {
+        font-weight: normal;
+    }
+    .weight-900 {
+        font-weight: 900;
+    }
+    .weight-200 {
+        font-weight: 200;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Setting Text Slant with <span style="font-family: monospace;">font-style</span></h4>
+            <p>The <span style="font-family: monospace;">font-style</span> property is used to create slanted text, typically using the value <span style="font-family: monospace;">italic</span>.</p>
+            <p class="style-italic">This text is set to italic using <span style="font-family: monospace;">font-style: italic;</span>.</p>
+            <hr>
+            <p>It can also be used to remove an existing slant, such as from an <span style="font-family: monospace;">&lt;i&gt;</span> tag.</p>
+            <p class="style-normal">This <i>italic</i> text is forced back to normal with <span style="font-family: monospace;">font-style: normal;</span>.</p>
+            <hr>
+
+            <h4>2. Transforming Text to <span style="font-family: monospace;">small-caps</span></h4>
+            <p>The <span style="font-family: monospace;">font-variant: small-caps;</span> property renders lowercase letters as small capital letters.</p>
+            <p class="variant-small-caps">This text uses font-variant: small-caps.</p>
+            <hr>
+
+            <h4>3. Controlling Boldness with <span style="font-family: monospace;">font-weight</span> Keywords</h4>
+            <p>The <span style="font-family: monospace;">font-weight</span> property controls the weight or thickness of the text. Keywords like <span style="font-family: monospace;">bold</span> and <span style="font-family: monospace;">normal</span> are commonly used.</p>
+            <p class="weight-bold">This text uses <span style="font-family: monospace;">font-weight: bold;</span>.</p>
+            <hr>
+            <p>Like <span style="font-family: monospace;">font-style</span>, it can reset the default weight of elements like <span style="font-family: monospace;">&lt;b&gt;</span> or <span style="font-family: monospace;">&lt;h1&gt;</span>.</p>
+            <p class="weight-normal">This <b>bold</b> text is forced back to normal with <span style="font-family: monospace;">font-weight: normal;</span>.</p>
+            <hr>
+
+            <h4>4. Controlling Boldness with <span style="font-family: monospace;">font-weight</span> Numeric Values (100-900)</h4>
+            <p>Numeric values (100, 200, ..., 900) offer fine-grained control over boldness, provided the font supports the specific weight.</p>
+            <p class="weight-900">This text uses <span style="font-family: monospace;">font-weight: 900;</span> (often Black or Heavy).</p>
+            <hr>
+            <p class="weight-200">This text uses <span style="font-family: monospace;">font-weight: 200;</span> (often Extra-Light or Thin).</p>
+            <hr>
+
+        </section>
+</body>
+</html>

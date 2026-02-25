@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/6.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Text Overflow - Ellipsis";
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText =
+                decodeURI(document.location.pathname).split('/')[2] + '/';
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+
+<section>
+    <section class="intro">
+        <a href="../../index.html" class="home-button">Go Home</a><br>
+        <a href="5.html" class="prev-button">Previous</a>
+        <a href="../05- 22-27/1.html" class="next-button">Next</a><br>
+
+        <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+    </section>
+
+    <h4>
+        Demonstrating how long text is truncated using <code>text-overflow: ellipsis;</code>  
+        The full text becomes visible on hover, and the title attribute shows the text on mouse hover.
+    </h4>
+
+    <pre id="pre">
+    
+      .box {
+          width: 250px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+
+      /* On hover, show the overflowed text */
+      .box:hover {
+          overflow: visible;
+          background-color: #f7f7f7;
+      }
+    </pre>
+
+    <section>
+        <div class="box"
+             title="This is a very long line of text that normally gets truncated with an ellipsis, but becomes fully visible on hover.">
+            This is a very long line of text that normally gets truncated with an ellipsis, but becomes fully visible on hover.
+        </div>
+    </section>
+
+</section>
+
+</body>
+</html>

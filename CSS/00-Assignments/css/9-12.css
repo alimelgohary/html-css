@@ -1,0 +1,51 @@
+/* ============================ 1 ============================*/
+.s1,
+.s2,
+.s3 {
+    background-color: #eee;
+    font-size: 35px;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+}
+.s1 {
+    border: 5px red solid;
+    outline: 5px black solid;
+}
+.s2 {
+    border-width: 5px;
+    border-color: blue green;
+    outline: 5px black solid;
+    border-style: solid;
+}
+.s3 {
+    border-width: 5px;
+    border-color: red green blue yellow;
+    border-style: dashed;
+    outline: 5px black solid;
+}
+
+/* ============================ 2 ============================*/
+.element {
+    background-color: #eee;
+    margin: 20px;
+    padding: 15px;
+    width: 400px;
+    outline: 5px #eee solid;
+}
+.element-1 {
+    border-width: 0 0 0 5px;
+    border-color: blueviolet;
+    border-style: solid;
+}
+.element-2 {
+    border-width: 0 0 0 5px;
+    border-color: blueviolet;
+    border-style: solid;
+    visibility: hidden;
+}
+.element-3 {
+    border-width: 0 0 0 5px;
+    border-color: darkcyan;
+    border-style: solid;
+}

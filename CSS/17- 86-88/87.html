@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/87.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Global Values Reference"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="86.html" class="prev-button">Previous</a>
+            <a href="88.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Global Keywords: */
+    - inherit: Get value from parent [00:00:54].
+    - initial: Get official CSS default [00:01:47].
+    - unset: Logic-based reset (inherit or initial) [00:04:31].
+    - revert: Get browser's default style [00:08:27].
+    - all: Property to target every style at once [00:06:53].
+        </pre>
+
+        <section class="parent">
+            I am the Parent (Blue text, 24px, Solid Border)
+            
+            <div class="box child-inherit">
+                I use <code>inherit</code> for my border [00:00:54].
+            </div>
+
+            <div class="box child-initial">
+                I use <code>color:initial, font-size: initial;</code> (Back to black/default) [00:01:47].
+            </div>
+
+            <div class="box child-unset">
+                I use <code>unset</code> (Inherits color, resets border) [00:04:31].
+            </div>
+
+            <div class="box reset-all">
+                I use <code>all: unset</code>. I've lost all styles! [00:07:02]
+            </div>
+        </section>
+
+        <section>
+            <h3>Difference Summary:</h3>
+            <ul>
+                <li><strong>inherit:</strong> "Give me whatever my parent has" [00:00:54].</li>
+                <li><strong>initial:</strong> "Give me the value defined in the CSS specifications" (often ignores parent and browser defaults) [00:01:47].</li>
+                <li><strong>unset:</strong> unset = initial or inherit. A smart hybrid. It prefers inheritance if the attribute is inheritable by default like "color" [00:04:31].</li>
+                <li><strong>revert:</strong> The most "natural" reset. It goes back to how a clean browser would render the tag (like <code>&lt;h1&gt;</code> being bold again) [00:08:27].</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

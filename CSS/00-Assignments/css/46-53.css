@@ -1,0 +1,236 @@
+.circle-shadow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff5722;
+    background-color: #EEE;
+    box-shadow: 10px 0px 0px 0px #ff5722, -10px 0px 0px 0px #03a9f4;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+/* ==================================================================  */
+.parent2{
+    margin: 20px auto;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    background-color: #EEE;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+
+}
+.child2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+    color: white;
+    height: 50px;
+    background-color: #f44336;
+}
+/* ==================================================================  */
+.parent3{
+    margin: 20px auto;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    background-color: #EEE;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-content: space-between;
+}
+.parent3 * { /* Children */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+    color: white;
+    height: 50px;
+    background-color: #607d8b;
+}
+.parent3 .one {
+    
+}
+.parent3 .two {
+    height: 50%;
+}
+.parent3 .three {
+    order: 5;
+    align-self: flex-end;
+}
+.parent3 .four {
+    height: 50%;
+    order: 4;
+}
+.parent3 .five {
+    height: 50%;
+    order: 3;
+}
+.parent3 .six {
+    height: 50%;
+    order: 6;
+}
+/* ==================================================================  */
+.parent4 {
+    margin: 20px auto;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    background-color: #EEE;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around;
+}
+.parent4 * { /* Children */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    height: 50px;
+    background-color: #009688;
+}
+.parent4 .two {
+    width: 50%;
+    align-self: flex-start;
+}
+/* ==================================================================  */
+.parent5 {
+    margin: 20px auto;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    background-color: #EEE;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+}
+.parent5 * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    height: 50%;
+    width: 15%;
+    box-sizing: border-box;
+    background-color: #009688;
+}
+.parent5 .one {
+    background-color: #ff9800;
+    order: 2;
+}
+.parent5 .two {
+    background-color: #8bc34a;
+    align-self: flex-end;
+    order: 3;
+}
+.parent5 .three {
+    background-color: #795548;
+    order: 4;
+}
+.parent5 .four {
+    background-color: #673ab7;
+    align-self: flex-end;
+    order: 1;
+}
+/* ==================================================================  */
+:root {
+    --page-color: #EEE;
+    --div-color: #DDD;
+    --small-height: 50px;
+}
+html * {
+    box-sizing: border-box;
+}
+.page {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--page-color);
+    height: 600px;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.logo {
+    background-color: var(--div-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--small-height);
+    width: 10%;
+}
+.links {
+    background-color: var(--div-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: var(--small-height);
+    width: 88%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.links li {
+    margin-right: 20px;
+}
+.main-area {
+    display: flex;
+    height: 60%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.sidebar {
+    display: flex;
+    background-color: var(--div-color);
+    width: 30%;
+}
+.content {
+    display: flex;
+    background-color: var(--div-color);
+    width: 68%;
+}
+.footer {
+    display: flex;
+    height: var(--small-height);
+}
+.copyright {
+    background-color: var(--div-color);
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.design {
+    background-color: var(--div-color);
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

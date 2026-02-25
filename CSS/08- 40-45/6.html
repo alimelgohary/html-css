@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/6.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Variables"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="5.html" class="prev-button">Previous</a>
+            <a href="../09- 46-52/46.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    :root {
+        --main-color: #007bff;
+        --main-padding: 10px;
+    }
+    
+    .global-color {
+        background-color: var(--main-color, red); 
+        border-color: var(--main-color);
+    }
+    
+    .global-padding {
+        padding: calc(var(--main-padding) + 15px);
+        background-color: #28a745;
+    }
+    
+    .local-scope {
+        --scope-color: #ffc107;
+        background-color: var(--scope-color);
+        color: black;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Global Variable Usage</h4>
+            <p>Variables are defined in the <span style="font-family: monospace;">:root</span> selector and accessed anywhere using <span style="font-family: monospace;">var(--variable-name)</span>. </p>
+            <div class="box global-color">
+                Background: var(--main-color)
+            </div>
+            <hr>
+
+            <h4>2. Variables in CSS Calculations</h4>
+            <p>You can use the <span style="font-family: monospace;">calc()</span> function to perform mathematical operations using your variables, allowing for dynamic sizing.</p>
+            <div class="box global-padding">
+                Padding: calc(var(--main-padding) + 15px)
+            </div>
+            <hr>
+
+            <h4>3. Local Variable Scope</h4>
+            <p>A variable defined on an element (like <span style="font-family: monospace;">.local-scope</span>) is only available to that element and its descendants, overriding any global variable with the same name.</p>
+            <div class="box local-scope">
+                Background: var(--scope-color)
+            </div>
+
+        </section>
+</body>
+</html>

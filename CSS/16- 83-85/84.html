@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/84.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Media Queries Standards & Breakpoints"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="83.html" class="prev-button">Previous</a>
+            <a href="85.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Standard Breakpoints (Mobile First) */
+    @media (min-width: 768px) { ... }  /* Small [00:04:44] */
+    @media (min-width: 992px) { ... }  /* Medium [00:04:54] */
+    @media (min-width: 1200px) { ... } /* Large [00:05:04] */
+    @media (min-width: 1400px) { ... } /* Extra Large [00:05:33] */
+
+    /* Custom Range Example [00:08:08] */
+    @media (min-width: 768px) and (max-width: 991px) {
+        /* Only for specific Tablet portrait mode */
+    }
+        </pre>
+
+        <section>
+            <h4>Standardized Container Widths</h4>
+            <p>Modern frameworks like Bootstrap use specific breakpoints to ensure layout consistency across millions of devices [00:04:30].</p>
+            
+            <div class="container">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+            </div>
+
+            <hr>
+            <h4>Implementation Methods:</h4>
+            <ul>
+                <li><strong>External Link with media attribute:</strong> <code>&lt;link rel="stylesheet" href="..." media="print"&gt;</code> [00:01:17].</li>
+                <li><strong>Inside @media blocks:</strong> Grouping rules within your main CSS file [00:02:16].</li>
+                <li><strong>Mobile First:</strong> Writing default CSS for mobile and adding <code>min-width</code> queries for larger screens [00:07:45].</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

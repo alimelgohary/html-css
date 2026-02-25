@@ -1,0 +1,64 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #39 - Border Radius
+ * Demonstrating border-radius values, syntax, and circle creation.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.radius-demo {
+    width: 200px;
+    height: 100px;
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 30px;
+    border: 2px solid #283593;
+    margin-left: 30px;
+}
+
+.circle-demo {
+    margin-left: 30px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background-color: #ff9800;
+    margin-bottom: 30px;
+    border: 2px solid #f57c00;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Single Value (Applies to all four corners) */
+.radius-single {
+    border-radius: 15px; 
+}
+
+/* 2. Four Values (Top-Left, Top-Right, Bottom-Right, Bottom-Left) */
+.radius-four-values {
+    border-radius: 5px 20px 40px 60px;
+}
+
+/* 3. Individual Corner Properties (Top-Left and Bottom-Right for a distinct shape) */
+.radius-individual {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* 4. Creating a Perfect Circle */
+.radius-circle {
+    /* For a perfect circle, the border-radius must be half of the element's width/height, 
+       or simply use 50% for square elements. */
+    border-radius: 50%;
+}
+
+/* 5. Elliptical Corners (Two values separated by a slash) */
+.radius-elliptical {
+    /* The slash separates the horizontal radius (50px) from the vertical radius (10px) */
+    border-radius: 50px / 10px;
+}
+.radius-elliptical2 {
+    /* The slash separates the horizontal radius (50px) from the vertical radius (10px) */
+    border-top-right-radius: 50px 20px;
+}

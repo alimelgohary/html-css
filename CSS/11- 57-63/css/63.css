@@ -1,0 +1,51 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #63 - Grid - Min, Max And Auto Fill - #63 - CSS Grid: minmax() and auto-fill
+ * Demonstrating the 'minmax()' and 'auto-fill' functions.
+ */
+
+/* --- General Styling (For visual clarity, not included in the <pre> tag) --- */
+* {
+    box-sizing: border-box;
+}
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 100%;
+    min-height: 200px;
+}
+
+.grid-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #333;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Fixed height for rows */
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Using minmax() to define a minimum and maximum size for the first track */
+.example-1 {
+    grid-template-columns: minmax(200px, 400px) 1fr 1fr 1fr;
+}
+
+/* 2. Using auto-fill with a fixed column size */
+.example-2 {
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-rows: 100px; /* Ensure rows appear correctly */
+}
+
+/* 3. Combining auto-fill and minmax() for responsive columns */
+.example-3 {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Pseudo Classes"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../06- 28-33/6.html" class="prev-button">Previous</a>
+            <a href="2.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .link-hover:hover {
+        color: red;
+    }
+    .link-visited:visited {
+        color: blue;
+    }
+    .input-check:checked + label {
+        color: red;
+    }
+    .box-empty:empty {
+        border: 5px solid red;
+        height: 50px;
+    }
+    .input-focus:focus {
+        border-color: yellow;
+        outline: none;
+    }
+            
+        </pre>
+        <section>
+            <h2>You can right click and element and force a certain state to test as you like</h4>
+            <h4>1. Changing Color on Hover (<span style="font-family: monospace;">:hover</span>)</h4>
+            <p>The <span style="font-family: monospace;">:hover</span> pseudo-class applies styles when the mouse pointer is over the element.</p>
+            <div class="demo-section">
+                <a href="#" class="demo-link link-hover">Hover Me</a>
+            </div>
+            <hr>
+
+            <h4>2. Styling Visited Links (<span style="font-family: monospace;">:visited</span>)</h4>
+            <p>The <span style="font-family: monospace;">:visited</span> pseudo-class targets links the user has previously clicked. (Note: Browser privacy settings often limit styles to color changes).</p>
+            <div class="demo-section">
+                <a href="https://www.google.com/" class="demo-link link-visited">Google (Visited?)</a>
+                <a href="https://www.youtube.com/" class="demo-link link-visited">YouTube (Visited?)</a>
+                <a href="https://www.example-non-existent-url.com/" class="demo-link link-visited">New Link (Not Visited)</a>
+            </div>
+            <hr>
+
+            <h4>3. Styling Based on Checkbox State (<span style="font-family: monospace;">:checked</span>)</h4>
+            <p>We can style sibling elements (like a label) based on whether a checkbox is checked using <span style="font-family: monospace;">:checked</span> and the adjacent sibling selector (<span style="font-family: monospace;">+</span>).</p>
+            <div class="demo-section">
+                <input type="checkbox" id="check1" class="input-check">
+                <label for="check1">Check me to turn Red</label>
+            </div>
+            <hr>
+
+            <h4>4. Styling Empty Elements (<span style="font-family: monospace;">:empty</span>)</h4>
+            <p>The <span style="font-family: monospace;">:empty</span> pseudo-class targets elements that have no children (including text nodes). The box below appears because it is empty.</p>
+            <div class="demo-section">
+                <p>Below is an empty div with a red border:</p>
+                <div class="box-empty"></div>
+            </div>
+            <hr>
+
+            <h4>5. Styling Focused Inputs (<span style="font-family: monospace;">:focus</span>)</h4>
+            <p>The <span style="font-family: monospace;">:focus</span> pseudo-class applies when an input field is selected (clicked or tabbed into). Here, the border turns yellow and the default outline is removed.</p>
+            <div class="demo-section">
+                <input type="text" class="input-focus" placeholder="Click here to focus...">
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

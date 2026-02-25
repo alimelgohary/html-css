@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/3.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Pseudo Elements (Before & After)"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="2.html" class="prev-button">Previous</a>
+            <a href="4.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .element-1::before {
+        content: "";
+        background-color: green;
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .element-1::after {
+        content: " (New)";
+        color: #007bff;
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    .element-2::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    .element-3::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-right-color: green;
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        margin-top: -10px;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Content Injection and Stylistic Bars</h4>
+            <p>The <span style="font-family: monospace;">::before</span> element is used to create the absolute-positioned green bar on the left, and <span style="font-family: monospace;">::after</span> is used to insert the text **(New)** at the end of the element.</p>
+            <div class="user-info-box element-1">
+                User Information: Osama Elzero
+            </div>
+            <hr>
+
+            <h4>2. Creating Shapes (Circle using <span style="font-family: monospace;">border-radius</span>)</h4>
+            <p>The <span style="font-family: monospace;">::before</span> element is given equal <span style="font-family: monospace;">width</span> and <span style="font-family: monospace;">height</span>, and then <span style="font-family: monospace;">border-radius: 50%;</span> is applied to turn it into a perfect circle.</p>
+            <div class="user-info-box element-2">
+                This box has a circle icon generated entirely with CSS.
+            </div>
+            <hr>
+
+            <h4>3. Creating Shapes (Arrow/Triangle using Borders)</h4>
+            <p>By setting <span style="font-family: monospace;">width</span> and <span style="font-family: monospace;">height</span> to 0 and giving borders a color only on one side (with other borders transparent), a sharp triangular arrow shape can be generated.</p>
+            <div class="user-info-box element-3">
+                This element has a green arrow pointing into it.
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

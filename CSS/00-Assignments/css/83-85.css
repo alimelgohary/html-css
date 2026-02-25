@@ -1,0 +1,104 @@
+@media print {
+    .assign-one {
+        font-size: 40px;
+    }
+}
+/* ============================================================ */
+body, p {
+    margin: 0;
+    padding: 0;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.product {
+    padding: 10px 0;
+    background-color: #EEE;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+}
+
+.product-title {
+    font-weight: bolder;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.product-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .product {
+        flex-basis: calc(50% - 10px * 1 / 2);
+    }
+    .product-title {
+        color: red;
+    }
+}
+
+@media (min-width: 992px) {
+    .product {
+        flex-basis: calc(25% - 10px * 3 / 4);
+    }
+    .product-title {
+        color: #019688;
+    }
+}
+/* ============================================================================ */
+.products2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.product2 {
+    padding: 10px 0;
+    background-color: #EEE;
+    margin-bottom: 10px;
+    flex-basis: 100%;
+}
+
+.product-title2 {
+    font-weight: bolder;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.product-desc2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .product2:nth-child(2), .product2:nth-child(3), .product2:nth-child(4) {
+        flex-basis: calc(33.33% - 10px * 2 / 3);
+    }
+    .product-title2 {
+        color: red;
+    }
+}
+
+@media (min-width: 992px) {
+    .product2:nth-child(1), .product2:nth-child(4) {
+        flex-basis: 100%;
+    }
+    .product2:nth-child(2), .product2:nth-child(3) {
+        flex-basis: calc(50% - 10px * 1 / 2);
+    }
+    .product-title2 {
+        color: #019688;
+    }
+}

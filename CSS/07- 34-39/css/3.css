@@ -1,0 +1,65 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #36 - Pseudo Elements
+ * Demonstrating ::before and ::after with content and advanced styling.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.user-info-box {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    position: relative; /* Necessary for positioning the pseudo-elements */
+    font-size: 18px;
+
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Basic Content Injection and Styling */
+.element-1::before {
+    content: ""; /* Must be present for the pseudo-element to render */
+    background-color: green;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.element-1::after {
+    content: " (New)"; /* Adding visible text content */
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+/* 2. Creating a Circle (Shaping with border-radius) */
+.element-2::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%; /* Creates a perfect circle */
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+/* 3. Creating a Triangle/Arrow using Borders */
+.element-3::before {
+    content: "";
+    width: 0;
+    height: 0;
+    /* Creating a triangle shape using transparent borders */
+    border: 10px solid transparent;
+    border-right-color: green; /* Only the right border has color (points left) */
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -10px; /* Adjust vertical center */
+}

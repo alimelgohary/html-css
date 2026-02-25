@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Text: color/shadow"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="1.html" class="prev-button">Previous</a>
+            <a href="3.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            <h4>text-shadow: H-Shadow V-Shadow Blur Color </h4>
+            <h4>H-Shadow (distance to the right)</h4>
+            <h4>V-Shadow (distance under the text) Blur Color </h4>
+           
+        </section>
+        <pre id="pre">
+
+            .one {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+            }
+            .two {
+                text-shadow: 20px 35px 2px rgba(0, 0, 0, 0.6);
+            }
+            .three {
+                text-shadow: -20px -35px 2px rgba(0, 0, 0, 0.6);
+            }
+        </pre>
+        <section>
+            <div>
+                <h3 class="one">Regular div One</h3>
+            </div>
+            <hr>
+            <div>
+                <h3 class="two">Regular div Two</h3>
+            </div>
+            <hr>
+            <div>
+                <h3 class="three">Regular div three</h3>
+            </div>
+        </section>
+
+
+
+
+
+</body>
+</html>

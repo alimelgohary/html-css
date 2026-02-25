@@ -1,0 +1,60 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #72 - 3D Transform - Translate, Perspective
+ * Demonstrating 3D translation and perspective settings.
+ */
+
+/* --- General Styling --- */
+
+.container {
+    height: 250px;
+    background-color: #fdfdfd;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    /* The perspective property determines how "far" the viewer is from the Z=0 plane.
+       Lower values make the 3D effect more intense. */
+    perspective: 400px;
+}
+
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: #ff5722;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    border: 2px solid #e64a19;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Moving an element closer to the viewer on the Z-axis */
+.box-z:hover {
+    transform: translateZ(100px);
+}
+
+/* 2. Moving an element away from the viewer on the Z-axis */
+.box-z-neg:hover {
+    transform: translateZ(-100px);
+}
+
+/* 3. Combined 3D translation using translate3d(x, y, z) */
+.box-3d:hover {
+    transform: translate3d(50px, 20px, 100px);
+}
+
+/* 4. Changing the vanishing point with perspective-origin */
+.container-origin {
+    perspective-origin: top left;
+}
+.box-origin:hover {
+    transform: translateZ(100px);
+}

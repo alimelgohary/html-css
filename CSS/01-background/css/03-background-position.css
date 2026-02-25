@@ -1,0 +1,32 @@
+html {
+    padding-left: 50px;
+}
+
+.div-1 {
+    background-color: blue;
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.div-2 {
+    background-color: blue;
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.div-3 {
+    background-color: blue;
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    background-position: 10px 50px
+}
+
+.div-4 {
+    background-color: blue;
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    /* background-position: center center */
+    background-position: 50% 50%
+}

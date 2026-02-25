@@ -1,0 +1,30 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #38 - Vendor Prefixes
+ * Demonstrating the syntax and use of vendor prefixes.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.prefix-demo {
+    width: 200px;
+    height: 100px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 30px;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+.box-prefixed {
+    /* Standard property */
+    border-radius: 10px; 
+    
+    /* Vendor Prefixes (Demonstration of older syntax) */
+    -webkit-border-radius: 10px; /* Chrome, Safari, newer Opera */
+    -moz-border-radius: 10px;    /* Firefox */
+    -ms-border-radius: 10px;     /* Internet Explorer */
+    -o-border-radius: 10px;      /* Old Opera */
+}

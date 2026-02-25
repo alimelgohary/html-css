@@ -1,0 +1,26 @@
+.div1, .div2, .div3, .div4  {
+    background-color: #eee;
+    padding: 20px;
+    margin: 10px;
+    border-bottom: 5px solid;
+}
+
+.div1 {
+    border-color: green;
+    color: green;
+}
+
+.div2 {
+     border-color: red;
+    color: red;
+}
+
+.div3 {
+    border-color: blue;
+    color: blue;
+}
+
+.div4 {
+    border-color: black;
+    color: black;
+}

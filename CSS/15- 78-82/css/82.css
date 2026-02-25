@@ -1,0 +1,62 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #82 - CSS Selectors Reference Part 5
+ * Covering :root, :checked, :empty, :disabled, :required, :focus, ::selection, and ::placeholder.
+ */
+
+/* 1. Root Selector (:root) [00:00:18] */
+/* The highest level selector, typically used for defining CSS variables. */
+:root {
+    --main-color: #e91e63;
+}
+
+/* 2. Empty Selector (:empty) [00:00:33] */
+/* Targets elements with absolutely no content (no text, no children, no spaces). */
+.box:empty {
+    display: none;
+}
+
+/* 3. Form State Selectors [00:03:02] */
+/* Targets disabled input fields. */
+input:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+/* Targets required input fields. [00:04:08] */
+input:required {
+    border-left: 5px solid red;
+}
+
+/* Targets elements currently in focus (clicked/tabbed). */
+input:focus {
+    outline: 2px solid var(--main-color);
+}
+
+/* 4. Checked Selector (:checked) [00:05:47] */
+/* Targets radio buttons or checkboxes that are selected. */
+input[type="checkbox"]:checked + label {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* 5. Selection Pseudo-element (::selection) [00:06:47] */
+/* Styles the text as the user highlights it with their mouse. */
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* 6. Placeholder Pseudo-element (::placeholder) [00:07:09] */
+/* Styles the hint text inside input fields. */
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Visual Helpers */
+.container {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.box { width: 100px; height: 50px; background: #ddd; margin: 10px 0;}
+form { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }

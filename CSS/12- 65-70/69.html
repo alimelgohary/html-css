@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/69.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS 2D Transform: matrix()"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="68.html" class="prev-button">Previous</a>
+            <a href="70.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Matrix that only applies Scale (2, 2) */
+    .box-1:hover {
+        /* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+        transform: matrix(2, 0, 0, 2, 0, 0);
+    }
+
+    /* 2. Matrix that only applies Translate (30px, 30px) */
+    .box-2:hover {
+        transform: matrix(1, 0, 0, 1, 30, 30);
+    }
+
+    /* 3. Matrix that combines SkewX (tan(15deg)) and Translate (20px, 20px) */
+    .box-3:hover {
+        /* tan(15deg) is approx 0.2679 */
+        transform: matrix(1, 0, 0.2679, 1, 20, 20);
+    }
+
+    /* 4. Matrix combining multiple effects (Scale, Skew, Translate) */
+    .box-4:hover {
+        /* Scale X=1.2, Skew X=0.3, Translate X=20, Translate Y=10 */
+        transform: matrix(1.2, 0, 0.3, 1, 20, 10);
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Using `matrix()` for Uniform Scaling (ScaleX, ScaleY)</h4>
+            <p>The `matrix(a, b, c, d, e, f)` function represents a 2D transformation. The values `a` and `d` control scaling. Setting them both to `2` results in a uniform double-size scaling effect, identical to `scale(2)`.</p>
+            <div class="container">
+                <div class="box initial-box">Original</div>
+                <div class="box box-1">Hover to Scale (2, 2) [01:47]</div>
+            </div>
+            <hr>
+
+            <h4>2. Using `matrix()` for Translation (TranslateX, TranslateY)</h4>
+            <p>The last two values, `e` and `f`, control translation (movement). Setting `e` and `f` to `30` moves the element 30 units right and 30 units down, identical to `translate(30px, 30px)`. The first four values are set to the default identity matrix (1, 0, 0, 1) to prevent scaling or skewing.</p>
+            <div class="container">
+                <div class="box initial-box">Original</div>
+                <div class="box box-2">Hover to Translate (30, 30) [03:17]</div>
+            </div>
+            <hr>
+
+            <h4>3. Using `matrix()` for Skew and Translate (SkewX and Translate)</h4>
+            <p>The value `c` controls skew on the X-axis (SkewX), and it requires a mathematical value (the tangent of the skew angle). Here, we combine a skew effect (tan(15deg) ≈ 0.2679) with a small translation to demonstrate combined movement and slanting.</p>
+            <div class="container">
+                <div class="box initial-box">Original</div>
+                <div class="box box-3">Hover to SkewX + Translate [04:09]</div>
+            </div>
+            <hr>
+
+            <h4>4. Combined Matrix Example</h4>
+            <p>This final example uses `matrix(1.2, 0, 0.3, 1, 20, 10)` to apply a 1.2x scale on X (`a=1.2`), a moderate skew on X (`c=0.3`), and a translation of (20, 10) on the last two values. This highlights how `matrix()` can perform multiple transforms with a single property declaration.</p>
+            <div class="container">
+                <div class="box initial-box">Original</div>
+                <div class="box box-4">Hover for Combined Transform [04:51]</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

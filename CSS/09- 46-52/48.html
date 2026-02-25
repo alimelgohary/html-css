@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/48.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Flexbox Align Items"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="47.html" class="prev-button">Previous</a>
+            <a href="49.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* All examples use 'display: flex' and a fixed container height */
+
+    /* 1. Default Behavior */
+    .ex-stretch {
+        align-items: stretch;
+    }
+
+    /* 2. Items at the Top */
+    .ex-start {
+        align-items: flex-start;
+    }
+
+    /* 3. Items at the Bottom */
+    .ex-end {
+        align-items: flex-end;
+    }
+
+    /* 4. Items Centered */
+    .ex-center {
+        align-items: center;
+    }
+
+    /* 5. Baseline Alignment */
+    .ex-baseline {
+        align-items: baseline;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Align Items: <span style="font-family: monospace;">stretch</span> (Default)</h4>
+            <p>Flex items stretch to fill the container along the cross axis, provided they don't have a fixed height set.  </p>
+            <div class="flex-container ex-stretch">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>2. Align Items: <span style="font-family: monospace;">flex-start</span></h4>
+            <p>Items are packed toward the start of the cross axis (vertically aligned to the top).</p>
+            <div class="flex-container ex-start">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>3. Align Items: <span style="font-family: monospace;">flex-end</span></h4>
+            <p>Items are packed toward the end of the cross axis (vertically aligned to the bottom).</p>
+            <div class="flex-container ex-end">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>4. Align Items: <span style="font-family: monospace;">center</span></h4>
+            <p>Items are centered along the cross axis (vertically centered).</p>
+            <div class="flex-container ex-center">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>5. Align Items: <span style="font-family: monospace;">baseline</span></h4>
+            <p>Items are aligned such that their baselines align. Useful when items have different font sizes or internal padding/margins.</p>
+            <mark>different text at the same level</mark>
+            <div class="flex-container ex-baseline">
+                <div class="box-1">Small Text</div>
+                <div class="box-2">BIG Text</div>
+                <div class="box-3">Normal Text</div>
+            </div>
+
+        </section>
+</body>
+</html>

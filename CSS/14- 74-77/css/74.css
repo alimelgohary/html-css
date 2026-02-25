@@ -1,0 +1,85 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #74 - Animation - KeyFrames, Name, Duration
+ * Demonstrating the basics of CSS animations.
+ */
+
+/* --- General Styling (For visual clarity) --- */
+
+.container {
+    height: 300px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid #333;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* --- Animation Examples (Included in the <pre> tag) --- */
+
+/* 1. Basic Keyframes using from/to [00:01:29] */
+@keyframes change-color {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: blue;
+    }
+}
+
+/* 2. Keyframes using percentages for more control [00:03:39] */
+@keyframes multi-color {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+/* 3. Custom Timing Distribution [00:04:30] */
+@keyframes uneven-timing {
+    0% {
+        background-color: red;
+    }
+    80% {
+        background-color: green; /* Spends 80% of the time transition to green */
+    }
+    100% {
+        background-color: yellow; /* Spends only 20% moving to yellow */
+    }
+}
+
+/* Applying the animations */
+
+.box-1 {
+    animation-name: change-color;
+    animation-duration: 3s;
+}
+
+.box-2 {
+    animation-name: multi-color;
+    animation-duration: 4s;
+}
+
+.box-3 {
+    animation-name: uneven-timing;
+    animation-duration: 5s;
+}

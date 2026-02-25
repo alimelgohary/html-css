@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Overflow"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../03- 11-15/5.html" class="prev-button">Previous</a>
+            <a href="2.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            <h4>overflow: scroll: make a scroll (even if no overflow)</h4>
+            <h4>overflow: auto: scroll but better (Scroll is visible only if the content overflows)</h4>
+            <h4>overflow: hidden</h4>
+            <h4>You can control overflow-x, y separately (Can be useful in responsive design)</h4>
+            <h4>overflow-x: hidden, overflow-y: hidden</h4>
+        </section>
+        <pre id="pre">
+            .scroll {
+                overflow: scroll;
+            }
+            .auto {
+                overflow: auto;
+            }
+            .hidden {
+                overflow: hidden;
+            }
+            .hiddenx {
+                overflow-x: hidden;
+            }
+            .hiddeny {
+                overflow-y: hidden;
+            }
+        </pre>
+        <section>
+            <div>
+                <h3>Regular div</h3>
+                https://www.domain.com/dksdokdsjfioshdshdsiudsjdbnsjdnsjkdnsjkdshdsdhusidhsdhsiudhdiusydsiunemsne/sejseseiusesusidsd.html
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                At, libero? Deleniti delectus, saepe,
+                iusto architecto quod vero porro amet quas quos id minima eaque blanditiis 
+                veritatis labore aliquid quis possimus!
+            </div>
+        </section>
+<br><hr><br>
+        <section>
+            <div class="scroll">
+                <h3>overflow: scroll;</h3>
+                https://www.domain.com/dksdokdsjfioshdshdsiudsjdbnsjdnsjkdnsjkdshdsdhusidhsdhsiudhdiusydsiunemsne/sejseseiusesusidsd.html
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                At, libero? Deleniti delectus, saepe,
+                iusto architecto quod vero porro amet quas quos id minima eaque blanditiis 
+                veritatis labore aliquid quis possimus!
+            </div>
+        </section>
+<br><br>
+        <section>
+            <div class="scroll">
+                <h3>Also overflow: scroll; with less content</h3>
+                lorem ipsum
+            </div>
+        </section>
+<br><hr><br>
+        <section>
+            <div class="auto">
+                <h3>overflow: auto;</h3>
+                https://www.domain.com/dksdokdsjfioshdshdsiudsjdbnsjdnsjkdnsjkdshdsdhusidhsdhsiudhdiusydsiunemsne/sejseseiusesusidsd.html
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                At, libero? Deleniti delectus, saepe,
+                iusto architecto quod vero porro amet quas quos id minima eaque blanditiis 
+                veritatis labore aliquid quis possimus!
+            </div>
+        </section>
+<br><br>
+        <section>
+            <div class="auto">
+                <h3>Also overflow: auto; with less content</h3>
+                lorem ipsum
+            </div>
+        </section>
+<br><hr><br>
+        <section>
+            <div class="hidden">
+                <h3>overflow: hidden;</h3>
+                https://www.domain.com/dksdokdsjfioshdshdsiudsjdbnsjdnsjkdnsjkdshdsdhusidhsdhsiudhdiusydsiunemsne/sejseseiusesusidsd.html
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                At, libero? Deleniti delectus, saepe,
+                iusto architecto quod vero porro amet quas quos id minima eaque blanditiis 
+                veritatis labore aliquid quis possimus!
+            </div>
+        </section>
+<br><hr><br>
+        <section>
+            <div class="hiddenx">
+                <h3>overflow-x: hidden;</h3>
+                https://www.domain.com/dksdokdsjfioshdshdsiudsjdbnsjdnsjkdnsjkdshdsdhusidhsdhsiudhdiusydsiunemsne/sejseseiusesusidsd.html
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                At, libero? Deleniti delectus, saepe,
+                iusto architecto quod vero porro amet quas quos id minima eaque blanditiis 
+                veritatis labore aliquid quis possimus!
+            </div>
+        </section>
+<br><hr><br>
+        <section>
+            <div class="hiddeny">
+                <h3>overflow-y: hidden;</h3>
+                https://www.domain.com/dksdokdsjfioshdshdsiudsjdbnsjdnsjkdnsjkdshdsdhusidhsdhsiudhdiusydsiunemsne/sejseseiusesusidsd.html
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                At, libero? Deleniti delectus, saepe,
+                iusto architecto quod vero porro amet quas quos id minima eaque blanditiis 
+                veritatis labore aliquid quis possimus!
+            </div>
+        </section>
+<br><hr><br>
+        
+    </section>
+
+
+
+
+
+</body>
+</html>

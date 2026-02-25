@@ -1,0 +1,63 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #46 - Flex Box Parent
+ * Demonstrating display, direction, wrap, and flow properties.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.flex-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    /* This is the key property to enable Flexbox */
+    display: flex; 
+    /* To visually distinguish children */
+    height: 200px; 
+}
+.flex-container div {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Basic Flex Container (Default: row, nowrap) */
+.ex-default {
+    /* display: flex is set in .flex-container above */
+}
+.ex-default div {
+    /* 5 children, each 25% width, they will shrink to fit on one line (nowrap default) */
+    width: 25%;
+}
+
+/* 2. Flex Direction: Column Reverse */
+.ex-direction {
+    flex-direction: column-reverse;
+}
+
+/* 3. Flex Wrap: Wrap */
+.ex-wrap {
+    /* Items are 25% width. If there are 5, they will overflow unless wrap is used. */
+    flex-wrap: wrap; 
+}
+.ex-wrap div {
+    width: 25%;
+}
+
+/* 4. Flex Flow: Shorthand */
+/* Combines direction and wrap: flex-flow: [direction] [wrap] */
+.ex-flow {
+    flex-flow: row-reverse wrap;
+}
+.ex-flow div {
+    width: 30%; /* Set to 30% to force wrapping easily */
+}

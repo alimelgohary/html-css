@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Border</title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="1.html" class="prev-button">Previous</a>
+            <a href="3.html" class="next-button">Next</a><br>
+            
+            <br><span>11-15/</span><h2 style="display: inline;">Display: none VS Visibility: hidden </h2>
+            <h4>Visibility hidden takes place in the document while display:none doesn't</h4>
+        </section>
+        <pre id="pre">
+
+            #element1 {
+                display: none;
+            }
+            #element3 {
+                visibility: hidden;
+            }
+        </pre>
+        <section>
+            Element1 is using Display:none
+            <button onclick="toggle()">
+                Display/hide Element 1
+            </button>
+            <div id="element1">
+                Element 1
+            </div>
+            <div id="element2">
+                Element 2
+            </div>
+        </section>
+<br><hr><br>
+        <section>
+            Element3 is using Visibility:hidden
+            <button onclick="toggle2()">
+                Display/hide Element 3
+            </button>
+            <div id="element3">
+                Element 3
+            </div>
+            <div id="element4">
+                Element 4
+            </div>
+        </section>
+    </section>
+
+
+
+
+
+</body>
+<script>
+    function toggle() {
+        var element1 = document.getElementById("element1")
+        var pre = document.getElementById("pre");
+        if (element1.style.display == 'block') {
+            pre.textContent = pre.textContent.replace('block', 'none')
+            element1.style.display = ''
+        }
+        else {
+            pre.textContent = pre.textContent.replace('none', 'block')
+            element1.style.display = 'block'
+        } 
+    }
+    function toggle2() {
+        var element3 = document.getElementById("element3")
+        var pre = document.getElementById("pre");
+        if (element3.style.visibility == 'visible') {
+            pre.textContent = pre.textContent.replace('visible', 'hidden')
+            element3.style.visibility = 'hidden'
+        }
+        else {
+            pre.textContent = pre.textContent.replace('hidden', 'visible')
+            element3.style.visibility = 'visible'
+        } 
+    }
+</script>
+</html>

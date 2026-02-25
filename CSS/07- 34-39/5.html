@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/5.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Vendor Prefixes"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="4.html" class="prev-button">Previous</a>
+            <a href="6.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .box-prefixed {
+        /* Standard property */
+        border-radius: 10px; 
+        
+        /* Vendor Prefixes (Demonstration of older syntax) */
+        -webkit-border-radius: 10px; /* Chrome, Safari, newer Opera */
+        -moz-border-radius: 10px;    /* Firefox */
+        -ms-border-radius: 10px;     /* Internet Explorer */
+        -o-border-radius: 10px;      /* Old Opera */
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. The Role and Format of Vendor Prefixes</h4>
+            <p><strong>Vendor Prefixes</strong> are special prefixes that browsers (vendors) attach to CSS properties to enable support for new or experimental features before they are fully standardized. This allows developers to use new features while they are still being tested.</p>
+            
+            <p>The instructor demonstrates the old, full syntax for a property like <code>border-radius</code>:</p>
+            <ul>
+                <li><code>-webkit-</code>: Chrome, Safari, and newer versions of Opera.</li>
+                <li><code>-moz-</code>: Mozilla Firefox.</li>
+                <li><code>-ms-</code>: Microsoft Internet Explorer and Edge (older versions).</li>
+                <li><code>-o-</code>: Older versions of Opera.</li>
+            </ul>
+            
+            <div class="prefix-demo box-prefixed">
+                Prefixed Box
+            </div>
+            <hr>
+
+            <h4>2. Modern Usage and The Standard Property</h4>
+            <p>It is crucial to always list the standard, unprefixed property <strong>last</strong>. This ensures that when the browser fully supports the feature without a prefix, it will override any prefixed version above it, making your code future-proof.</p>
+            
+            <p>The video notes that for most modern properties, developers rely on build tools (like task runners) or VS Code extensions to add prefixes automatically, as manually managing them for all modern browsers is no longer necessary.</p>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/73.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "3D Transform: Backface Visibility & Flip Card"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="72.html" class="prev-button">Previous</a>
+            <a href="../14- 74-77/74.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* Essential Properties for the Flip Effect */
+
+    .card {
+        transform-style: preserve-3d; /* Keep children in 3D space */
+        transition: transform 0.8s;
+    }
+
+    .container:hover .card {
+        transform: rotateY(180deg); /* Flip the card */
+    }
+
+    .face {
+        backface-visibility: hidden; /* Hide face when turned away */
+    }
+
+    .back {
+        transform: rotateY(180deg); /* Back face starts reversed */
+    }
+        </pre>
+
+        <section>
+            <h4>Practical Example: Flip Product Card</h4>
+            <p>Hover over the card below to see the 3D flip effect in action. This uses <code>preserve-3d</code> to ensure the front and back faces move together as a solid object [00:05:04].</p>
+            
+            <div class="container">
+                <div class="card">
+                    <div class="face front">
+                        Front: Product Image
+                    </div>
+                    <div class="face back">
+                        Back: Price & Info
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <h4>Key Concepts from the Video:</h4>
+            <ul>
+                <li><strong>backface-visibility: hidden;</strong> Prevents the "mirror image" of the front face from being visible when the element is rotated 180 degrees, allowing the back face to show through instead [00:04:51].</li>
+                <li><strong>transform-style: preserve-3d;</strong> This is applied to the parent. Without it, the children (front and back faces) would be flattened into the plane of the parent and wouldn't maintain their 3D positions during the rotation [00:05:04].</li>
+                <li><strong>The Setup:</strong> The "Back" face must be pre-rotated by 180deg [00:03:55]. When the main container is rotated on hover [00:04:16], the Front face moves to 180deg (becoming hidden) and the Back face moves to 360deg (becoming visible).</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

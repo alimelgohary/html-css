@@ -1,0 +1,66 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #52 - Flex Box Child - Align Self
+ * Demonstrating the align-self property.
+ */
+
+/* --- General Styling --- */
+.flex-container {
+    background-color: #f0ffdf;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 3px solid #007bff;
+    display: flex; 
+    /* Fixed height is required for vertical alignment properties to work */
+    height: 150px; 
+    /* Set a container alignment that individual items will override */
+    align-items: stretch; /* Default for demonstration */
+}
+.flex-item {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    width: 90px;
+    /* Explicit item height prevents 'stretch' unless overridden by align-self */
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Example CSS Rules (Included in the <pre> tag) */
+/* -------------------------------------------------------------------------- */
+
+/* 1. align-self: auto (Inherits container's align-items) */
+.self-auto {
+    align-self: auto; /* Inherits stretch from container */
+    /* Must remove explicit height to allow stretch */
+    height: auto;
+}
+
+/* 2. align-self: flex-start */
+.self-start {
+    align-self: flex-start; /* Aligns to the top */
+}
+
+/* 3. align-self: flex-end */
+.self-end {
+    align-self: flex-end; /* Aligns to the bottom */
+    background-color: #dc3545; /* Red */
+}
+
+/* 4. align-self: center */
+.self-center {
+    align-self: center; /* Aligns to the center */
+    background-color: #28a745; /* Green */
+    
+}
+
+/* 5. align-self: baseline */
+.self-baseline {
+    align-self: baseline; /* Aligns based on content baseline */
+    font-size: 20px;
+    height: 60px;
+}

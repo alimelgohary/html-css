@@ -1,0 +1,72 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #49 - Flex Box Parent - Align Content
+ * Demonstrating the align-content property (only works with flex-wrap: wrap).
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.flex-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    display: flex; 
+    /* Fixed height is CRITICAL to demonstrate align-content */
+    height: 250px; 
+    /* Must be set to wrap for align-content to have an effect */
+    flex-wrap: wrap; 
+    /* Items have 30% width, forcing them to wrap onto multiple lines */
+}
+.flex-container div {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    width: 30%; /* Force items to wrap onto multiple lines */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Default Behavior: stretch */
+.ex-stretch {
+    align-content: stretch; /* Rows of items stretch to fill the remaining space (default) */
+}
+
+/* 2. Content at the Top: flex-start */
+.ex-start {
+    align-content: flex-start; /* Content packed toward the start of the cross axis */
+}
+
+/* 3. Content at the Bottom: flex-end */
+.ex-end {
+    align-content: flex-end; /* Content packed toward the end of the cross axis */
+}
+
+/* 4. Content Centered: center */
+.ex-center {
+    align-content: center; /* Content centered along the cross axis */
+}
+
+/* 5. Space Between Rows: space-between */
+.ex-between {
+    /* Rows are distributed evenly; first row is on the start line, last row on the end line */
+    align-content: space-between; 
+}
+
+/* 6. Space Around Rows: space-around */
+.ex-around {
+    /* Rows are evenly distributed with equal space around them */
+    align-content: space-around;
+}
+
+/* 7. Space Evenly */
+.ex-evenly {
+    /* Rows are distributed such that the spacing between rows, and the space before the first row and after the last row, is equal. */
+    align-content: space-evenly;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/58.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Grid: grid-template-rows and Gap"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="57.html" class="prev-button">Previous</a>
+            <a href="59.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* Container setup: display: grid; grid-template-columns: repeat(3, 1fr); height: 300px; */
+
+    /* 1. Grid Template Rows (Fixed + Fraction) */
+    .ex-rows-fr {
+        grid-template-rows: 50px 1fr 1fr; /* 58-1: Fixed height + equal remaining space */
+    }
+
+    /* 2. Grid Template Rows (Auto vs. Fraction) */
+    .ex-rows-auto {
+        grid-template-rows: auto 1fr; /* 58-2: Auto height for Row 1, 1fr for remaining Row 2 */
+    }
+    
+    /* 3. Row Gap */
+    .ex-row-gap {
+        row-gap: 20px; /* 58-3: Space between rows */
+    }
+    
+    /* 4. Column Gap */
+    .ex-col-gap {
+        column-gap: 10px; /* 58-4: Space between columns */
+    }
+
+    /* 5. Gap Shorthand */
+    .ex-gap-shorthand {
+        gap: 20px 5px; /* 58-5: 20px row gap, 5px column gap */
+    }
+            
+        </pre>
+        <section>
+            
+            <h3>CSS Grid: <span style="font-family: monospace;">grid-template-rows</span> and <span style="font-family: monospace;">gap</span></h3>
+            <p>These properties control the sizing of rows and the spacing between grid items.</p>
+            <hr>
+
+            <h4>1. <span style="font-family: monospace;">grid-template-rows</span> (Fixed and <span style="font-family: monospace;">fr</span>)</h4>
+            <div class="grid-container ex-rows-fr">
+                <div class="grid-item">Row 1 (50px)</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">Row 2 (1fr)</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">Row 3 (1fr)</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item">9</div>
+            </div>
+            <hr>
+
+            <h4>2. <span style="font-family: monospace;">auto</span> vs. <span style="font-family: monospace;">fr</span></h4>
+            <div class="grid-container ex-rows-auto">
+                <div class="grid-item" style="padding: 30px 10px;">Row 1 (Auto Height - Content determines height)</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">Row 2 (1fr - Takes ALL remaining space)</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <hr>
+
+            <h4>3. Spacing Properties</h4>
+            <p>These properties add gutters between tracks (rows or columns) and work similarly for both axes.</p>
+            
+            <h5><span style="font-family: monospace;">row-gap: 20px;</span></h5>
+            <div class="grid-container ex-row-gap">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            
+            <h5><span style="font-family: monospace;">column-gap: 10px;</span></h5>
+            <div class="grid-container ex-col-gap">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+
+            <h4>4. <span style="font-family: monospace;">gap</span> Shorthand</h4>
+            <p><span style="font-family: monospace;">gap: [row-gap] [column-gap];</span></p>
+            <div class="grid-container ex-gap-shorthand">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+
+        </section>
+</body>
+</html>

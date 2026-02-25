@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/72.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS 3D Transform: Translate & Perspective"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="71.html" class="prev-button">Previous</a>
+            <a href="73.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Perspective on Parent (Essential for 3D) */
+    .container {
+        perspective: 400px;
+    }
+
+    /* 2. TranslateZ (Closer to viewer) */
+    .box-z:hover {
+        transform: translateZ(100px);
+    }
+
+    /* 3. Translate3d(x, y, z) */
+    .box-3d:hover {
+        transform: translate3d(50px, 20px, 100px);
+    }
+
+    /* 4. Perspective Origin (Vanishing Point) */
+    .container-origin {
+        perspective-origin: top left;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Positive `translateZ` (Zoom In effect)</h4>
+            <p>Moving an element on the Z-axis toward the viewer (positive value). It appears larger as it "comes out" of the screen toward you.</p>
+            <div class="container">
+                <div class="box box-z">TranslateZ (100px)</div>
+            </div>
+            <hr>
+
+            <h4>2. Negative `translateZ` (Zoom Out effect)</h4>
+            <p>Moving an element on the Z-axis away from the viewer (negative value). It appears smaller as it recedes into the screen.</p>
+            <div class="container">
+                <div class="box box-z-neg">TranslateZ (-100px)</div>
+            </div>
+            <hr>
+
+            <h4>3. Using `translate3d(x, y, z)`</h4>
+            <p>A shorthand function that allows moving the element along all three axes simultaneously. This example moves it right, down, and toward the viewer.</p>
+            <div class="container">
+                <div class="box box-3d">Translate3d</div>
+            </div>
+            <hr>
+
+            <h4>4. Understanding `perspective-origin`</h4>
+            <p>The <code>perspective-origin</code> property sets the position of the viewer's eye. By setting it to <code>top left</code>, the element appears to move toward that corner as it scales up, changing the vanishing point of the 3D space.</p>
+            <div class="container container-origin">
+                <div class="box box-origin">Perspective Origin</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

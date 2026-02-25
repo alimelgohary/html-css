@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/3.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Grouping Multiple Selectors"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="2.html" class="prev-button">Previous</a>
+            <a href="4.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            <h4>You can select more than one element in css to apply styling without repeating</h4>
+        </section>
+        <pre id="pre">
+            .div1, .div2, .div3, .div4  {
+                background-color: #eee;
+                padding: 20px;
+                margin: 10px;
+                border-bottom: 5px solid;
+            }
+
+            .div1 {
+                border-color: green;
+                color: green;
+            }
+
+            .div2 {
+                border-color: red;
+                color: red;
+            }
+
+            .div3 {
+                border-color: blue;
+                color: blue;
+            }
+
+            .div4 {
+                border-color: black;
+                color: black;
+            }
+        </pre>
+        <section>
+            <div class="div1">
+                Element 1
+            </div>
+            <div class="div2">
+                Element 2
+            </div>
+            <div class="div3">
+                Element 3
+            </div>
+            <div class="div4">
+                Element 4
+            </div>
+        </section>
+<br><hr><br>
+        
+    </section>
+
+
+
+
+
+</body>
+</html>

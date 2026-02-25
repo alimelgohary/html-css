@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/6.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Float And Clear"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="5.html" class="prev-button">Previous</a>
+            <a href="../06- 28-33/1.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .float-left {
+        float: left;
+        width: 33.33%;
+    }
+    .box-half {
+        float: left;
+        width: 50%;
+        height: 100px;
+    }
+    .collapsing-parent {
+        /* Height of this parent container will collapse */
+        background-color: yellow;
+        border: 2px solid red;
+    }
+    .clear-both {
+        clear: both;
+    }
+    .float-right-small {
+        float: right;
+        width: 30%;
+    }
+    .float-left-small {
+        float: left;
+        width: 30%;
+    }
+    .clear-right {
+        clear: right;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Floating Elements Side-by-Side (<span style="font-family: monospace;">float: left;</span>)</h4>
+            <p>Using <span style="font-family: monospace;">float</span> moves elements out of the normal flow, allowing other elements to sit next to them, which enables multi-column layouts.</p>
+            <div class="container">
+                <div class="box float-left">Box 1</div>
+                <div class="box float-left">Box 2</div>
+                <div class="box float-left">Box 3</div>
+            </div>
+            <hr>
+
+            <h4>2. Demonstrating Parent Collapse (The Float Problem)</h4>
+            <p>When children are floated, they are removed from the normal flow. The parent element (red border, yellow background) acts as if they don't exist, and its height collapses. The paragraph below flows around the floated box.</p>
+            <div class="collapsing-parent">
+                <div class="box box-half">Floated Box</div>
+            </div>
+            <p>This paragraph flows right under the box because the parent's height collapsed to zero.</p>
+            <hr>
+
+            <h4>3. Fixing Layout with a Sibling Clear Element (<span style="font-family: monospace;">clear: both;</span>)</h4>
+            <p>Inserting an empty element with <span style="font-family: monospace;">clear: both;</span> after the last floated element forces the document flow to restart, pushing the content below the floated boxes.</p>
+            <div class="container-fixed">
+                <div class="box box-half">Floated Box</div>
+                <div class="clear-both" style="height: 0;"></div>
+                <p>This paragraph is now correctly pushed below the box.</p>
+            </div>
+            <hr>
+        </section>
+</body>
+</html>

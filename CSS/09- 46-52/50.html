@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/50.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Flexbox Child Properties"
+            document.title = title = "Flexbox Child Properties (Grow, Shrink, Order)";
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="49.html" class="prev-button">Previous</a>
+            <a href="51.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Flex Grow */
+    .ex-grow .flex-item {
+        flex-grow: 1; 
+    }
+    .ex-grow .grow-3 {
+        flex-grow: 3; /* Grows 3x more than others */
+    }
+
+    /* 2. Flex Shrink */
+    .ex-shrink .flex-item {
+        width: 150px; /* Base size is too large for container */
+        flex-shrink: 1; 
+    }
+    .ex-shrink .no-shrink {
+        flex-shrink: 0; /* Prevents item from shrinking */
+    }
+
+    /* 3. Order */
+    .ex-order .flex-item {
+        order: 0; /* Default */
+    }
+    .ex-order .order-1 {
+        order: 5; /* Moves to the end */
+    }
+    .ex-order .order-2 {
+        order: -1; /* Moves to the beginning */
+    }
+    .ex-order .order-3 {
+        order: 2; 
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Flex Item: <span style="font-family: monospace;">flex-grow</span></h4>
+            <p>Controls how much an item should grow to fill the remaining space. Default is 0 (no growth). All items have a base width of 80px and <span style="font-family: monospace;">flex-grow: 1</span>, except for Box 3 which has <span style="font-family: monospace;">flex-grow: 3</span>.</p>
+            <div class="flex-container ex-grow">
+                <div class="flex-item">Box 1 (Grow: 1)</div>
+                <div class="flex-item">Box 2 (Grow: 1)</div>
+                <div class="flex-item grow-3">Box 3 (Grow: 3)</div>
+                <div class="flex-item">Box 4 (Grow: 1)</div>
+                <div class="flex-item">Box 5 (Grow: 1)</div>
+            </div>
+            <hr>
+
+            <h4>2. Flex Item: <span style="font-family: monospace;">flex-shrink</span></h4>
+            <p>Controls how much an item should shrink when the container is smaller than the sum of item widths. Default is 1 (shrinks equally). All items have a base width of 150px, but Box 3 is set to <span style="font-family: monospace;">flex-shrink: 0</span>.</p>
+            <div class="flex-container ex-shrink">
+                <div class="flex-item">Box 1 (Shrink: 1)</div>
+                <div class="flex-item">Box 2 (Shrink: 1)</div>
+                <div class="flex-item no-shrink">Box 3 (Shrink: 0)</div>
+                <div class="flex-item">Box 4 (Shrink: 1)</div>
+            </div>
+            <hr>
+
+            <h4>3. Flex Item: <span style="font-family: monospace;">order</span></h4>
+            <p>Sets the sequential order of the flex item within the container. Items with a lower number appear first. Default order is 0. HTML order: 1, 2, 3, 4, 5.</p>
+            <div class="flex-container ex-order">
+                <div class="flex-item">Box 1 (Order: 0)</div>
+                <div class="flex-item order-2">Box 2 (Order: -1)</div>
+                <div class="flex-item order-3">Box 3 (Order: 2)</div>
+                <div class="flex-item order-1">Box 4 (Order: 5)</div>
+                <div class="flex-item">Box 5 (Order: 0)</div>
+            </div>
+
+        </section>
+</body>
+</html>

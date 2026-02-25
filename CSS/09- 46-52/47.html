@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/47.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Flexbox Justify Content"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="46.html" class="prev-button">Previous</a>
+            <a href="48.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* All examples use 'display: flex' */
+
+    /* 1. Default Behavior */
+    .ex-start {
+        justify-content: flex-start;
+    }
+
+    /* 2. Items at the End */
+    .ex-end {
+        justify-content: flex-end;
+    }
+
+    /* 3. Items Centered */
+    .ex-center {
+        justify-content: center;
+    }
+
+    /* 4. Space Between Items */
+    .ex-between {
+        justify-content: space-between; 
+    }
+
+    /* 5. Space Around Items */
+    .ex-around {
+        justify-content: space-around;
+    }
+
+    /* 6. Space Evenly */
+    .ex-evenly {
+        justify-content: space-evenly;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Justify Content: <span style="font-family: monospace;">flex-start</span></h4>
+            <p>Packs flex items toward the start of the main axis. This is the default behavior.</p>
+            <div class="flex-container ex-start">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>2. Justify Content: <span style="font-family: monospace;">flex-end</span></h4>
+            <p>Packs flex items toward the end of the main axis.</p>
+            <div class="flex-container ex-end">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>3. Justify Content: <span style="font-family: monospace;">center</span></h4>
+            <p>Packs flex items around the center of the main axis.</p>
+            <div class="flex-container ex-center">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>4. Justify Content: <span style="font-family: monospace;">space-between</span></h4>
+            <p>Items are evenly distributed in the line. The first item is on the start line, and the last item is on the end line.</p>
+            <div class="flex-container ex-between">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>5. Justify Content: <span style="font-family: monospace;">space-around</span></h4>
+            <p>Items are evenly distributed with equal space around them. Note that the space at the ends is half the space between the items.</p>
+            <div class="flex-container ex-around">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <hr>
+
+            <h4>6. Justify Content: <span style="font-family: monospace;">space-evenly</span></h4>
+            <p>Items are distributed such that the spacing between any two adjacent items, and the space before the first and after the last, is exactly the same.</p>
+            <div class="flex-container ex-evenly">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+
+        </section>
+</body>
+</html>

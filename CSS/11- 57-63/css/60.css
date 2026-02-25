@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 50px;
+}
+
+.page {
+    background-color: #EEE;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas: 
+    "logo . links links links links links links links links"
+    "cont cont cont cont cont cont cont . side side"
+    "foot foot foot foot foot foot foot foot foot foot";
+    /* gap: 10px 10px */
+}
+
+nav {
+    grid-area: links;
+    background-color: blue;
+}
+
+footer {
+    grid-area: foot;
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    grid-area: logo;
+    background-color: red;
+}
+
+main {
+    grid-area: cont;
+    background-color: green;
+}
+
+aside {
+    grid-area: side;
+    background-color: yellow;
+}

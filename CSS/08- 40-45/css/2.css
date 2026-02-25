@@ -1,0 +1,48 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #41 - The Box Model And Box Sizing
+ * Demonstrating content-box vs. border-box.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.box {
+    background-color: #ddd;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px; /* Vertically center text for demo */
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Default Behavior (content-box) */
+/* Total Width = Width + Padding + Border */
+.one {
+    box-sizing: content-box; /* Default */
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border: 5px solid red;
+    /* Calculated Width: 300 + 20 (padding) + 10 (border) = 330px */
+}
+
+/* 2. The Fix (border-box) */
+/* Total Width = Width (Padding and Border are internal) */
+.two {
+    box-sizing: border-box;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border: 5px solid blue;
+    /* Calculated Width: 300px (Content shrinks to 270px) */
+}
+
+/* 3. Global Best Practice */
+/* Apply border-box to all elements for consistent sizing */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}

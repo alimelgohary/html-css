@@ -1,0 +1,65 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #76 - Animation - Direction, Fill Mode, Play State, Delay
+ * Advanced animation control properties.
+ */
+
+/* --- General Styling --- */
+
+.container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid #ccc;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #333;
+}
+
+/* --- Shared Keyframes --- */
+@keyframes color-shift {
+    0% { background-color: red; }
+    50% { background-color: blue; }
+    100% { background-color: black; color: white; }
+}
+
+/* 1. Animation Direction [00:00:20] */
+.dir-normal { animation: color-shift 3s infinite normal; }
+.dir-reverse { animation: color-shift 3s infinite reverse; } /* Starts from 100% to 0% */
+.dir-alternate { animation: color-shift 3s infinite alternate; } /* Goes back and forth */
+
+/* 2. Animation Delay [00:04:06] */
+.delay-pos { animation: color-shift 3s infinite; animation-delay: 2s; } /* Starts after 2s */
+.delay-neg { animation: color-shift 3s infinite; animation-delay: -1.5s; } /* Starts 1.5s into the animation */
+
+/* 3. Animation Fill Mode [00:05:01] */
+.fill-none { animation: color-shift 3s 1 none; }
+.fill-forwards { animation: color-shift 3s 1 forwards; } /* Stays at the 100% state */
+.fill-backwards { animation: color-shift 3s 1 backwards; animation-delay: 2s; } /* Applies 0% state during delay */
+.fill-both { animation: color-shift 3s 1 both; animation-delay: 2s; } /* Applies 0% during delay AND stays at 100% after */
+
+/* 4. Animation Play State [00:07:58] */
+.play-pause {
+    animation: color-shift 3s infinite;
+}
+.play-pause:hover {
+    animation-play-state: paused; /* Freezes animation on hover */
+}
+
+/* 5. Shorthand Example [00:09:22] */
+/* Syntax: [name] [duration] [timing] [delay] [count] [direction] [fill-mode] */
+.shorthand {
+    animation: color-shift 3s ease-in-out 1s infinite alternate both;
+}

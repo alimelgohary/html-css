@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/55.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Gradients"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="54.html" class="prev-button">Previous</a>
+            <a href="56.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Default Direction */
+    .ex-default {
+        background-image: linear-gradient(red, blue); /* 55-1: Defaults to 'to bottom' */
+    }
+
+    /* 2. Direction Keywords */
+    .ex-direction {
+        background-image: linear-gradient(to right, green, yellow); /* 55-2: Goes from left to right */
+    }
+
+    /* 3. Angles */
+    .ex-angle {
+        background-image: linear-gradient(45deg, black, purple); /* 55-3: 45 degree angle */
+    }
+
+    /* 4. Color Stops (Smooth Transition) */
+    .ex-stops {
+        background-image: linear-gradient(to right, 
+            red 20%, /* Red stops at 20% */
+            blue 80% /* Blue starts at 20% and stops at 80% */
+        ); 
+    }
+
+    /* 5. Border Effect (Sharp Color Transitions) */
+    .ex-border {
+        background-image: linear-gradient(to right,
+            #007bff 20%, /* Blue ends at 20% */
+            #28a745 20%, #28a745 40%, /* Green starts at 20%, ends at 40% */
+            #ffc107 40%, #ffc107 60%, /* Yellow starts at 40%, ends at 60% */
+            #dc3545 60%, #dc3545 80%, /* Red starts at 60%, ends at 80% */
+            purple 80% /* Purple starts at 80%, ends at 100% */
+        ); /* 55-5: Creates sharp divisions */
+    }
+            
+        </pre>
+        <section>
+            
+            <h3>CSS Linear Gradients (<span style="font-family: monospace;">linear-gradient()</span>)</h3>
+            <p>A linear gradient is used to create a gradual transition between two or more colors along a straight line. It is set as the value for the <span style="font-family: monospace;">background-image</span> property.</p>
+            <hr>
+
+            <h4>1. Default Direction: <span style="font-family: monospace;">to bottom</span></h4>
+            <div class="gradient-box ex-default">Red to Blue (Top to Bottom)</div>
+            <hr>
+
+            <h4>2. Direction Keywords</h4>
+            <div class="gradient-box ex-direction">Green to Yellow (Left to Right)</div>
+            <hr>
+
+            <h4>3. Angles (<span style="font-family: monospace;">45deg</span>)</h4>
+            <div class="gradient-box ex-angle">Black to Purple (45 degrees)</div>
+            <hr>
+
+            <h4>4. Color Stops (Smooth Transition)</h4>
+            <p>By specifying a position (percentage or pixel) for a color, you control where the transition happens.</p>
+            <div class="gradient-box ex-stops">Light Blue (20%) to Green (80%)</div>
+            <hr>
+
+            <h4>5. Sharp Color Transitions / Border Effect (The Task)</h4>
+            <p>Achieved by defining two colors with the exact same stop position, resulting in an immediate color change instead of a blend.</p>
+            <div class="gradient-box ex-border">Multi-Colored Border Effect</div>
+
+        </section>
+</body>
+</html>

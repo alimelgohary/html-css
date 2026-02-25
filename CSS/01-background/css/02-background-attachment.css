@@ -1,0 +1,15 @@
+html {
+    padding-left: 50px;
+}
+
+.div-1 {
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;  /* default */
+}
+
+.div-2 {
+    background-image: url('../imgs/image.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

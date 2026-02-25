@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/5.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Lists Styling"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="4.html" class="prev-button">Previous</a>
+            <a href="6.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .list-disc {
+        list-style-type: disc;
+    }
+    .list-square {
+        list-style-type: square;
+    }
+    .list-roman {
+        list-style-type: lower-roman;
+    }
+    .list-alpha {
+        list-style-type: upper-alpha;
+    }
+    .list-outside {
+        list-style-position: outside;
+    }
+    .list-inside {
+        list-style-position: inside;
+    }
+    .list-reset {
+        list-style: none;
+        padding-left: 0;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. <span style="font-family: monospace;">list-style-type</span> for Unordered Lists</h4>
+            <p>Controls the shape of the marker for <span style="font-family: monospace;">&lt;ul&gt;</span> elements.</p>
+            <ul class="list-example list-disc">
+                <li>Disc (Default)</li>
+                <li>Item Two</li>
+            </ul>
+            <ul class="list-example list-square">
+                <li>Square Marker</li>
+                <li>Item Four</li>
+            </ul>
+            <hr>
+
+            <h4>2. <span style="font-family: monospace;">list-style-type</span> for Ordered Lists</h4>
+            <p>Controls the numbering/sequencing style for <span style="font-family: monospace;">&lt;ol&gt;</span> elements.</p>
+            <ol class="list-example list-roman">
+                <li>Roman Numerals</li>
+                <li>Item Two</li>
+            </ol>
+            <ol class="list-example list-alpha">
+                <li>Uppercase Letters</li>
+                <li>Item Four</li>
+            </ol>
+            <hr>
+
+            <h4>3. <span style="font-family: monospace;">list-style-position</span> (<span style="font-family: monospace;">inside</span> vs. <span style="font-family: monospace;">outside</span>)</h4>
+            <p><span style="font-family: monospace;">Outside</span> (default) means wrapped text aligns with the item. <span style="font-family: monospace;">Inside</span> means wrapped text aligns with the marker.</p>
+            <p><span style="font-family: monospace;">Outside</span> bullets <b>doesn't take</b> li style like background-color:cyan <span style="font-family: monospace;">Inside</span> bullets <b>take</b> li style like background-color:cyan</p>
+            <ul class="list-example list-outside">
+                <li>Outside position: Marker is outside the content box, allowing wrapped text to align neatly under the main line.</li>
+            </ul>
+            <ul class="list-example list-inside">
+                <li>Inside position: Marker is part of the content box, and wrapped text aligns under the marker itself.</li>
+            </ul>
+            <hr>
+
+            <h4>4. List Reset (Removing Default Styling)</h4>
+            <p>Using <span style="font-family: monospace;">list-style: none;</span> and removing default browser <span style="font-family: monospace;">padding</span> is the first step to creating custom navigation menus.</p>
+            <ul class="list-example list-reset">
+                <li>Reset Style</li>
+                <li>Reset Style</li>
+            </ul>
+            <hr>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/5.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Margin Collapse"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="4.html" class="prev-button">Previous</a>
+            <a href="6.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* Expected gap: 10px + 25px = 35px. Actual gap: 25px (the largest margin) */
+    .margin-a {
+        margin-bottom: 10px;
+    }
+    
+    .margin-b {
+        margin-top: 25px;
+    }
+    
+    /* Using a border to prevent collapse */
+    .separator-parent {
+        border-top: 1px solid black;
+    }
+    .child-margin-top {
+        margin-top: 20px;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Vertical Collapse: Largest Margin Wins</h4>
+            <p>The gap between the boxes is **25px**, not 35px (10px + 25px). The margins collapse, and the largest value wins.  </p>
+            
+            <div class="container">
+                <div class="element margin-a">Box A (margin-bottom: 10px)</div>
+                <div class="element margin-b" style="background-color: #ff9800;">Box B (margin-top: 25px)</div>
+            </div>
+            <hr>
+
+            <h4>2. Preventing Collapse (Parent and First Child)</h4>
+            <p>If the parent element has a border, padding, or content separating the parent's top edge from the child's top margin, the collapse is prevented. Here, the border prevents the child's <span style="font-family: monospace;">margin-top</span> from moving outside the parent.</p>
+            
+            <div class="container separator-parent">
+                <div class="element child-no-collapse" style="background-color: #4CAF50;">Box C (margin-top: 20px)</div>
+            </div>
+
+        </section>
+</body>
+</html>

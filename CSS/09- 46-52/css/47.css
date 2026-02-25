@@ -1,0 +1,64 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #47 - Flex Box Parent - Justify Content
+ * Demonstrating the justify-content property.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.flex-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    display: flex; 
+    height: 100px;
+}
+.flex-container div {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+    /* Set a fixed size so we have extra space for justification */
+    width: 60px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Default Behavior: flex-start */
+.ex-start {
+    justify-content: flex-start; /* Items packed towards the start line of the main axis */
+}
+
+/* 2. Items at the End: flex-end */
+.ex-end {
+    justify-content: flex-end; /* Items packed towards the end line of the main axis */
+}
+
+/* 3. Items Centered: center */
+.ex-center {
+    justify-content: center; /* Items centered along the main axis */
+}
+
+/* 4. Space Between Items: space-between */
+.ex-between {
+    /* Distributes items evenly; first item is on the start line, last item on the end line */
+    justify-content: space-between; 
+}
+
+/* 5. Space Around Items: space-around */
+.ex-around {
+    /* Distributes items evenly; space is added before the first item and after the last item */
+    justify-content: space-around;
+}
+
+/* 6. Space Evenly: space-evenly */
+.ex-evenly {
+    /* Distributes items such that the spacing between any two adjacent items, and the space before the first item and after the last item, is equal. */
+    justify-content: space-evenly;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/67.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS 2D Transform: translate()"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="66.html" class="prev-button">Previous</a>
+            <a href="68.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Translation on X and Y axes */
+    .box-1:hover {
+        transform: translate(50px, 20px);
+    }
+
+    /* 2. Translation on X-axis only */
+    .box-2:hover {
+        transform: translateX(70px);
+    }
+
+    /* 3. Translation on Y-axis with percentage */
+    .box-3:hover {
+        transform: translateY(-50%);
+    }
+
+    /* 4. Centering an element horizontally and vertically */
+    .center-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Basic Translation using `translate(x, y)`</h4>
+            <p>The <code>translate(x, y)</code> function moves an element from its original position. The first value (50px) is the shift along the X-axis (horizontal), and the second value (20px) is the shift along the Y-axis (vertical). Positive values move right and down.</p>
+            <div class="container">
+                <div class="box box-1">Hover to Translate [00:47]</div>
+            </div>
+            <hr>
+
+            <h4>2. Horizontal Movement using `translateX(x)`</h4>
+            <p>To move an element only horizontally, use <code>translateX(x)</code>. This is a shorthand for <code>translate(x, 0)</code> and makes the intention clearer.</p>
+            <div class="container">
+                <div class="box box-2">Hover to TranslateX [00:59]</div>
+            </div>
+            <hr>
+
+            <h4>3. Vertical Movement using `translateY(y)` (Percentage)</h4>
+            <p>The <code>translateY(y)</code> function moves an element only vertically. When using a percentage, it is relative to the element's *own* height. <code>-50%</code> moves the element up by half of its own height.</p>
+            <div class="container">
+                <div class="box box-3">Hover to TranslateY (-50%) [01:05]</div>
+            </div>
+            <hr>
+
+            <h4>4. Centering with `position` and `translate()`</h4>
+            <p>This is a powerful technique for perfect centering. By setting <code>top: 50%;</code> and <code>left: 50%;</code>, the element's top-left corner is positioned at the container's center. Then, <code>transform: translate(-50%, -50%);</code> shifts the element back by exactly half of its own width and height, positioning its true center at the container's center. This is superior to using margin offsets because it is size-independent.</p>
+            <div class="container example-4">
+                <div class="box center-box">Perfectly Centered [04:23]</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

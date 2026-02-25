@@ -1,0 +1,52 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #45 - CSS Variables And Trainings
+ * Demonstrating Global and Local CSS Variables.
+ */
+
+/* 1. Global Variables (Defined on :root) */
+:root {
+    /* Define a color variable */
+    --main-color: #007bff;
+    /* Define a sizing variable */
+    --main-padding: 10px;
+}
+
+/* --- General Styling (Not in <pre>) --- */
+.box {
+    width: 250px;
+    height: 100px;
+    margin: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid #333;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 2. Using a Global Variable (Color) */
+.global-color {
+    /* Use the variable with the var() function. 
+       The second value is a fallback color if the variable is not found. */
+    background-color: var(--main-color, red); 
+    border-color: var(--main-color);
+}
+
+/* 3. Using a Global Variable (Sizing and Calc) */
+.global-padding {
+    /* Use the variable in a CSS calculation to add 15px to the base padding */
+    padding: calc(var(--main-padding) + 15px);
+    background-color: #28a745; /* Green */
+}
+
+/* 4. Local Variable (Defined on the element itself) */
+.local-scope {
+    /* This variable is only accessible by elements inside the .local-scope div */
+    --scope-color: #ffc107; /* Yellow */
+    background-color: var(--scope-color);
+    color: black;
+}

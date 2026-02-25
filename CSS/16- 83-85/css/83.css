@@ -1,0 +1,65 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #83 - Media Queries And Responsive Designs Intro
+ * Basics of @media rules for screen and print.
+ */
+
+/* --- General Styling (Applied to all devices) --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #2196f3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* 1. Media Type: Print [00:03:07] */
+/* Styles inside this block apply ONLY when printing the page. */
+@media print {
+    .box {
+        display: none; /* Hide the box when the user tries to print [00:04:25] */
+    }
+    body {
+        font-size: 12pt;
+        color: black;
+    }
+}
+
+/* 2. Media Type: Screen with Conditions (Width) [00:05:09] */
+
+/* Mobile / Small Screens: up to 600px */
+@media (max-width: 600px) {
+    .box {
+        background-color: #e91e63; /* Change to Pink on small screens */
+        width: 100%;
+    }
+}
+
+/* Medium Screens / Range: Between 601px and 1000px [00:07:30] */
+@media (min-width: 601px) and (max-width: 1000px) {
+    .box {
+        background-color: #4caf50; /* Green in the middle range */
+        width: 400px;
+    }
+}
+
+/* Large Screens: 1001px and up [00:06:44] */
+@media (min-width: 1001px) {
+    .box {
+        background-color: #2196f3; /* Default Blue */
+    }
+}
+
+/* Visual Helper for showing current mode */
+.status::after { content: "Desktop (Large)"; color: blue; }
+@media (max-width: 1000px) { .status::after { content: "Tablet (Medium)"; color: green; } }
+@media (max-width: 600px) { .status::after { content: "Mobile (Small)"; color: red; } }

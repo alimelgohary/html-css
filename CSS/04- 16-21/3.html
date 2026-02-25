@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/3.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Text Align Vs Direction"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="2.html" class="prev-button">Previous</a>
+            <a href="4.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            <h4>Text align: aligns text regardless of its direction RTL or LTR</h4>
+           
+        </section>
+        <pre id="pre">
+            
+            .one {
+                text-align: right;
+            }
+            .two {
+                text-align: left;
+            }
+            .three {
+                text-align: center;
+            }
+            .four {
+                direction: rtl;
+                text-align: center;
+            }
+            .five img {
+                vertical-align: top;
+            }
+        </pre>
+        <section>
+            <div class="one">
+                Text Align Right
+            </div>
+            <hr>
+            <div class="two">
+                Text Align Left
+            </div>
+            <hr>
+            <div class="three">
+                Text Align Center
+            </div>
+        </section>
+        <br><hr><hr><br>
+        <section>
+            
+            <div class="four">
+                <h3>div: text then image, direction: RTL, text align: center</h3>
+                first element inside div
+                <img width="50px" src="../00-Assignments/imgs/5-8.png" alt="">
+            </div>    
+            <div class="five four">
+                <h3>Same but img has vertical-align: top</h3>
+                first element inside div
+                <img width="50px" src="../00-Assignments/imgs/5-8.png" alt="">
+            </div>    
+        </section>
+
+
+
+
+
+</body>
+</html>

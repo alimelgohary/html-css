@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Opacity Property"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="1.html" class="prev-button">Previous</a>
+            <a href="3.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .box-opacity-01 {
+        opacity: 0.1;
+    }
+    .opacity-full {
+        opacity: 1.0;
+    }
+    .opacity-zero {
+        opacity: 0.0;
+    }
+    .rgba-box {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .opacity-box {
+        opacity: 0.5;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Setting Full Element Opacity (<span style="font-family: monospace;">opacity: 0.1;</span>)</h4>
+            <p>The <span style="font-family: monospace;">opacity</span> property controls the transparency of the <strong>entire element</strong> and its content. A value of 0.3 is mostly transparent.</p>
+            <div class="box box-opacity-01">Box with Opacity 0.1 (Background and Text are faded)</div>
+            <hr>
+
+            <h4>2. Full Opacity (<span style="font-family: monospace;">1.0</span>) vs. Full Transparency (<span style="font-family: monospace;">0.0</span>)</h4>
+            <p>The range is from 1.0 (fully visible) to 0.0 (completely invisible, though still occupying space).</p>
+            <div class="box opacity-full">Opacity 1.0 (Fully Visible)</div>
+            <div class="box opacity-zero">Opacity 0.0 (Completely Invisible)</div>
+            <hr>
+
+            <h4>3. <span style="font-family: monospace;">opacity</span> vs. <span style="font-family: monospace;">rgba()</span> Background Transparency</h4>
+            <p><span style="font-family: monospace;">rgba()</span> transparency only affects the background color, keeping the text fully visible. <span style="font-family: monospace;">opacity</span> affects everything, including text and nested elements.</p>
+            <div class="container-comparison">
+                <div class="box rgba-box">RGBA Background (Text is Opaque)</div>
+                <div class="box opacity-box">Full Opacity 0.5 (Text is Transparent)</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

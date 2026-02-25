@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/51.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Flexbox Child Properties (Basis, Shorthand, Inline-Flex)"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="50.html" class="prev-button">Previous</a>
+            <a href="52.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Flex Basis */
+    .ex-basis .item-51-1 {
+        flex-basis: 100px; 
+        flex-grow: 1; /* Grows from 100px */
+    }
+    .ex-basis .item-51-2 {
+        flex-basis: 40%; /* Takes 40% of container space */
+        flex-grow: 0; 
+    }
+    .ex-basis .item-51-3 {
+        flex-basis: auto; /* Uses explicit 'width' (60px) */
+        width: 60px; 
+        flex-grow: 1;
+    }
+
+    /* 2. Flex Shorthand (grow shrink basis) */
+    .ex-shorthand .item-51-4 {
+        flex: 1; /* Expands to 1 1 0% */
+    }
+    .ex-shorthand .item-51-5 {
+        flex: 2 1 auto; /* 2x growth, 1x shrink, size based on 80px width */
+        width: 80px;
+    }
+    .ex-shorthand .item-51-6 {
+        flex: none; /* Expands to 0 0 auto - fixed size */
+        width: 150px;
+    }
+
+    /* 3. Inline-Flex */
+    .ex-inline-flex {
+        display: inline-flex; /* Container acts inline, but contents are flex */
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Flex Item: <span style="font-family: monospace;">flex-basis</span></h4>
+            <p>Sets the initial main size of the flex item before any `grow` or `shrink` calculation. </p>
+            <div class="flex-container ex-basis">
+                <div class="flex-item item-51-1">51-1 (Basis: 100px, Grow: 1)</div>
+                <div class="flex-item item-51-2">51-2 (Basis: 40%, Grow: 0)</div>
+                <div class="flex-item item-51-3">51-3 (Basis: auto, Width: 60px, Grow: 1)</div>
+            </div>
+            <hr>
+
+            <h4>2. Flex Item: <span style="font-family: monospace;">flex</span> Shorthand</h4>
+            <p>Shorthand for <span style="font-family: monospace;">flex-grow</span>, <span style="font-family: monospace;">flex-shrink</span>, and <span style="font-family: monospace;">flex-basis</span>.</p>
+            <div class="flex-container ex-shorthand">
+                <div class="flex-item item-51-4">51-4 (flex: 1)</div>
+                <div class="flex-item item-51-5">51-5 (flex: 2 1 auto)</div>
+                <div class="flex-item item-51-6">51-6 (flex: none)</div>
+            </div>
+            <hr>
+
+            <h4>3. Display: <span style="font-family: monospace;">inline-flex</span></h4>
+            <p>Makes the container behave like an **inline** element with respect to surrounding content (it only takes the width of its content), but its direct children are still laid out using the flex model.</p>
+            <div style="background: #e9ecef; padding: 10px; border: 1px solid #ccc;">
+                <span style="background: yellow;">Before Container</span>
+                <div class="flex-container ex-inline-flex">
+                    <div class="flex-item">51-7A</div>
+                    <div class="flex-item">51-7B</div>
+                </div>
+                <span style="background: yellow;">After Container</span>
+                <div class="flex-container ex-inline-flex">
+                    <div class="flex-item">51-8A</div>
+                </div>
+            </div>
+
+        </section>
+</body>
+</html>

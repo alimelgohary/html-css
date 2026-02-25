@@ -1,0 +1,44 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #40 - Box Shadow And Examples
+ * Demonstrating the box-shadow property.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.shadow-demo {
+    width: 250px;
+    height: 100px;
+    background-color: #f0f0f0;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Basic Shadow (H-shadow, V-shadow, Blur, Color) */
+.shadow-basic {
+    box-shadow: 10px 10px 5px #888888;
+}
+
+/* 2. Full Shadow with Spread Radius */
+.shadow-spread {
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Inset Shadow (Internal) */
+.shadow-inset {
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.7);
+    background-color: white;
+}
+
+/* 4. Multiple Shadows */
+.shadow-multiple {
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5), /* Blue shadow */
+                5px 5px 10px rgba(0, 0, 0, 0.3), /* Black shadow */
+                -5px -5px 15px rgba(255, 165, 0, 0.7); /* Orange shadow */
+}

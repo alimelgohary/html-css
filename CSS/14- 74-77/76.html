@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/76.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Animation: Advanced Controls"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="75.html" class="prev-button">Previous</a>
+            <a href="77.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* 1. Animation Direction */
+    animation-direction: alternate; /* Normal -> Reverse -> Normal */
+
+    /* 2. Animation Delay (Positive vs Negative) */
+    animation-delay: 2s;  /* Wait before starting */
+    animation-delay: -1s; /* Start as if it was running for 1s already */
+
+    /* 3. Animation Fill Mode */
+    animation-fill-mode: forwards; /* Element keeps last frame style */
+
+    /* 4. Animation Play State */
+    animation-play-state: paused; /* Stop the animation on specific triggers */
+
+    /* 5. Shorthand Property */
+    animation: name duration timing delay count direction fill-mode;
+        </pre>
+
+        <section>
+            <h4>1. Animation Direction</h4>
+            <p>Controls whether the animation plays forward, backward, or in alternating cycles [00:00:20].</p>
+            <div class="container">
+                <div class="box dir-normal">Normal</div>
+                <div class="box dir-reverse">Reverse</div>
+                <div class="box dir-alternate">Alternate</div>
+            </div>
+
+            <h4>2. Animation Delay</h4>
+            <p>Positive delays wait to start. Negative delays skip the specified amount of time and start the animation mid-way [00:04:06].</p>
+            <div class="container">
+                <div class="box delay-pos">2s Delay</div>
+                <div class="box delay-neg">-1.5s (Mid-Start)</div>
+            </div>
+
+            <h4>3. Animation Fill Mode</h4>
+            <p>Determines how the element's style looks before the animation starts and after it ends [00:05:01]. Note: Reload to see effects.</p>
+            <div class="container">
+                <div class="box fill-none">None</div>
+                <div class="box fill-forwards">Forwards (Last Frame)</div>
+                <div class="box fill-both">Both (Pre & Post)</div>
+            </div>
+
+            <h4>4. Animation Play State (Hover to Pause)</h4>
+            <p>Use <code>animation-play-state</code> to toggle between <code>running</code> and <code>paused</code> [00:07:58].</p>
+            <div class="container">
+                <div class="box play-pause">Hover Me to Pause</div>
+            </div>
+
+            <h4>5. Animation Shorthand</h4>
+            <p>Combining all properties into a single <code>animation</code> line for efficiency [00:09:22].</p>
+            <div class="container">
+                <div class="box shorthand">Shorthand Applied</div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>

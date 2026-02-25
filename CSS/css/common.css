@@ -1,0 +1,88 @@
+body, html {
+    background-color: lightgrey;
+    padding: 0px;
+    margin: 0px;
+}
+pre {
+    padding-top: 15px;
+    padding: 0px;
+    color: white;
+    background-color: rgba(0, 0, 88, 0.767);
+}
+.intro{
+    margin-left: 10px;
+}
+.home-button, .prev-button, .next-button {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    margin: 10px 0px -10px;
+    box-shadow: 1px 1px 1px #0000006e;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.home-button {
+    background-color: rgb(0, 147, 173);
+}
+.home-button:hover {
+    background-color: rgb(0, 121, 143);
+}
+.home-button:active, .prev-button:active, .next-button:active {
+    box-shadow: inset 1px 1px 1px #0000006e;
+}
+.prev-button {
+    background-color: rgb(228, 31, 31);
+}
+.prev-button:hover {
+    background-color: rgba(228, 31, 31, 0.75);
+}
+.next-button {
+    background-color: rgb(51, 51, 235);
+}
+.next-button:hover {
+    background-color: rgb(51, 51, 235, 0.75);
+}
+.course-section {
+    background-color: rgb(235, 49, 49);
+    border-radius: 5px;
+    padding: 3px 10px;
+    display: inline-flex;
+    margin-left: 10px;
+    color: white;
+    font-weight: bolder;
+    width: 150px;
+    justify-content: center;
+}
+.css-course-title{
+    background-color: rgb(13, 182, 13);
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: white;
+}
+.html-course-title {
+    background-color: rgb(13, 182, 13);
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: white;
+}
+
+.course-section ~ a {
+    /* background-color: white; */
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.course-section ~ a:hover {
+    color: blue;
+}

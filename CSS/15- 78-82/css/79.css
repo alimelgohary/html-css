@@ -1,0 +1,63 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #79 - CSS Selectors Reference Part 2
+ * Covering Sibling Combinators and Attribute Selectors.
+ */
+
+/* 1. Adjacent Sibling Combinator (+) [00:00:17] */
+/* Targets the element that is IMMEDIATELY after another element. */
+div + p {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+/* 2. General Sibling Combinator (~) [00:01:26] */
+/* Targets all specified elements that follow another element (must share same parent). */
+h3 ~ p {
+    color: #4caf50;
+    font-style: italic;
+}
+
+/* 3. Basic Attribute Selector [00:03:27] */
+/* Targets any element with the specified attribute. */
+[title] {
+    border-bottom: 2px dashed #2196f3;
+}
+
+/* 4. Attribute Value Selector [00:04:32] */
+/* Targets elements where the attribute exactly matches the value. */
+input[type="text"] {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* 5. Attribute Word Selector (~=) [00:06:15] */
+/* Targets elements with an attribute containing a specific word (space-separated). */
+[title~="important"] {
+    background-color: yellow;
+}
+
+/* 6. Attribute Substring Selector (*=) [00:07:41] */
+/* Targets elements with an attribute value containing the string anywhere. */
+[class*="btn-"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 7. Attribute Starts-With Selector (^=) [00:08:18] */
+/* Targets elements whose attribute starts with the specified string. */
+a[href^="https"] {
+    color: #3f51b5;
+    text-decoration: underline;
+}
+
+/* Visual Helpers */
+.visual-container {
+    padding: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    line-height: 1.8;
+}
+.btn-primary { background-color: #007bff; color: white; border: none; }
+.btn-danger { background-color: #dc3545; color: white; border: none; }

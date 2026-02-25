@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/3.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Position"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="2.html" class="prev-button">Previous</a>
+            <a href="4.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+            
+        </pre>
+        <section>
+            <h4>Adding margin to an element</h4>
+            <p>Adding margin to an element changes its position and also other elements under it change <button onclick="toggle1()">Start Animation</button></p>
+            <div class="ex1">
+                <div class="common ex11">
+                    One
+                </div>
+                <div class="common ex12">
+                    Two
+                </div>
+            </div>
+            <hr>
+
+            <h4>Position Relative</h4>
+            <p>Element has a space in the layout</p>
+            <p id="ex2">When you specify top:0px or bottom: or left: or right:  the element moves <b>relative to its intial positon</b> regardless of other elements</p>
+            <button onclick="toggle2()">Start Animation</button>
+            <div class="ex2">
+                <div class="common ex21">
+                    One
+                </div>
+                <div class="common ex22">
+                    Two 
+                </div>
+            </div>
+            <hr>
+            <h4>Position absolute</h4>
+            <p>Element one has <b>NO</b> space in the layout</p>
+            <p id="ex3">When you specify top:0px or bottom: or left: or right:  the element moves <b>relative to its root parent element</b></p>
+            <button onclick="toggle3()">Start Animation</button>
+            <div class="ex3">
+                <div class="common ex31">
+                    One
+                </div>
+                <div class="common ex32">
+                    Two 
+                </div>
+            </div>
+            <hr>
+            <h4>Position absolute with parent</h4>
+            <p>Element one has <b>NO</b> space in the layout</p>
+            <p>Parent element <b>must</b> have position relative</p>
+            <p id="ex4">When you specify top: or bottom: or left: or right:0px  the element moves <b>relative to its parent element</b></p>
+            <button onclick="toggle4()">Start Animation</button>
+            <div class="ex4">
+                <div class="common ex41">
+                    One
+                </div>
+                <div class="common ex42">
+                    Two 
+                </div>
+            </div>
+            <hr>
+            <h4>Position fixed</h4>
+            <p>Element one has <b>NO</b> space in the layout</p>
+            <p>Element position is relative to top root element</p>
+            <p>Element also doesn't move when you scroll, can be used to implement scroll to top feature</p>
+            <p id="ex5">When you specify top: or bottom: or left: or right:0px  the element moves <b>relative to its parent element</b></p>
+            <div class="ex5">
+                <div onclick="window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })" class="common ex51">
+                    Scroll To Top
+                </div>
+                <div class="common ex52">
+                    Two 
+                </div>
+            </div>
+            <hr>
+            <h4>Position sticky</h4>
+            <p>Element has <b>Regular</b> space in the layout</p>
+            <p id="ex6">When you specify top:0 or bottom:0 or left: or right:  the element sticks when <b>visible part of the screen</b> reaches that point</p>
+            <div class="ex6">
+                
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <div class="common ex61">
+                    position: sticky with bottom:0
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <div class="common ex62">
+                    position: sticky with top:0
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aliquam deserunt quaerat vel consectetur vero sapiente iure vitae accusantium provident perferendis, animi sunt ullam itaque dolore saepe optio, modi quis?</p>
+            </div>
+            <hr>
+        </section>
+</body>
+<script>
+    start1 = false;
+    async function toggle1() {
+        start1 = !start1;
+        if(start1){
+            var element = document.querySelector(".ex11")
+                for (let index = 0; index < 60; index++) {
+                    if(start1 == false)
+                        break;
+                    await new Promise(resolve => setTimeout(resolve, 25));
+                    element.style.marginTop = `${index}px`;
+                    if(index == 59)
+                        index = 0;
+                }
+        }
+    }
+    start2 = false;
+    async function toggle2() {
+        start2 = !start2;
+        if(start2){
+            var element = document.querySelector(".ex21")
+            var p = document.getElementById("ex2")
+                for (let index = 0; index < 100; index++) {
+                    if(start2 == false)
+                        break;
+                    await new Promise(resolve => setTimeout(resolve, 25));
+                    element.style.top = `${index}px`;
+                    p.innerHTML = `When you specify top:${index}px or bottom: or left:${index} or right:  the element moves <b>relative to its intial positon</b> regardless of other elements</b>`
+                    if(index == 99)
+                        index = 0;
+                }
+        }
+    }
+    start3 = false;
+    async function toggle3() {
+        start3 = !start3;
+        if(start3){
+            var element = document.querySelector(".ex31")
+            var p = document.getElementById("ex3")
+                for (let index = 0; index < 600; index++) {
+                    if(start3 == false)
+                        break;
+                    await new Promise(resolve => setTimeout(resolve, 3));
+                    element.style.top = `${index}px`;
+                    element.style.left = `${index}px`;
+                    p.innerHTML = `When you specify top:${index}px or bottom: or left:${index} or right:  the element moves <b>relative to its root parent element</b>`
+                    if(index == 599)
+                        index = 0;
+                }
+        }
+    }
+    start4 = false;
+    async function toggle4() {
+        start4 = !start4;
+        if(start4){
+            var element = document.querySelector(".ex41")
+            var p = document.getElementById("ex4")
+                for (let index = 0; index < 200; index++) {
+                    if(start4 == false)
+                        break;
+                    await new Promise(resolve => setTimeout(resolve, 25));
+                    element.style.right = `${index}px`;
+                    p.innerHTML = `When you specify top: or bottom: or left: or right:${index}px  the element moves <b>relative to its parent element</b>`
+                    if(index == 199)
+                        index = 0;
+                }
+        }
+    }
+</script>
+</html>

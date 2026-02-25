@@ -1,0 +1,74 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #42 - Transition
+ * Demonstrating transition properties, delays, timing functions, and shorthand.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Basic Transition (Duration Only) */
+/* By default, transition-property is 'all' */
+.trans-basic {
+    transition-duration: 2s;
+}
+.trans-basic:hover {
+    width: 300px;
+    background-color: blue;
+}
+
+/* 2. Transitioning Specific Properties (Performance) */
+.trans-specific {
+    /* Only animate the width, change background instantly */
+    transition-property: width;
+    transition-duration: 2s;
+}
+.trans-specific:hover {
+    width: 300px;
+    background-color: blue; /* Instant change */
+}
+
+/* 3. Transition Delay */
+.trans-delay {
+    transition-property: width;
+    transition-duration: 2s;
+    transition-delay: 1s; /* Wait 1 second before starting */
+}
+.trans-delay:hover {
+    width: 300px;
+}
+
+/* 4. Multiple Properties with Different Durations */
+.trans-multi {
+    /* comma-separated list */
+    transition: width 2s, height 1s;
+}
+.trans-multi:hover {
+    width: 300px;
+    height: 150px;
+}
+
+/* 5. Shorthand Syntax with Timing Function */
+/* property | duration | timing-function | delay */
+.trans-shorthand {
+    transition: all 1s ease-in-out 0.5s;
+}
+.trans-shorthand:hover {
+    width: 300px;
+    background-color: green;
+    border-radius: 50%;
+}

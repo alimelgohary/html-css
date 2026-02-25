@@ -1,0 +1,62 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #84 - Media Queries And Responsive Designs Standards
+ * Standard Breakpoints based on modern frameworks (like Bootstrap).
+ */
+
+/* --- Default Layout (Mobile First Approach) --- */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #eee;
+    text-align: center;
+}
+
+.item {
+    background-color: #2196f3;
+    color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* 1. Small Devices (Tablets, 768px and up) [00:04:44] */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        background-color: #bbdefb;
+    }
+    .item {
+        width: 48%;
+        display: inline-block;
+    }
+}
+
+/* 2. Medium Devices (Desktops, 992px and up) [00:04:54] */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+        background-color: #64b5f6;
+    }
+    .item {
+        width: 31%;
+    }
+}
+
+/* 3. Large Devices (Large Desktops, 1200px and up) [00:05:04] */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+        background-color: #1e88e5;
+    }
+    .item {
+        width: 23%;
+    }
+}
+
+/* 4. Extra Large Devices (Huge Screens, 1400px and up) [00:05:33] */
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+        background-color: #0d47a1;
+    }
+}

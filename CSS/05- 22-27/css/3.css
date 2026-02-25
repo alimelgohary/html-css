@@ -1,0 +1,47 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #24 - Typography - Font Size And CSS Units
+ * Demonstrating different CSS font size units: em, rem, percentage, and vw.
+ */
+
+/* --- General Styling --- */
+/* These rules are for demonstration structure and readability */
+.parent-em, .parent-rem, .parent-perc, .heading-vw {
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    width: 600px;
+}
+
+/* Set parent sizes for comparison */
+.parent-em {
+    font-size: 20px;
+}
+.parent-rem {
+    font-size: 20px;
+} 
+.parent-perc {
+    font-size: 20px;
+}
+
+/* --- Example CSS Rules --- */
+
+/* 1. EM Unit */
+.child-em {
+    font-size: 1.5em; /* 1.5 * 20px (parent size) = 30px */
+}
+
+/* 2. REM Unit */
+.child-rem {
+    font-size: 2rem; /* 2 * 16px (root size) = 32px, unaffected by parent's 20px */
+}
+
+/* 3. Percentage Unit */
+.child-perc {
+    font-size: 150%; /* 150% of 20px (parent size) = 30px */
+}
+
+/* 4. Viewport Width Unit */
+.heading-vw {
+    font-size: 5vw; /* 5% of the viewport width */
+}

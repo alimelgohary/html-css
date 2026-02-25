@@ -1,0 +1,41 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #23 - Typography - Font Family
+ * Demonstrating font-family property, fallbacks, and generic families.
+ */
+
+/* General styling for all examples */
+.serif-example, .sans-serif-example, .fallback-demo, .google-font {
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    width: 600px;
+}
+
+/* 1. Generic Families */
+.serif-example {
+    /* Times is a common web-safe serif font */
+    font-family: Times, "Times New Roman", serif;
+    font-size: 20px;
+}
+.sans-serif-example {
+    /* Arial is a common web-safe sans-serif font */
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+/* 2. Font Fallback System */
+.fallback-demo {
+    /* The browser will try NonExistentFont, then Courier, then Monospace generic family */
+    font-family: "NonExistentFont", Courier, monospace;
+    font-size: 20px;
+    color: darkred;
+}
+
+/* 3. Google Font (Roboto) */
+.google-font {
+    /* Roboto must be loaded via a <link> tag in HTML. sans-serif is the fallback. */
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    border-left: 5px solid blue;
+}

@@ -1,0 +1,249 @@
+html * {
+    box-sizing: border-box;
+}
+.one {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    animation-name: spin1;
+    border-radius: 50%;
+    border: 4px solid #e51b5e;
+    border-left-color: transparent;
+    position: relative;
+    animation: spin1 1s infinite linear;
+}
+.one::after {
+    content: "";
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    border: 4px solid #2193f7;
+    border-right-color: transparent;
+}
+.one::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: -16px;
+    left: -16px;
+    border-radius: 50%;
+    border: 4px solid #fca500;
+    border-bottom-color: transparent;
+}
+@keyframes spin1 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.one:hover{
+    animation-play-state: paused;
+}
+/* ================================================ */
+.two {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    border-radius: 50%;
+    border: 4px solid #1e94d9;
+    border-bottom-color: transparent;
+    position: relative;
+    animation: spin2 1s infinite linear paused;
+}
+.two::after {
+    content: "";
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    border: 4px solid #fca500;
+    border-bottom-color: transparent;
+    animation: spin2 1.3s infinite linear paused;
+}
+.two::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: -16px;
+    left: -16px;
+    border-radius: 50%;
+    border: 4px solid black;
+    border-bottom-color: transparent;
+    animation: spin2 1.6s infinite linear paused;
+}
+@keyframes spin2 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.two:hover::before, .two:hover::after, .two:hover{
+    animation-play-state: running;
+}
+/* ============================================================== */
+span {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    display: block;
+    background-color: #EEE;
+    border-radius: 50%;
+    border: 4px solid black;
+    border-bottom-color: transparent;
+    animation: spin3 1s infinite linear reverse;
+}
+@keyframes spin3 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* =================================================================== */
+.container {
+    display: flex;
+    margin: 50px auto;
+    width: 1280px;
+}
+.container .E {
+    display: grid;
+    height: 1000px;
+    width: 600px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px auto 150px auto 150px;
+    grid-template-areas: "row1 row1 row1 row1"
+                         "col1 . . ."
+                         "row2 row2 row2 row2"
+                         "col2 . . ."
+                         "row3 row3 row3 row3";
+    position: relative;
+}
+.container .L {
+    margin-left: 80px;
+    display: grid;
+    height: 1000px;
+    width: 600px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 150px;
+    grid-template-areas: "col-L . . ."
+                         "row-L row-L row-L row-L";
+    position: relative;
+}
+.L::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    bottom: 25px;
+    left: 475px;
+    position: absolute;
+    animation: move-left-up-vanish 10s linear infinite; /* 3s actual animation + 7s delay for the next iteration*/
+}
+.E::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #fea604;
+    top: 25px;
+    left: 475px;
+    position: absolute;
+    animation: move-left-down-right-left-down-right-start 10s linear infinite; /* 7s actual animation + 3s delay for the next iteration*/
+    animation-delay: 3s;
+}
+@keyframes move-left-down-right-left-down-right-start {
+    0% {
+        top: 25px;
+        left: 475px;
+    }
+    10% {
+        top: 25px;
+        left: 25px;
+    }
+    20% {
+        left: 25px;
+        top: 450px;
+    }
+    30% {
+        left: 475px;
+        top: 450px;
+    }
+    40% {
+        left: 25px;
+        top: 450px;
+    }
+    50% {
+        left: 25px;
+        top: 875px;
+    }
+    60% {
+        left: 475px;
+        top: 875px;
+    }
+    63%{
+        left: 25px;
+        top: 875px;
+    }
+    66%{
+        left: 25px;
+        top: 25px;
+    }
+    70% {
+        top: 25px;
+        left: 475px;
+    }
+    100% { /* Hold the final state for 3s */
+        top: 25px;
+        left: 475px;
+    }
+}
+@keyframes move-left-up-vanish {
+    0% {
+        background-color: #fea604;
+    }
+    10% {
+        background-color: #fea604;
+        left: 25px;
+        bottom: 25px;
+    }
+    20%{
+        background-color: #fea604;
+        left: 25px;
+        bottom: 875px;
+    }
+    30% {
+        left: 25px;
+        bottom: 875px;
+        background-color: transparent;
+    }
+    100% {
+        left: 25px;
+        bottom: 875px;
+        background-color: transparent;
+    }
+}
+.E div, .L div {
+    background-color: #333;
+}
+.E .row1 {
+    grid-area: row1;
+}
+.E .row2 {
+    grid-area: row2;
+}
+.E .row3 {
+    grid-area: row3;
+}
+.E .col1 {
+    grid-area: col1;
+}
+.E .col2 {
+    grid-area: col2;
+}
+.L .col1 {
+    grid-area: col-L;
+}
+.L .row1 {
+    grid-area: row-L;
+}

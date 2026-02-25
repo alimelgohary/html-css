@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <title>02-Padding-margin-border-outline/Padding</title>
+</head>
+<body>
+    <a href="../../index.html" class="home-button">Go Home</a><br>
+    <a href="../01-background/04-background-size.html" class="prev-button">Previous</a>
+    <a href="2.html" class="next-button">Next</a><br>
+    
+    <section>
+        <h3>02-Spacing & Borders/Padding = inner space</h3>
+        <pre>
+            .div-1 {
+                padding: 10px;               /* 10px all sides */
+                padding: 64px 32px 16px 8px; /* Top - Right - Bottom - Left */
+                padding: 64px 32px;          /* Top:64 right:32 bottom=top left=right */
+                padding: 64px 32px 16px;     /* left = right = 32*/
+                padding-left: 16px;          /* Each side can be specified independently */
+                <del>padding: -10px;</del>              /* Negative values not available */
+            }
+        </pre>
+        <div class="div-1">div content start here
+            <p>Paragraph: This is Text</p>
+            <p>Paragraph: This is Text</p>
+            <p>Paragraph: This is Text</p>
+            <p>Paragraph: This is Text</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/3.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Typography - Font Size And CSS Units"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="2.html" class="prev-button">Previous</a>
+            <a href="4.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .child-em {
+        font-size: 1.5em;
+    }
+    .child-rem {
+        font-size: 2rem;
+    }
+    .child-perc {
+        font-size: 150%;
+    }
+    .heading-vw {
+        font-size: 5vw;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Understanding <span style="font-family: monospace;">em</span> Units (Relative to Parent)</h4>
+            <p>The <span style="font-family: monospace;">em</span> unit is relative to the font size of its **parent element**. If the parent is 20px, 1.5em will be 30px.</p>
+            <div class="parent-em" style="font-size: 20px; color: blue;">Parent is 20px
+                <p class="child-em" style="color: black;">This text is 1.5em (30px) because the parent is 20px.</p>
+            </div>
+            <hr>
+
+            <h4>2. Understanding <span style="font-family: monospace;">rem</span> Units (Relative to Root)</h4>
+            <p>The <span style="font-family: monospace;">rem</span> unit is relative to the font size of the **root element** (<span style="font-family: monospace;">html</span>). By default, 1rem is 16px, regardless of the immediate parent's size.</p>
+            <div class="parent-rem" style="font-size: 20px; color: blue;">Parent is 20px
+                <p class="child-rem" style="color: black;">This text is 2rem (32px) regardless of the parent, based on the default root size (16px).</p>
+            </div>
+            <hr>
+
+            <h4>3. Using Percentage Units (Relative to Parent)</h4>
+            <p>Percentage units behave similarly to <span style="font-family: monospace;">em</span>, setting the size relative to the immediate **parent element**'s font size.</p>
+            <div class="parent-perc" style="font-size: 20px; color: blue;">Parent is 20px
+                <p class="child-perc" style="color: black;">This text is 150% (30px) of the parent's font size.</p>
+            </div>
+            <hr>
+
+            <h4>4. Using Viewport Width Unit (<span style="font-family: monospace;">vw</span>) for Scalable Text</h4>
+            <p>The <span style="font-family: monospace;">vw</span> unit is relative to the **viewport width** (1vw = 1% of the viewport width). This allows text size to scale dynamically as the user resizes the browser window.</p>
+            <h1 class="heading-vw">This Heading Scales with the Browser Width (5vw).</h1>
+            <hr>
+
+        </section>
+</body>
+</html>

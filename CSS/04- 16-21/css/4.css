@@ -1,0 +1,27 @@
+.one, .two, .three, .four, .five, .six, .seven {
+    margin-left: 50px;
+    color: black;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.one {
+    text-decoration: line-through;
+}
+.two {
+    text-decoration: underline;
+}
+.three {
+    text-decoration: overline;
+}
+.four a{
+    text-decoration: none;
+}
+.five {
+    text-transform: capitalize;
+}
+.six {
+    text-transform: uppercase;
+}
+.seven {
+    text-transform: lowercase;
+}

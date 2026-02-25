@@ -1,0 +1,63 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #58 - Grid - Parent - Template Rows And Gap
+ * Demonstrating grid-template-rows and gap properties.
+ */
+
+/* --- General Styling --- */
+.grid-container {
+    /* Required properties for Grid */
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns for all examples */
+    width: 600px;
+    height: 300px; /* Fixed height to show row sizing clearly */
+    border: 3px solid #007bff;
+    margin-bottom: 25px;
+}
+.grid-item {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Example CSS Rules (Included in the <pre> tag) */
+/* -------------------------------------------------------------------------- */
+
+/* 1. Grid Template Rows (Fixed + Fraction) */
+.ex-rows-fr {
+    /* 58-1: Row 1 is fixed at 50px. Rows 2 & 3 split the remaining 250px equally. */
+    grid-template-rows: 50px 1fr 1fr;
+}
+
+/* 2. Grid Template Rows (Auto vs. Fraction) */
+.ex-rows-auto {
+    /* 58-2: Row 1 height determined by content. Row 2 takes all remaining space. */
+    grid-template-rows: auto 1fr;
+}
+
+/* 3. Row Gap */
+.ex-row-gap {
+    /* 58-3: Adds 20px space between rows */
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px; 
+}
+
+/* 4. Column Gap */
+.ex-col-gap {
+    /* 58-4: Adds 10px space between columns */
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 10px; 
+}
+
+/* 5. Gap Shorthand */
+.ex-gap-shorthand {
+    /* 58-5: Row gap is 20px, Column gap is 5px */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px 5px; 
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/46.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Flexbox Parent Properties"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../08- 40-45/6.html" class="prev-button">Previous</a>
+            <a href="47.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .flex-container {
+        display: flex; 
+        /* ... other styles ... */
+    }
+
+    /* 1. Default (row, nowrap) */
+    .ex-default div {
+        width: 25%; /* Items shrink to fit on one line */
+    }
+
+    /* 2. Direction */
+    .ex-direction {
+        flex-direction: column-reverse;
+    }
+
+    /* 3. Wrap */
+    .ex-wrap {
+        flex-wrap: wrap; 
+    }
+    .ex-wrap div {
+        width: 25%; /* Items wrap when total width > 100% */
+    }
+
+    /* 4. Flow (Shorthand) */
+    .ex-flow {
+        flex-flow: row-reverse wrap;
+    }
+    .ex-flow div {
+        width: 30%; 
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Basic Flex Container (<span style="font-family: monospace;">display: flex</span>)</h4>
+            <p>The <span style="font-family: monospace;">display: flex</span> property turns the container into a flex context. By default, items align horizontally (<span style="font-family: monospace;">row</span>) and attempt to fit on a single line (<span style="font-family: monospace;">nowrap</span>). </p>
+            <div class="flex-container ex-default">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+            </div>
+            <hr>
+
+            <h4>2. Direction (<span style="font-family: monospace;">flex-direction</span>)</h4>
+            <p>Controls the direction of the main axis. Options: <span style="font-family: monospace;">row</span> (default), <span style="font-family: monospace;">row-reverse</span>, <span style="font-family: monospace;">column</span>, and <span style="font-family: monospace;">column-reverse</span>.</p>
+            <div class="flex-container ex-direction">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <hr>
+
+            <h4>3. Wrap (<span style="font-family: monospace;">flex-wrap: wrap</span>)</h4>
+            <p>When set to <span style="font-family: monospace;">wrap</span>, flex items that exceed the container's space will wrap to the next line instead of shrinking to fit on one line.</p>
+            <div class="flex-container ex-wrap" style="height: auto;">
+                <div>1 (25%)</div>
+                <div>2 (25%)</div>
+                <div>3 (25%)</div>
+                <div>4 (25%)</div>
+                <div>5 (25%)</div>
+            </div>
+            <hr>
+
+            <h4>4. Flow (Shorthand for Direction and Wrap)</h4>
+            <p>The <span style="font-family: monospace;">flex-flow</span> shorthand combines <span style="font-family: monospace;">flex-direction</span> and <span style="font-family: monospace;">flex-wrap</span>. Example: <span style="font-family: monospace;">flex-flow: row-reverse wrap;</span>.</p>
+            <div class="flex-container ex-flow" style="height: auto;">
+                <div>1 (30%)</div>
+                <div>2 (30%)</div>
+                <div>3 (30%)</div>
+                <div>4 (30%)</div>
+            </div>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/5.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Text Spacing"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="4.html" class="prev-button">Previous</a>
+            <a href="6.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        <pre id="pre">
+            .one {
+                letter-spacing: 5px;
+            }
+            .two {
+                letter-spacing: -1px;
+            }
+            .three {
+                text-indent: 40px;
+            }
+            .four {
+                text-indent: -40px;
+            }
+            .five {
+                width: 400px;
+                line-height: 2.5; /* Recommended line height=1.6 */
+            }
+            .six {
+                word-spacing: 20px;
+            }
+            .seven {
+                background-color: #eee;
+                width: 400px;
+                white-space: nowrap;
+            }
+            .eight {
+                background-color: #eee;
+                word-break: break-word;
+                width: 100px;
+                hyphens: auto;
+            }
+            .nine {
+                background-color: #eee;
+                word-break: break-all;
+                width: 400px;
+            }
+            
+        </pre>
+        <section>
+            <div class="zero">
+                regular text: Text Text Text Text
+                Text Text Text Text
+                Text Text Text Text
+                Text Text Text Text 
+                Text Text Text Text
+                Text Text Text Text
+            </div>
+            <hr>
+            <div class="one">
+                letter-spacing: Text Text Text Text 
+            </div>
+            <hr>
+            <div class="two">
+                letter-spacing negative: Text Text Text Text 
+            </div>
+            <hr>
+            <div class="three">
+                 indentation positive Text Text Text Text 
+            </div>
+            <hr>
+            <div class="four">
+                 indentation negative Text Text Text Text 
+            </div>
+            <hr>
+            <div class="five">
+                 Increase line height  Text Text Text
+                 Text Text Text Text Text Text Text
+                 Text Text Text Text Text Text Text
+                 Text Text Text Text Text Text Text
+                 Text Text Text Text Text  Text Text Text 
+            </div>
+            <hr>
+            <div class="six">
+                Increase Word-spacing Text Text Text Text 
+            </div>
+            <hr>
+            <div class="seven">
+                white-space: nowrap; Text Text Text Text 
+                Text Text Text Text Text Text Text Text 
+                Text Text Text Text Text Text Text Text 
+            </div>
+            <hr>
+            <h3>word-break: break-word; prevents overflow, breaks at natural points first, then anywhere if necessary. </h3>
+            <div class="eight">
+                word-break: break-word; Hello, this is the mediterranean sea mediterranean the mediterranean the mediterranean the mediterranean the mediterranean 
+            </div>
+            <hr>
+            <h3>word-break: break-all; prevents overflow, breaks at any character; </h3>
+            <div class="nine">
+                word-break: break-all; Hello, this is the mediterranean sea mediterranean the mediterranean the mediterranean the mediterranean the mediterranean 
+            </div>
+        </section>
+</body>
+</html>

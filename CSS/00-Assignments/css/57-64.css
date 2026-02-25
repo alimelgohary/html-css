@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template: 50px auto /  repeat(3, 1fr);
+  gap: 15px 15px;
+}
+.grid div {
+    background-color: #607d8b;
+    counter-increment: name;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid div::after {
+    content: "Element " counter(name);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+/* ====================================================================== */
+.layout {
+    height: 100vh;
+    display: grid;
+    grid-template: 50px 1fr 50px / repeat(5, 1fr);
+    grid-template-areas:
+    "header header header header header"
+    "sec sec sec sec side"
+    "foot foot foot foot foot";
+}
+.layout * {
+    padding: 10px;
+}
+header::after, section::after, footer::after, aside {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    grid-area: header;
+    background-color: #03a9f4;
+}
+header::after {
+    content: "Header";
+}
+section {
+    background-color: #ff5722;
+    grid-area: sec;
+}
+section::after {
+    content: "Section";
+}
+footer {
+    background-color: #009688;
+    grid-area: foot;
+}
+footer::after {
+        content: "Footer";
+    }
+aside {
+    background-color: #607d8b;
+    grid-area: side;
+}
+aside::after {
+    content: "Aside";
+}
+/* ====================================================================== */
+.grid2 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template: 1fr auto / auto 1fr 1fr auto;
+  gap: 10px 10px;
+}
+.grid2 div {
+    background-color: #403f3f;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ====================================================================== */
+.grid3 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(3, 1fr);
+    gap: 10px 10px;
+}
+.grid3 * {
+    background-color: #2196f3;
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid3 .two {
+    grid-column: span 2;
+}
+.grid3 .five {
+    grid-area: 3 / 2 / 6 / 4;
+}
+.grid3 .eight {
+    grid-area: 1 / span 3;
+    
+}
+.grid3 .one {
+    grid-area: 6 / span 3;
+}
+/* =================================================================== */
+.grid4 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template: 25px 25px / 1fr 1fr;
+    gap: 10px 10px;
+
+    align-content: space-between;
+}
+.grid4 * {
+    background-color: #e91e63;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ============================================================================= */
+.grid5 {
+    background-color: #EEE;
+    height: fit-content;
+    width: 100%;
+    padding: 20px 25px;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    gap: 10px 10px;
+}
+.grid5 div {
+    border: solid #fe470d;
+    border-width: 0px 0px 4px;
+    padding: 10px;
+    background-color: white;
+    position: relative;
+}
+.grid5 .three, .grid5 .five {
+    background-color: #00001b;
+}
+.grid5 div::after {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    content: "\"";
+    font-size: 50px;
+    transform: rotate(25deg);
+    color: #b3b3b3;
+}
+.name, .role, .main, .explain {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #00001b;
+}
+.role, .explain {
+    font-size: 20px;
+}
+.explain {
+    font-size: 18px;
+    font-weight: normal;
+}
+.role {
+    color: #a8a8a8; /* Role color */
+    display: block;
+    padding: 10px 0px;
+}
+.grid5 .three .name,
+.grid5 .five .name,
+.grid5 .three .main,
+.grid5 .five .main,
+.grid5 .three .explain,
+.grid5 .five .explain
+{
+    color: white;
+}
+/* spans adjust */
+.grid5 .three {
+    grid-row: span 3;
+}
+.grid5 .four {
+    grid-row: span 2;
+}
+.grid5 .one, .grid5 .five, .grid5 .six {
+    grid-column: span 2;
+}

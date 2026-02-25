@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/59.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Grid: Justify Content and Align Content"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="58.html" class="prev-button">Previous</a>
+            <a href="60.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* Container setup: 
+       display: grid; width: 400px; height: 250px;
+       grid-template-columns: 100px 100px;
+       grid-template-rows: 80px 80px; */
+
+    /* 1. Justify Content (Horizontal) */
+    .ex-justify-center {
+        justify-content: center; /* 59-1: Centers the content horizontally */
+    }
+
+    /* 2. Align Content (Vertical) */
+    .ex-align-end {
+        align-content: flex-end; /* 59-2: Aligns content to the bottom */
+    }
+
+    /* 3. Space Distribution (Both Axes) */
+    .ex-space-around {
+        justify-content: space-around; /* 59-3: Space around on the horizontal axis */
+        align-content: space-between; /* 59-4: Space between on the vertical axis */
+    }
+            
+        </pre>
+        <section>
+            
+            <h3>CSS Grid Parent Properties: Alignment</h3>
+            <p>These properties control the positioning and distribution of the entire grid **content** (all tracks) within the container, but only when there is **free space** available.</p>
+            <hr>
+
+            <h4>1. <span style="font-family: monospace;">justify-content: center</span> (Horizontal Alignment)</h4>
+            <div class="grid-container ex-justify-center">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+            </div>
+            <hr>
+
+            <h4>2. <span style="font-family: monospace;">align-content: flex-end</span> (Vertical Alignment)</h4>
+            <div class="grid-container ex-align-end">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+            </div>
+            <hr>
+
+            <h4>3. Space Distribution: <span style="font-family: monospace;">space-around</span> and <span style="font-family: monospace;">space-between</span></h4>
+            <div class="grid-container ex-space-around">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+            </div>
+
+        </section>
+</body>
+</html>

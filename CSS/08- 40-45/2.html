@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Box Sizing"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="1.html" class="prev-button">Previous</a>
+            <a href="3.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .one {
+        box-sizing: content-box;
+        width: 300px;
+        height: 50px;
+        padding: 10px;
+        border: 5px solid red;
+    }
+    .two {
+        box-sizing: border-box;
+        width: 300px;
+        height: 50px;
+        padding: 10px;
+        border: 5px solid blue;
+    }
+    * {
+        box-sizing: border-box;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. The Problem (<span style="font-family: monospace;">content-box</span>)</h4>
+            <p>By default, if you set a width of 300px, adding padding (10px) and borders (5px) <strong>increases</strong> the total width to 330px. This often breaks layouts where elements are meant to sit side-by-side.</p>
+            <div class="box one">
+                Total Width: 330px
+            </div>
+            <hr>
+
+            <h4>2. The Solution (<span style="font-family: monospace;">border-box</span>)</h4>
+            <p>Using <span style="font-family: monospace;">box-sizing: border-box;</span> forces the element to stay at the specified 300px width. The padding and border push the content inward rather than expanding the box outward.</p>
+            <div class="box two">
+                Total Width: 300px
+            </div>
+            <hr>
+
+            <h4>3. Global Reset (Best Practice)</h4>
+            <p>It is standard practice to apply <span style="font-family: monospace;">box-sizing: border-box;</span> to all elements using the universal selector (<span style="font-family: monospace;">*</span>) to make sizing intuitive across the entire project.</p>
+            <div style="padding: 10px; border: 1px solid #999; background: #eee;">
+                (The global rule is applied in the CSS file)
+            </div>
+
+        </section>
+</body>
+</html>

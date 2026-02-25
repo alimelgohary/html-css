@@ -1,0 +1,50 @@
+body {
+    margin: 0px;
+}
+.parent {
+    width: 800px;
+    padding: 0px;
+    text-align: center;
+}
+.child {
+    background-color: #EEE;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 0px;
+    
+    margin-left: 15px;
+    margin-top: 15px;
+    float: left;
+}
+.full {
+    width: calc((100% - 15px*2)/1)
+}
+.one-third {
+    width: calc((100% - 15px*4)/3)
+}
+.half {
+    width: calc((100% - 15px*3)/2)
+}
+.one-fourth {
+    width: calc((100% - 15px*5)/4)
+}
+.clear {
+    clear: both;
+}
+
+
+.normal, .one, .two {
+  margin: 20px auto;
+  width: 300px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: rgb(179 179 179); /* Get The Background From Image */
+  color: black;
+}
+.one {
+    background-color: rgb(179 179 179 / 0.1);
+}
+.two {
+    opacity: 0.1;
+}

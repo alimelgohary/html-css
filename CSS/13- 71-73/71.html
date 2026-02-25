@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/71.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "3D RotateX with Transform Origin"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="70.html" class="prev-button">Previous</a>
+            <a href="72.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+        </section>
+        
+        <pre id="pre">
+    /* 1. Rotation around the X-axis (Tilting forward/backward) */
+    .box-x:hover {
+        transform: rotateX(180deg);
+    }
+
+    /* 2. Rotation around the Y-axis (Spinning like a door) */
+    .box-y:hover {
+        transform: rotateY(180deg);
+    }
+
+    /* 3. Rotation around the Z-axis (Similar to 2D rotate) */
+    .box-z:hover {
+        transform: rotateZ(45deg);
+    }
+
+    /* 4. Custom 3D Rotation using rotate3d(x, y, z, angle) */
+    .box-3d:hover {
+        /* Rotates around a custom vector (1, 1, 1) */
+        transform: rotate3d(1, 1, 1, 45deg);
+    }
+    /* The Info panel is hidden by rotating it -90deg on the X-axis. 
+       The transform-origin: top; makes it swing like a door. */
+
+    .product-info {
+        transform-origin: top;
+        transform: rotateX(-90deg);
+        transition: transform 0.6s;
+    }
+
+    .product-card:hover .product-info {
+        transform: rotateX(0deg);
+    }
+        </pre>
+        <section>
+            <h4>1. Rotation Around the X-Axis (`rotateX`)</h4>
+            <p>The <code>rotateX()</code> function rotates an element around the horizontal X-axis. This creates a tilting effect where the element flips forward or backward in 3D space [00:03:06].</p>
+            <div class="container">
+                <div class="box box-x">Rotate X (180deg)</div>
+            </div>
+            <hr>
+
+            <h4>2. Rotation Around the Y-Axis (`rotateY`)</h4>
+            <p>The <code>rotateY()</code> function rotates an element around the vertical Y-axis. This is commonly used for "card flip" effects, where the element spins like a revolving door [00:03:06].</p>
+            <div class="container">
+                <div class="box box-y">Rotate Y (180deg)</div>
+            </div>
+            <hr>
+
+            <h4>3. Rotation Around the Z-Axis (`rotateZ`)</h4>
+            <p>The <code>rotateZ()</code> function rotates the element around the Z-axis (the axis pointing directly at the viewer). In a 2D context, this is identical to the standard <code>rotate()</code> function [00:01:55].</p>
+            <div class="container">
+                <div class="box box-z">Rotate Z (45deg)</div>
+            </div>
+            <hr>
+
+            <h4>4. Vector Rotation using `rotate3d()`</h4>
+            <p>The <code>rotate3d(x, y, z, angle)</code> function allows for rotation around a custom vector in 3D space. The first three values are coordinates (0 to 1) defining the vector, and the fourth is the angle of rotation [00:03:34].</p>
+            <div class="container">
+                <div class="box box-3d">Rotate 3D (1, 1, 1, 45deg)</div>
+            </div>
+            <hr>
+        </section>
+        <section class="product-container">
+            <div class="product-card">
+                <img src="https://placehold.co/250x350/222/fff?text=Product+Image" alt="Product" class="product-image">
+                <div class="product-info">
+                    <h3>Premium Watch</h3>
+                    <p>Experience timeless elegance with our handcrafted mechanical collection.</p>
+                    <button>View Details</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://placehold.co/250x350/444/fff?text=Product+Image" alt="Product" class="product-image">
+                <div class="product-info">
+                    <h3>Smart Audio</h3>
+                    <p>Noise-canceling technology paired with 40 hours of battery life.</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>How it works:</h3>
+            <ul>
+                <li><strong>Transform Origin:</strong> By setting <code>transform-origin: top</code>, the element rotates around its top edge rather than its center.</li>
+                <li><strong>Initial State:</strong> <code>rotateX(-90deg)</code> tilts the info panel back until it is invisible (perpendicular to the screen).</li>
+                <li><strong>Hover State:</strong> <code>rotateX(0deg)</code> brings the panel back to its natural, flat position.</li>
+            </ul>
+        </section>
+    </section>
+</body>
+</html>

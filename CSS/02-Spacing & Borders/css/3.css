@@ -1,0 +1,13 @@
+.div-1 {
+    background-color: yellow;
+    padding: 20px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 10px red solid; /* Shorthand */
+    
+    /* specify different directions */
+    border-style: dashed solid dotted double;
+    border-width: 10px 5px 7px 18px;
+    border-color: darkorange green darkblue black;
+}

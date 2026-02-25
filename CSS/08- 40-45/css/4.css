@@ -1,0 +1,43 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #43 - !Important Declaration
+ * Demonstrating how to override inline styles and specificity rules.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.box {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+    border: 1px solid #333;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Overriding Inline Styles */
+/* Normally, inline styles (style="...") have higher priority. */
+/* Adding !important forces this rule to apply instead. */
+.inline-override {
+    background-color: green !important;
+}
+
+/* 2. Overriding Cascade Order */
+/* Normally, the last rule defined wins (Red). */
+/* Because the first rule has !important, it wins (Blue). */
+.cascade-override {
+    background-color: blue !important;
+}
+
+.cascade-override {
+    background-color: red; /* Ignored due to !important above */
+}
+
+/* 3. Utility Class Example */
+/* Often used in utility classes to ensure they always work */
+.hidden-important {
+    display: none !important;
+}

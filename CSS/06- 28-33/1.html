@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Mastering The CSS Calculation (calc())"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../05- 22-27/6.html" class="prev-button">Previous</a>
+            <a href="2.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .item-perc {
+        width: 23.75%;
+        margin-right: 1%;
+    }
+    .item-calc {
+        width: calc((100% - 50px) / 4);
+        margin-right: 10px;
+    }
+    .item-calc-five {
+        width: calc((100% - 60px) / 5);
+        margin-right: 10px;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Pure Percentage Distribution (Without <span style="font-family: monospace;">calc()</span>)</h4>
+            <p>This is the initial approach. For 4 items and 5 margins (before, between, after) each at 1%, the total margin is 5%. Remaining width is 95%. Each item gets 95% / 4 = 23.75%.</p>
+            <div class="container-perc">
+                <div class="item item-perc">1</div>
+                <div class="item item-perc">2</div>
+                <div class="item item-perc">3</div>
+                <div class="item item-perc">4</div>
+            </div>
+            <hr>
+
+            <h4>2. Calculating 4-Item Width with Fixed Pixel Margins using <span style="font-family: monospace;">calc()</span></h4>
+            <p>This is the key application: mixing units. With 4 items, we need 5 margins. If each margin is a fixed 10px, the total margin is 50px. The width is calculated as <span style="font-family: monospace;">calc((100% - 50px) / 4)</span>, guaranteeing perfect alignment regardless of container width.</p>
+            <div class="container-calc">
+                <div class="item item-calc">1</div>
+                <div class="item item-calc">2</div>
+                <div class="item item-calc">3</div>
+                <div class="item item-calc">4</div>
+            </div>
+            <hr>
+
+            <h4>3. Calculating 5-Item Width with Fixed Pixel Margins using <span style="font-family: monospace;">calc()</span></h4>
+            <p>To demonstrate flexibility: 5 items require 6 margins. If each margin is 10px, the total margin is 60px. The width is calculated as <span style="font-family: monospace;">calc((100% - 60px) / 5)</span>.</p>
+            <div class="container-calc-five">
+                <div class="item item-calc-five">1</div>
+                <div class="item item-calc-five">2</div>
+                <div class="item item-calc-five">3</div>
+                <div class="item item-calc-five">4</div>
+                <div class="item item-calc-five">5</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #33 - Table Styling
+ * Demonstrating border-spacing, border-collapse, and header styling.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.table-custom {
+    margin-bottom: 30px;
+    width: 100%; /* Video mentions controlling width via CSS */
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Basic Styling & Border Spacing */
+.table-spacing {
+    border: 1px solid #ccc;
+    border-spacing: 10px; /* Video demonstrates this to show gaps between cells */
+}
+.table-spacing td {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 10px;
+}
+
+/* 2. Border Collapse (The Modern Standard) */
+.table-collapsed {
+    border: 1px solid #ccc;
+    border-collapse: collapse; /* Cancels border-spacing and merges borders */
+}
+.table-collapsed td {
+    border: 1px solid #ccc;
+    padding: 15px; /* Instructor increases padding for better look */
+    background-color: #eee;
+}
+
+/* 3. Professional Header Styling */
+.table-styled {
+    border-collapse: collapse;
+}
+.table-styled td, .table-styled th {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+.table-styled thead th {
+    background-color: #333; /* Dark background for header */
+    color: white;           /* White text */
+    border-color: #333;     /* Matching border color to remove separator lines in header */
+    text-align: center;
+}

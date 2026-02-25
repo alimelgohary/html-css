@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/6.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Table Styling"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="5.html" class="prev-button">Previous</a>
+            <a href="../07- 34-39/1.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    .table-spacing {
+        border: 1px solid #ccc;
+        border-spacing: 10px;
+    }
+    .table-spacing td {
+        border: 1px solid #ccc;
+        background-color: #eee;
+        padding: 10px;
+    }
+    .table-collapsed {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+    }
+    .table-collapsed td {
+        border: 1px solid #ccc;
+        padding: 15px;
+        background-color: #eee;
+    }
+    .table-styled {
+        border-collapse: collapse;
+    }
+    .table-styled td, .table-styled th {
+        border: 1px solid #ccc;
+        padding: 15px;
+    }
+    .table-styled thead th {
+        background-color: #333;
+        color: white;
+        border-color: #333;
+        text-align: center;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Understanding <span style="font-family: monospace;">border-spacing</span></h4>
+            <p>The video starts by showing how tables naturally have gaps between cells. Using <span style="font-family: monospace;">border-spacing</span> allows you to control this gap, but it is rarely used in modern "flat" designs.</p>
+            <table class="table-custom table-spacing">
+                <tbody>
+                    <tr><td>One</td><td>Two</td><td>Three</td></tr>
+                    <tr><td>One</td><td>Two</td><td>Three</td></tr>
+                    <tr><td>One</td><td>Two</td><td>Three</td></tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <h4>2. Using <span style="font-family: monospace;">border-collapse: collapse;</span></h4>
+            <p>To fix the "double border" look and the gaps, the instructor introduces <span style="font-family: monospace;">border-collapse: collapse;</span>, which merges adjacent borders into a single line.</p>
+            <table class="table-custom table-collapsed">
+                <tbody>
+                    <tr><td>One</td><td>Two</td><td>Three</td></tr>
+                    <tr><td>One</td><td>Two</td><td>Three</td></tr>
+                    <tr><td>One</td><td>Two</td><td>Three</td></tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <h4>3. Customizing the Header (<span style="font-family: monospace;">thead</span>)</h4>
+            <p>The final example demonstrates a common design pattern: giving the <span style="font-family: monospace;">thead</span> a dark background with white text. The instructor also notes matching the border color to the background to make the header look solid.</p>
+            <table class="table-custom table-styled">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Osama</td><td>Developer</td></tr>
+                    <tr><td>2</td><td>Ahmed</td><td>Designer</td></tr>
+                    <tr><td>3</td><td>Sayed</td><td>Admin</td></tr>
+                </tbody>
+            </table>
+            <hr>
+
+        </section>
+</body>
+</html>

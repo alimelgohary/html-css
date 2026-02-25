@@ -1,0 +1,44 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #22 - Inheritance
+ * Demonstrating Inheritance and the 'inherit' keyword.
+ */
+
+/* General styling for all examples */
+.parent-one, .parent-two, .parent-three {
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+/* 1. Default Inheritance */
+.parent-one {
+    font-size: 30px;
+    color: green;
+}
+.parent-one p, .parent-one span {
+    margin: 5px 0; /* Adding a small margin to show they are blocks/inline-blocks */
+}
+
+/* 2. Non-Inherited Properties */
+.parent-two {
+    border: 5px solid red;
+    padding: 10px;
+}
+.child-two {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #ddd;
+    margin-left: 20px;
+}
+
+/* 3. Forcing Inheritance with 'inherit' */
+.parent-three {
+    border: 3px dashed blue;
+    padding: 10px;
+}
+.child-three {
+    border: inherit; /* Explicitly forces the child to take the parent's border */
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #ddd;
+}

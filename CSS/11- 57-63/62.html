@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/62.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Grid: Grid Area Property"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="61.html" class="prev-button">Previous</a>
+            <a href="63.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Placement via Longhand (Alternative to using grid-area) */
+    .example-1 .item-9 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-row-end: 5;
+        grid-column-end: 6;
+
+        grid-area: 2 / 2 / 5 / 6; /*  [row start]/[col start]/[row end]/[col end]  */
+    }
+
+    /* 2. Defining Grid Areas (Parent Container) */
+    .example-2 .grid-container {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+            "logo links"
+            "content content";
+    }
+
+    /* 3. Assigning Items to Named Areas (Child Items) */
+    .example-2 .item-1 {
+        grid-area: logo;
+    }
+
+    .example-2 .item-2 {
+        grid-area: links;
+    }
+
+    .example-2 .item-3 {
+        grid-area: content;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Using Longhand Properties to Define Grid Area (Alternative Method)</h4>
+            <p>Before introducing the <code>grid-area</code> property, the video demonstrates how to achieve complex positioning by combining the longhand properties: <code>grid-column-start</code>, <code>grid-row-start</code>, <code>grid-column-end</code>, and <code>grid-row-end</code>. This places item 9 in a central 4x3 cell block.</p>
+            <div class="grid-container example-1">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+                <div class="grid-item">7</div>
+                <div class="grid-item">8</div>
+                <div class="grid-item item-9">Item 9 [02:30]</div>
+                <div class="grid-item">10</div>
+                <div class="grid-item">11</div>
+                <div class="grid-item">12</div>
+                <div class="grid-item">13</div>
+                <div class="grid-item">14</div>
+                <div class="grid-item">15</div>
+                <div class="grid-item">16</div>
+                <div class="grid-item">17</div>
+                <div class="grid-item">18</div>
+                <div class="grid-item">19</div>
+                <div class="grid-item">20</div>
+            </div>
+            <hr>
+
+            <h4>2. Defining Grid Structure and Assigning Elements with `grid-area`</h4>
+            <p>The primary method for advanced layouts is to first define named areas on the parent container using <code>grid-template-areas</code>. Here, we define a layout with a split header (logo/links) and a full-width content section below. The child items are then assigned to these named areas using the <code>grid-area</code> property on the child elements.</p>
+            <div class="grid-container example-2">
+                <div class="grid-item item-1">Logo [04:53]</div>
+                <div class="grid-item item-2">Navigation Links [05:03]</div>
+                <div class="grid-item item-3">Main Content [05:58]</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/54.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS Filters"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="../09- 46-52/52.html" class="prev-button">Previous</a>
+            <a href="55.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* 1. Grayscale Filter */
+    .grayscale-example .filter-img {
+        filter: grayscale(100%); /* 54-1: Apply full black and white */
+        transition: filter 0.5s; /* For smooth effect */
+    }
+    .grayscale-example .filter-img:hover {
+        filter: grayscale(0%); /* 54-2: Revert to color on hover */
+    }
+
+    /* 2. Blur Filter */
+    .blur-example .filter-img {
+        filter: blur(4px); /* 54-3: Apply 4px blur */
+    }
+    .blur-example .filter-img:hover {
+        filter: blur(0px); /* 54-4: Remove blur on hover */
+    }
+
+    /* 3. Invert Filter */
+    .invert-example .filter-img {
+        filter: invert(100%); /* 54-5: Fully invert the colors */
+    }
+    .invert-example .filter-img:hover {
+        filter: invert(45%); /* 54-6: Invert by 45% on hover */
+    }
+            
+        </pre>
+        <section>
+            
+            <h3>CSS Filters (<span style="font-family: monospace;">filter</span> Property)</h3>
+            <p>The <span style="font-family: monospace;">filter</span> property applies graphical effects like blurring or color shifting to an element. It is often used on images, but can be applied to any element.</p>
+            <div class="img-container">
+                <p><strong>Note:</strong> For these examples to display correctly, you need to replace <span style="font-family: monospace;">placeholder.jpg</span> with a local image file.</p>
+            </div>
+            <hr>
+
+            <h4>1. <span style="font-family: monospace;">grayscale()</span> Filter</h4>
+            <p>Converts the image to black and white. Try hovering over the image.</p>
+            <div class="img-container grayscale-example">
+                <img src="../00-Assignments/imgs/30-33_1.png" alt="Image in Grayscale" class="filter-img" style="background-color: #008CBA;">
+            </div>
+            <hr>
+
+            <h4>2. <span style="font-family: monospace;">blur()</span> Filter</h4>
+            <p>Applies a Gaussian blur to the image. Try hovering over the image to remove the blur.</p>
+            <div class="img-container blur-example">
+                <img src="../00-Assignments/imgs/30-33_1.png" alt="Blurred Image" class="filter-img" style="background-color: #f44336;">
+            </div>
+            <hr>
+
+            <h4>3. <span style="font-family: monospace;">invert()</span> Filter</h4>
+            <p>Inverts the colors of the image. Try hovering over the image for a partial inversion effect.</p>
+            <div class="img-container invert-example">
+                <img src="../00-Assignments/imgs/30-33_1.png" alt="Inverted Colors" class="filter-img" style="background-color: #8cc440;">
+            </div>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,67 @@
+.common {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+.ex11 {
+    background-color: green;
+}
+.ex12 {
+    margin-top: 5px;
+    background-color: red;
+}
+.ex21 {
+    margin-top: 10px;
+    background-color: green;
+    position: relative;
+}
+.ex22 {
+    margin-top: 5px;
+    background-color: red;
+}
+.ex31 {
+    background-color: green;
+    position: absolute;
+}
+.ex32 {
+    margin-top: 5px;
+    background-color: red;
+}
+.ex4 {
+    background-color: blue;
+    height: 200px;
+    width: 400px;
+    position: relative;
+}
+.ex41 {
+    background-color: green;
+    position: absolute;
+}
+.ex42 {
+    margin-top: 5px;
+    background-color: red;
+}
+.ex51 {
+    background-color: green;
+    position: fixed;
+    right: 10px;
+    bottom: 35px;
+    width: fit-content;
+}
+.ex52 {
+    margin-top: 5px;
+    background-color: red;
+}
+.ex61 {
+    width: 100%;
+    background-color: green;
+    position: sticky;
+    bottom: 0;
+}
+.ex62 {
+    width: 100%;
+    margin-top: 5px;
+    background-color: red;
+    position: sticky;
+    top:0 ;
+}

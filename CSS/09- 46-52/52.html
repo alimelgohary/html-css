@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/52.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "Flexbox Child Property: Align Self"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="51.html" class="prev-button">Previous</a>
+            <a href="../10- 54-56/54.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+           
+        </section>
+        
+        <pre id="pre">
+
+    /* Container has align-items: stretch; */
+    .flex-container {
+        height: 150px; 
+        align-items: stretch;
+    }
+
+    /* 1. Default/Auto */
+    .self-auto {
+        align-self: auto; /* Inherits stretch (must not have explicit height) */
+    }
+
+    /* 2. Item at the Top */
+    .self-start {
+        align-self: flex-start;
+    }
+
+    /* 3. Item at the Bottom */
+    .self-end {
+        align-self: flex-end;
+    }
+
+    /* 4. Item Centered */
+    .self-center {
+        align-self: center;
+    }
+
+    /* 5. Item Baseline */
+    .self-baseline {
+        align-self: baseline;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Flex Item: <span style="font-family: monospace;">align-self</span></h4>
+            <p>Overrides the container's <span style="font-family: monospace;">align-items</span> property for a single flex item. The container's default is <span style="font-family: monospace;">stretch</span>.</p>
+            <div class="flex-container">
+                <div class="flex-item self-auto" style="height: auto;">Box 1 (auto/stretch)</div>
+                <div class="flex-item self-start">Box 2 (flex-start)</div>
+                <div class="flex-item self-center">Box 3 (center)</div>
+                <div class="flex-item self-end">Box 4 (flex-end)</div>
+                <div class="flex-item self-baseline">Box 5 (baseline)</div>
+            </div>
+            <hr>
+
+            <h4>2. Recommended Flexbox Practice</h4>
+            <p>The video encourages the use of online resources to master Flexbox. Suggested resources include:</p>
+            <ul>
+                <li><strong>Flexbox Froggy:</strong> A simple game to learn container properties (<a href="https://flexboxfroggy.com/">flexboxfroggy.com</a>).</li>
+                <li><strong>Flexbox Zombies:</strong> A narrative-driven, deeper dive into all Flexbox properties (<a href="https://mastery.games/flexboxzombies/">mastery.games/flexboxzombies</a>).</li>
+                <li><strong>"Holy Grail" Layout Task:</strong> An exercise in building a classic, complex website layout (Header, Footer, Nav/Aside, Main Content) using Flexbox.</li>
+            </ul>
+
+        </section>
+</body>
+</html>

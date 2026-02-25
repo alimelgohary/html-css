@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/66.css"> 
+    <link rel="stylesheet" href="../css/common.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var title = "CSS 2D Transform: rotate()"
+            document.title = title;
+            document.getElementById("title-main").innerHTML = title;
+            document.getElementById("path").innerText = decodeURI(document.location.pathname).split('/')[2] + '/'
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    
+    <section>
+        <section class="intro">
+            <a href="../../index.html" class="home-button">Go Home</a><br>
+            <a href="65.html" class="prev-button">Previous</a>
+            <a href="67.html" class="next-button">Next</a><br>
+            
+            <br><span id="path"></span><h2 style="display: inline;" id="title-main"></h2>
+            
+        </section>
+        
+        <pre id="pre">
+
+    .box-1:hover {
+        transform: rotate(45deg);
+    }
+
+    .box-2:hover {
+        transform: rotate(-30deg);
+    }
+
+    .box-3:hover {
+        transform: rotateX(180deg);
+    }
+
+    .box-4:hover {
+        transform: rotateY(90deg);
+    }
+
+    .box-5:hover {
+        /* Combination of multiple transforms */
+        transform: rotate(5deg) scale(1.2);
+        opacity: 0.7;
+    }
+            
+        </pre>
+        <section>
+            
+            <h4>1. Basic 2D Rotation (`rotate(Ndeg)`)</h4>
+            <p>The <code>rotate()</code> function turns the element clockwise around its center point by the specified degree value. This example rotates the box by 45 degrees when hovered.</p>
+            <div class="container">
+                <div class="box box-1">Hover to Rotate (45deg)</div>
+            </div>
+            <hr>
+
+            <h4>2. Counter-Clockwise Rotation (Negative Value)</h4>
+            <p>A negative degree value is used to rotate the element in the counter-clockwise direction. This demonstrates a -30 degree rotation.</p>
+            <div class="container">
+                <div class="box box-2">Hover to Rotate (-30deg)</div>
+            </div>
+            <hr>
+
+            <h4>3. Rotation Around the X-Axis (`rotateX()`)</h4>
+            <p>The <code>rotateX()</code> function rotates the element around the horizontal X-axis, making it appear to flip or spin into/out of the screen. A 180-degree rotation flips it completely.</p>
+            <div class="container">
+                <div class="box box-3">Hover to RotateX (180deg)</div>
+            </div>
+            <hr>
+
+            <h4>4. Rotation Around the Y-Axis (`rotateY()`)</h4>
+            <p>The <code>rotateY()</code> function rotates the element around the vertical Y-axis, making it appear to turn like a page. A 90-degree rotation makes the element disappear edge-on.</p>
+            <div class="container">
+                <div class="box box-4">Hover to RotateY (90deg)</div>
+            </div>
+            <hr>
+
+            <h4>5. Combining Transforms</h4>
+            <p>Multiple transform functions can be applied to a single element. This box is rotated 15 degrees and simultaneously scaled up by 1.2, showing how transformations can be chained.</p>
+            <div class="container">
+                <div class="box box-5">Hover to Combine (Rotate & Scale)</div>
+            </div>
+            <hr>
+
+        </section>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/*
+ * CSS File for: Learn CSS In Arabic 2021 - #34 - Pseudo Classes
+ * Demonstrating hover, visited, checked, empty, and focus pseudo-classes.
+ */
+
+/* --- General Styling (Not in <pre>) --- */
+.demo-section {
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    width: 400px;
+}
+.demo-link {
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 15px;
+    color: green; /* Default color mentioned in video */
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* --- Example CSS Rules (Included in the <pre> tag) --- */
+
+/* 1. Hover State (:hover) */
+.link-hover:hover {
+    color: red;
+}
+
+/* 2. Visited State (:visited) */
+/* Styles links that the user has already visited */
+.link-visited:visited {
+    color: blue;
+}
+
+/* 3. Checked State (:checked) */
+/* Styling the label immediately following a checked checkbox */
+.input-check:checked + label {
+    color: red;
+}
+
+/* 4. Empty State (:empty) */
+/* Targets elements with absolutely no children (including text/whitespace) */
+.box-empty:empty {
+    border: 5px solid red;
+    height: 50px; /* Added height to make the empty box visible */
+}
+
+/* 5. Focus State (:focus) */
+/* Targets form elements when they are selected/active */
+.input-focus {
+    font-size: 30px;
+}
+.input-focus:focus {
+    border-color: yellow;
+    border-style: solid;
+    border-width: 4px;
+    outline: none; /* Removes the default browser outline */
+}
